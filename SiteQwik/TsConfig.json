@@ -1,0 +1,127 @@
+{
+	"extends": "./TsConfigBase",
+	"compilerOptions": {
+		"paths": {
+			"Accounts": [
+				"src/Modules/Accounts/Exports"
+			],
+			"Aggregates": [
+				"src/Modules/Aggregates/Exports"
+			],
+			"Base": [
+				"src/Base/Exports"
+			],
+			"Blog": [
+				"src/Modules/Blog/Exports"
+			],
+			"BlogParts": [
+				"src/Components/BlogParts/Exports"
+			],
+			"Commissions": [
+				"src/Modules/Commissions/Exports"
+			],
+			"CompareParts": [
+				"src/Components/CompareParts/Exports"
+			],
+			"Configuration": [
+				"src/Modules/Configuration/Exports"
+			],
+			"Contacts": [
+				"src/Modules/Contacts/Exports"
+			],
+			"Contents": [
+				"src/Modules/Contents/Exports"
+			],
+			"Contracts": [
+				"src/Modules/Contracts/Exports"
+			],
+			"Currencies": [
+				"src/Modules/Currencies/Exports"
+			],
+			"Dashboard": [
+				"src/Components/Dashboard/Exports"
+			],
+			"DefaultLocale": [
+				"src/DefaultLocale.jsx"
+			],
+			"Forms": [
+				"src/Modules/Forms/Exports"
+			],
+			"Geo": [
+				"src/Modules/Geo/Exports"
+			],
+			"Globalization": [
+				"src/Modules/Globalization/Exports"
+			],
+			"HierarchiesParts": [
+				"src/Components/HierarchiesParts/Exports"
+			],
+			"HierarchyChildrenParts": [
+				"src/Components/HierarchyChildrenParts/Exports"
+			],
+			"Layout": [
+				"src/Components/Layout/Exports"
+			],
+			"Loaders": [
+				"src/Loaders"
+			],
+			"Locales": [
+				"./src/Locales"
+			],
+			"Media": [
+				"src/Modules/Media/Exports"
+			],
+			"Modules": [
+				"src/Modules/Modules/Exports"
+			],
+			"Navigation": [
+				"src/Modules/Navigation/Exports"
+			],
+			"PageParts": [
+				"src/Components/PageParts/Exports"
+			],
+			"PaginationBehaviors": [
+				"src/PaginationBehaviors"
+			],
+			"PostParts": [
+				"src/Components/PostParts/Exports"
+			],
+			"Pricing": [
+				"src/Modules/Pricing/Exports"
+			],
+			"Properties": [
+				"src/Modules/Properties/Exports"
+			],
+			"PropertiesParts": [
+				"src/Components/PropertiesParts/Exports"
+			],
+			"PropertyParts": [
+				"src/Components/PropertyParts/Exports"
+			],
+			"RichTextComponents": [
+				"src/RichTextComponents"
+			],
+			"Seo": [
+				"src/Modules/Seo/Exports"
+			],
+			"Shared": [
+				"src/Components/Shared/Exports"
+			],
+			"Social": [
+				"src/Modules/Social/Exports"
+			],
+			"SupportedLocales": [
+				"src/SupportedLocales.jsx"
+			],
+			"TagsParts": [
+				"src/Components/TagsParts/Exports"
+			],
+			"Taxonomy": [
+				"src/Modules/Taxonomy/Exports"
+			],
+			"Units": [
+				"src/Modules/Units/Exports"
+			]
+		}
+	}
+}

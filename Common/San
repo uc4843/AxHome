@@ -1,0 +1,7 @@
+certbot --nginx --cert-name axhome.ir \
+-d admin.new.axhome.ir \
+-d api.admin.new.axhome.ir \
+-d api.new.axhome.ir \
+-d db.axhome.ir \
+-d new.axhome.ir \
+-d storage.new.axhome.ir
