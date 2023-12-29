@@ -1,0 +1,362 @@
+name: SiteQwik
+
+on:
+  # schedule:
+  #   - cron: '30 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+
+      # Base
+
+      - name: Add commands directory to PATH
+        run: |
+          echo "/HolismHolding/Commands" >> $GITHUB_PATH
+
+      - name: Create /HolismHolding directory
+        run: |
+          sudo mkdir /HolismHolding
+          sudo chmod 777 --preserve-root /HolismHolding
+
+      - name: Create /HolismSite directory
+        run: |
+          sudo mkdir /HolismSite
+          sudo chmod 777 --preserve-root /HolismSite
+
+      - name: Create /Holizm directory
+        run: |
+          sudo mkdir /Holizm
+          sudo chmod 777 --preserve-root /Holizm
+
+      - name: Create /AxHome directory
+        run: |
+          sudo mkdir /AxHome
+          sudo chmod 777 --preserve-root /AxHome
+
+      - name: Get HolismHolding/Infra
+        uses: actions/checkout@v3
+        with:
+          repository: HolismHolding/Infra
+          token: ${{ secrets.PAT }}
+          path: HolismHolding/Infra
+      - name: Copy HolismHolding/Infra to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismHolding/Infra /HolismHolding/Infra
+
+      - name: Get HolismHolding/Commands
+        uses: actions/checkout@v3
+        with:
+          repository: HolismHolding/Commands
+          token: ${{ secrets.PAT }}
+          path: HolismHolding/Commands
+      - name: Copy HolismHolding/Commands to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismHolding/Commands /HolismHolding/Commands
+
+      - name: Get HolismHolding/Scripts
+        uses: actions/checkout@v3
+        with:
+          repository: HolismHolding/Scripts
+          token: ${{ secrets.PAT }}
+          path: HolismHolding/Scripts
+      - name: Copy HolismHolding/Scripts to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismHolding/Scripts /HolismHolding/Scripts
+
+      - name: Get HolismHolding/Docker
+        uses: actions/checkout@v3
+        with:
+          repository: HolismHolding/Docker
+          token: ${{ secrets.PAT }}
+          path: HolismHolding/Docker
+      - name: Copy HolismHolding/Docker to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismHolding/Docker /HolismHolding/Docker
+
+      - name: Get HolismHolding/Fonts
+        uses: actions/checkout@v3
+        with:
+          repository: HolismHolding/Fonts
+          token: ${{ secrets.PAT }}
+          path: HolismHolding/Fonts
+      - name: Copy HolismHolding/Fonts to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismHolding/Fonts /HolismHolding/Fonts
+
+      - name: Get HolismSite/Infra
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Infra
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Infra
+      - name: Copy HolismSite/Infra to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Infra /HolismSite/Infra
+
+      - name: Pull holism/site
+        run: |
+          docker pull holism/site
+
+      - name: Pull node:lts-bookworm-slim
+        run: |
+          docker pull node:lts-bookworm-slim
+
+      # Dependencies
+
+      - name: Get HolismSite/Accounts
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Accounts
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Accounts
+      - name: Copy HolismSite/Accounts to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Accounts /HolismSite/Accounts
+
+      - name: Get HolismSite/Aggregates
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Aggregates
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Aggregates
+      - name: Copy HolismSite/Aggregates to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Aggregates /HolismSite/Aggregates
+
+      - name: Get HolismSite/Blog
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Blog
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Blog
+      - name: Copy HolismSite/Blog to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Blog /HolismSite/Blog
+
+      - name: Get HolismSite/Commissions
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Commissions
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Commissions
+      - name: Copy HolismSite/Commissions to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Commissions /HolismSite/Commissions
+
+      - name: Get HolismSite/Configuration
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Configuration
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Configuration
+      - name: Copy HolismSite/Configuration to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Configuration /HolismSite/Configuration
+
+      - name: Get HolismSite/Contacts
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Contacts
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Contacts
+      - name: Copy HolismSite/Contacts to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Contacts /HolismSite/Contacts
+
+      - name: Get HolismSite/Contents
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Contents
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Contents
+      - name: Copy HolismSite/Contents to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Contents /HolismSite/Contents
+
+      - name: Get HolismSite/Contracts
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Contracts
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Contracts
+      - name: Copy HolismSite/Contracts to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Contracts /HolismSite/Contracts
+
+      - name: Get HolismSite/Currencies
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Currencies
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Currencies
+      - name: Copy HolismSite/Currencies to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Currencies /HolismSite/Currencies
+
+      - name: Get HolismSite/DataTypes
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/DataTypes
+          token: ${{ secrets.PAT }}
+          path: HolismSite/DataTypes
+      - name: Copy HolismSite/DataTypes to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/DataTypes /HolismSite/DataTypes
+
+      - name: Get HolismSite/Forms
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Forms
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Forms
+      - name: Copy HolismSite/Forms to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Forms /HolismSite/Forms
+
+      - name: Get HolismSite/Geo
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Geo
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Geo
+      - name: Copy HolismSite/Geo to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Geo /HolismSite/Geo
+
+      - name: Get HolismSite/Globalization
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Globalization
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Globalization
+      - name: Copy HolismSite/Globalization to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Globalization /HolismSite/Globalization
+
+      - name: Get HolismSite/Media
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Media
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Media
+      - name: Copy HolismSite/Media to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Media /HolismSite/Media
+
+      - name: Get HolismSite/Modules
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Modules
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Modules
+      - name: Copy HolismSite/Modules to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Modules /HolismSite/Modules
+
+      - name: Get HolismSite/Navigation
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Navigation
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Navigation
+      - name: Copy HolismSite/Navigation to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Navigation /HolismSite/Navigation
+
+      - name: Get HolismSite/Pricing
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Pricing
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Pricing
+      - name: Copy HolismSite/Pricing to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Pricing /HolismSite/Pricing
+
+      - name: Get HolismSite/Properties
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Properties
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Properties
+      - name: Copy HolismSite/Properties to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Properties /HolismSite/Properties
+
+      - name: Get HolismSite/Seo
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Seo
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Seo
+      - name: Copy HolismSite/Seo to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Seo /HolismSite/Seo
+
+      - name: Get HolismSite/Social
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Social
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Social
+      - name: Copy HolismSite/Social to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Social /HolismSite/Social
+
+      - name: Get HolismSite/Taxonomy
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Taxonomy
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Taxonomy
+      - name: Copy HolismSite/Taxonomy to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Taxonomy /HolismSite/Taxonomy
+
+      - name: Get HolismSite/Units
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Units
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Units
+      - name: Copy HolismSite/Units to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Units /HolismSite/Units
+
+      # Main
+      
+      - name: Get Holizm/AxHome
+        uses: actions/checkout@v3
+        with:
+          repository: Holizm/AxHome
+          token: ${{ secrets.PAT }}
+          path: Holizm/AxHome
+      - name: Copy Holizm/AxHome to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/Holizm/AxHome /Holizm/AxHome
+
+      - name: Move /Holizm/AxHome to /AxHome
+        run: |
+          sudo cp -a /Holizm/AxHome/. /AxHome
+          ls /AxHome -lah
+      
+      - name: Build production docker
+        run: |
+          cd /AxHome/SiteQwik
+          /HolismHolding/Commands/Build
+
+      - name: Log in to GitHub Container Registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Push the image
+        run: |
+          docker push ghcr.io/holizm/axhome/siteqwik:latest
+
+      - name: Logout from GitHub Container Registry
+        run: |
+          docker logout
