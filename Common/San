@@ -4,4 +4,5 @@ certbot --nginx --cert-name axhome.ir \
 -d api.new.axhome.ir \
 -d db.axhome.ir \
 -d new.axhome.ir \
--d storage.new.axhome.ir
+-d storage.new.axhome.ir \
+-d www.new.axhome.ir
