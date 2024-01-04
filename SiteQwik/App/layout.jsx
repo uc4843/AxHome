@@ -49,7 +49,7 @@ const Layout = component$(() => {
         <GoogleTagManagerNoScript {...configs} />
         <div
             dir={currentLocale.isRtl ? 'rtl' : 'ltr'}
-            class="h-auto"
+            class="scroll-smooth scroll-pb-7 h-auto"
         >
             <Header {...data} />
             <Slot />

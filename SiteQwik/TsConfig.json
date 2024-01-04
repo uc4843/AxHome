@@ -119,6 +119,9 @@
 			"SupportedLocales": [
 				"src/SupportedLocales.jsx"
 			],
+			"Svg": [
+				"src/Components/Svg/Exports"
+			],
 			"TagsParts": [
 				"src/Components/TagsParts/Exports"
 			],
