@@ -127,6 +127,16 @@ jobs:
         run: |
           cp -r $GITHUB_WORKSPACE/HolismSite/Aggregates /HolismSite/Aggregates
 
+      - name: Get HolismSite/Attributes
+        uses: actions/checkout@v3
+        with:
+          repository: HolismSite/Attributes
+          token: ${{ secrets.PAT }}
+          path: HolismSite/Attributes
+      - name: Copy HolismSite/Attributes to root
+        run: |
+          cp -r $GITHUB_WORKSPACE/HolismSite/Attributes /HolismSite/Attributes
+
       - name: Get HolismSite/Blog
         uses: actions/checkout@v3
         with:

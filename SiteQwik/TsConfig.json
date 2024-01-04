@@ -8,6 +8,9 @@
 			"Aggregates": [
 				"src/Modules/Aggregates/Exports"
 			],
+			"Attributes": [
+				"src/Modules/Attributes/Exports"
+			],
 			"Base": [
 				"src/Base/Exports"
 			],
@@ -58,6 +61,9 @@
 			],
 			"HierarchyChildrenParts": [
 				"src/Components/HierarchyChildrenParts/Exports"
+			],
+			"Index": [
+				"src/Components/Index/Exports"
 			],
 			"Layout": [
 				"src/Components/Layout/Exports"
