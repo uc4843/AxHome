@@ -17,8 +17,8 @@ const Header = ({
             <a
                 href="/">
                 <Image
-                    containerClass="relative w-[60px] md:w-[70px] hidden xs:block aspect-[1/1] mt-2 md:mt-0"
-                    imageClass="object-contain"
+                    containerClass="relative hidden xs:block h-[60px] md:h-[70px] aspect-square mt-2 md:mt-0"
+                    imageClass="w-full h-full object-contain"
                     src={branding?.logo}
                     alt={branding?.brand}
                     priority

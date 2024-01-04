@@ -16,6 +16,7 @@ import {
     getLatestOccasion,
 } from 'Properties'
 import {
+    Filter,
     Hero,
     QuickAccess,
 } from 'Index'
@@ -66,19 +67,25 @@ const Index = component$(() => {
         allCityDivision,
         allDealTypes,
         allPropertyTypes,
+        currentLocale,
+        hero,
+        homeFilter,
         latestPosts,
         localePathPrefix,
         localesEnum,
-        currentLocale,
         rentProperties,
         saleProperties,
         translations,
     } = data
 
-    return <>
-        <Hero />
+    return <main>
+        <Hero {...hero} />
+        <Filter
+            class="bg-custom-color4"
+            {...homeFilter}
+        />
         <QuickAccess />
-    </>
+    </main>
 })
 
 export default Index
