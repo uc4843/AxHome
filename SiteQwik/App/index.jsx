@@ -91,6 +91,7 @@ const Index = component$(() => {
 export default Index
 
 const head = ({ resolveValue }) => {
+
     return useSeo(getData, resolveValue)
 }
 

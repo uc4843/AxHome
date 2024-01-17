@@ -1,4 +1,5 @@
 const PhoneForwarded = ({ class: internalClass }) => {
+
     return <svg
         class={internalClass || ""}
         viewBox="0 -960 960 960"

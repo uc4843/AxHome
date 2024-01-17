@@ -61,6 +61,7 @@ const Layout = component$(() => {
 export default Layout
 
 const head = ({ resolveValue }) => {
+
     return useLayoutSeo(getData, resolveValue)
 }
 

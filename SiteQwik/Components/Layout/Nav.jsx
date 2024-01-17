@@ -1,6 +1,7 @@
 import { KeyboardArrowDown } from 'Svg'
 
 const Nav = ({ menuItems }) => {
+
     return <nav class='flex w-[calc(50%-64px)]'>
         <div
             // onClick={toggleMenu}

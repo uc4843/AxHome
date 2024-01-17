@@ -10,10 +10,10 @@ const config = {
                 custom: {
                     color1: '#D7181E',
                     color2: '#ef7f80',
-                    color3: "#EEEEEE", // header -- all gray color
-                    color4: "#57585A", // seerch - footer
-                    border: "#707070",
-                    btn: "#C9C9C9"
+                    color3: '#EEEEEE', // header -- all gray color
+                    color4: '#57585A', // seerch - footer
+                    border: '#707070',
+                    btn: '#C9C9C9'
                 }
             },
             maxWidth: {

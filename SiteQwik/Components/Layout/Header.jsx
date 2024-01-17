@@ -1,19 +1,41 @@
+import {
+    component$,
+    useSignal,
+} from '@builder.io/qwik'
 import { Image } from 'Base'
 import {
+    Bars,
     Person,
     PhoneForwarded,
 } from 'Svg'
-import { Nav } from 'Layout'
+import {
+    DesktopMainMenu,
+    MobileMainMenu,
+} from 'Layout'
 
-const Header = ({
+const Header = component$(({
     branding,
     contactInfo,
     headerCta,
     menuItems,
 }) => {
+
+    const isOpen = useSignal(false)
+
     return <header class='py:2 md:py-4 bg-custom-color3'>
         <div class="relative w-full flex items-center justify-between max-w-wide mx-auto px-4 2xl:px-0">
-            <Nav menuItems={menuItems} />
+            <DesktopMainMenu menuItems={menuItems} />
+            <div
+                class="py-2"
+                onClick$={() => isOpen.value = !isOpen.value}
+            >
+                <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-none" />
+            </div>
+            <MobileMainMenu
+                branding={branding}
+                isOpen={isOpen}
+                menuItems={menuItems}
+            />
             <a
                 href="/">
                 <Image
@@ -60,6 +82,6 @@ const Header = ({
             </div>
         </div>
     </header>
-}
+})
 
 export default Header

@@ -6,6 +6,7 @@ const Hero = ({
     subtitle,
     title,
 }) => {
+
     return <section class='bg-custom-color3 overflow-hidden relative after:content-[""] after:relative after:block after:w-full after:bg-[length:250%_100%] md:after:bg-[length:115%_100%] after:bg-center after:h-[150px] md:after:h-[320px] after:bg-[url("/images/rounded.svg")] select-none'>
         <div class='pt-10 px-4 2xl:px-0'>
             <h1 class='text-3xl font-bold text-center'>{title}</h1>

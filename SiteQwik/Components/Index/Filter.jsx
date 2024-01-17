@@ -7,6 +7,7 @@ const Filter = ({
     noBackgroundImage,
     searchTitle,
 }) => {
+
     return <section>
         {
             noBackgroundImage ? null : <Image
