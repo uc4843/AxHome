@@ -19,7 +19,7 @@ const OurTeam = component$(({
 }) => {
 
     return <>
-        <section class="max-w-7xl mx-auto px-5 py-12">
+        <section class="max-w-7xl mx-auto px-5 pt-12">
             <SectionTitle
                 description={description}
                 title={title}
