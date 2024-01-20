@@ -18,7 +18,8 @@ import {
 import {
     Filter,
     Hero,
-    QuickAccess,
+    Services,
+    States,
 } from 'Index'
 
 const getData = routeLoader$(async props => {
@@ -75,6 +76,8 @@ const Index = component$(() => {
         localesEnum,
         rentProperties,
         saleProperties,
+        services,
+        states,
         translations,
     } = data
 
@@ -84,7 +87,8 @@ const Index = component$(() => {
             class="bg-custom-color4"
             {...homeFilter}
         />
-        <QuickAccess />
+        <Services {...services} />
+        <States {...states} />
     </main>
 })
 

@@ -11,6 +11,7 @@ import MobileMainMenu from './MobileMainMenu'
 import MobileSubMenu from './MobileSubMenu'
 import Nav from './Nav'
 import QuickAccess from './QuickAccess'
+import SocialNetworks from './SocialNetworks'
 
 export { About }
 export { Contact }
@@ -25,3 +26,4 @@ export { MobileMainMenu }
 export { MobileSubMenu }
 export { Nav }
 export { QuickAccess }
+export { SocialNetworks }
