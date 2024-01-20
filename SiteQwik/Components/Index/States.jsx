@@ -72,7 +72,7 @@ const States = component$(({
                                     src={item?.image}
                                     containerClass="w-full aspect-square"
                                 />
-                                <div class="absolute bottom-0 start-0 w-full bg-black/60 p-4">
+                                <div class="absolute bottom-0 start-0 w-full bg-black/60 px-4 pt-4 pb-12">
                                     <h2 class="w-full text-lg font-bold line-clamp-1 mb-2 line-clamp-0">
                                         {item?.title}
                                     </h2>
@@ -80,6 +80,12 @@ const States = component$(({
                                         {item?.summary}
                                     </p>
                                 </div>
+                            </a>
+                            <a
+                                class="absolute -bottom-3 rounded-md hover:brightness-125 transition-all end-1/2 translate-x-[-50%] bg-custom-color1 text-white font-bold text-md min-w-[40%] p-2 flex justify-center"
+                                href={item?.link}
+                            >
+                                {item?.linkText}
                             </a>
                         </SwiperSlide>)}
 
