@@ -10,21 +10,21 @@ import {
 
 const Footer = ({
     about,
-    bgImages,
     contactInfo,
     copyright,
     firstFooterLinks,
+    footerImage,
     quickAccess,
     secondFooterLinks,
     socialNetworks,
 }) => {
     return <>
         <footer class="bg-custom-color4 pt-10 relative">
-            {/* <Image
-                containerclass="absolute w-full h-full inset-0 z-0"
+            <Image
+                containerClass="absolute w-full h-full inset-0 z-0"
                 class="object-cover"
-                src={bgImages?.footerBg?.relatedItems?.fileUrl}
-            /> */}
+                src={footerImage?.image}
+            />
 
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-5 items-start justify-center px-4 relative z-20 text-white mb-8">
                 <About {...about} />

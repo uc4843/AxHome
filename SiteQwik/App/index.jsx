@@ -16,8 +16,11 @@ import {
     getLatestOccasion,
 } from 'Properties'
 import {
+    Ad,
+    Counter,
     Filter,
     Hero,
+    OurTeam,
     Services,
     States,
 } from 'Index'
@@ -68,12 +71,15 @@ const Index = component$(() => {
         allCityDivision,
         allDealTypes,
         allPropertyTypes,
+        counter,
         currentLocale,
         hero,
         homeFilter,
+        indexAd,
         latestPosts,
         localePathPrefix,
         localesEnum,
+        ourTeam,
         rentProperties,
         saleProperties,
         services,
@@ -88,6 +94,9 @@ const Index = component$(() => {
             {...homeFilter}
         />
         <Services {...services} />
+        <Counter {...counter} />
+        <Ad {...indexAd} />
+        <OurTeam {...ourTeam} />
         <States {...states} />
     </main>
 })

@@ -19,14 +19,14 @@ const States = component$(({
 }) => {
 
     return <>
-        <section class="bg-custom-color21 pb-14">
+        <section class="bg-custom-color21 py-12">
             <div class="max-w-7xl mx-auto px-5">
                 <SectionTitle
                     description={description}
                     title={title}
                 />
                 <Swiper
-                    name='LatestPostsSlider'
+                    name='statesSlider'
                     containerClass="pb-14"
                     paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color1"
                     config={{
