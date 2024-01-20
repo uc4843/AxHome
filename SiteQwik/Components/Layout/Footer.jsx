@@ -4,6 +4,7 @@ import {
     Contact,
     Copyright,
     FooterLinks,
+    QuickAccess,
 } from 'Layout'
 
 const Footer = ({
@@ -13,6 +14,7 @@ const Footer = ({
     copyright,
     firstFooterLinks,
     secondFooterLinks,
+    quickAccess,
 }) => {
     return <>
         <footer class="bg-custom-color4 pt-10 relative">
@@ -29,6 +31,7 @@ const Footer = ({
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-y-4 gap-x-5 items-start justify-center px-4 relative z-20 pb-20 2xl:pb-0">
                 <FooterLinks {...firstFooterLinks} />
                 <FooterLinks {...secondFooterLinks} />
+                <QuickAccess {...quickAccess} />
             </div>
             <Copyright {...copyright} />
         </footer>

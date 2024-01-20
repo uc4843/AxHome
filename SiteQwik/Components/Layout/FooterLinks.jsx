@@ -5,7 +5,7 @@ const FooterLinks = ({
     title,
 }) => {
 
-    return <div>
+    return <div class="text-white w-full md:w-[35%]">
         <FooterTitle title={title} />
         <div class="grid grid-cols-2 gap-2 items-start text-sm lg:text-md">
             {
