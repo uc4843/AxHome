@@ -11,11 +11,11 @@ const PropertyCard = ({
     age,
     area,
     currentLocale,
-    featuredLabel,
+    featuredLabelTitle,
     item,
     localesEnum,
     location,
-    occasionLabel,
+    occasionLabelTitle,
     rooms,
     translations,
     type,
@@ -38,10 +38,10 @@ const PropertyCard = ({
                     {item?.dealTypeName}
                 </a>
                 {item?.isOccasion &&
-                    <p class="absolute z-10 top-2 start-2 bg-custom-color21/80 text-slate-50 rounded-xl text-xs px-2 py-1">{occasionLabel}</p>
+                    <p class="absolute z-10 top-2 start-2 bg-custom-color1/80 text-slate-50 rounded-xl text-xs px-2 py-1">{occasionLabelTitle}</p>
                 }
                 {item?.isFeatured &&
-                    <p class="absolute z-10 top-1 end-2 bg-custom-color1 text-slate-950 rounded-bl-xl text-sm px-2 pt-.5 pb-1 -rotate-90">{featuredLabel}</p>
+                    <p class="absolute z-10 top-1 end-2 bg-custom-color1 text-slate-950 rounded-bl-xl text-sm px-2 pt-.5 pb-1 -rotate-90">{featuredLabelTitle}</p>
                 }
             </div>
             <div class="bg-white">

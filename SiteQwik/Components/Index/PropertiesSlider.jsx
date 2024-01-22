@@ -16,9 +16,9 @@ import {
 
 const PropertiesSlider = component$(({
     currentLocale,
-    featuredLabel,
+    featuredLabelTitle,
     localesEnum,
-    occasionLabel,
+    occasionLabelTitle,
     properties,
     propertyImages,
     sliderName,
@@ -26,7 +26,7 @@ const PropertiesSlider = component$(({
     occasionTitle,
     translations,
 }) => {
-console.log('qqqqqqqqqqqqqqqqq', occasionLabel);
+
     return <>
         <section class="max-w-7xl mx-auto px-5">
             <SectionTitle
@@ -71,9 +71,9 @@ console.log('qqqqqqqqqqqqqqqqq', occasionLabel);
                         <SwiperSlide key={item?.id}>
                             <PropertyCard
                                     {...propertyImages}
-                                    featuredLabel={featuredLabel}
+                                    featuredLabelTitle={featuredLabelTitle}
                                     item={item}
-                                    occasionLabel={occasionLabel}
+                                    occasionLabelTitle={occasionLabelTitle}
                                     translations={translations}
                                     currentLocale={currentLocale}
                                     localesEnum={localesEnum}
