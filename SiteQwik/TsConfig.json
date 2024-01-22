@@ -29,6 +29,9 @@
 			"Configuration": [
 				"src/Modules/Configuration/Exports"
 			],
+			"Contact": [
+				"src/Components/Contact/Exports"
+			],
 			"Contacts": [
 				"src/Modules/Contacts/Exports"
 			],
