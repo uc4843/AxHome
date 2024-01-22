@@ -86,7 +86,7 @@ const Index = component$(() => {
         propertiesTexts,
         propertyImages,
         rentProperties,
-        saleProperties,
+        occasionProperties,
         services,
         states,
         translations,
@@ -100,13 +100,10 @@ const Index = component$(() => {
         />
         <Services {...services} />
         <PropertiesSlider
-            featuredLabel={propertiesTexts?.featuredLabelTitle}
-            occasionLabel={propertiesTexts?.occasionLabelTitle}
-            properties={saleProperties}
+            {...propertiesTexts}
+            properties={occasionProperties}
             propertyImages={propertyImages}
             sliderName={'occasionSwiper'}
-            subtitle={propertiesTexts?.saleSubtitle}
-            title={propertiesTexts?.saleTitle}
             translations={translations}
             currentLocale={currentLocale}
             localesEnum={localesEnum}

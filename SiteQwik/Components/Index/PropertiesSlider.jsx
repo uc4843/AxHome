@@ -26,7 +26,7 @@ const PropertiesSlider = component$(({
     occasionTitle,
     translations,
 }) => {
-
+console.log('qqqqqqqqqqqqqqqqq', occasionLabel);
     return <>
         <section class="max-w-7xl mx-auto px-5">
             <SectionTitle
