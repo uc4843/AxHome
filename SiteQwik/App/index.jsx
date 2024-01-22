@@ -22,6 +22,7 @@ import {
     Hero,
     LatestPosts,
     OurTeam,
+    PropertiesSlider,
     Services,
     States,
 } from 'Index'
@@ -82,6 +83,8 @@ const Index = component$(() => {
         localePathPrefix,
         localesEnum,
         ourTeam,
+        propertiesTexts,
+        propertyImages,
         rentProperties,
         saleProperties,
         services,
@@ -96,6 +99,18 @@ const Index = component$(() => {
             {...homeFilter}
         />
         <Services {...services} />
+        <PropertiesSlider
+            featuredLabel={propertiesTexts?.featuredLabelTitle}
+            occasionLabel={propertiesTexts?.occasionLabelTitle}
+            properties={saleProperties}
+            propertyImages={propertyImages}
+            sliderName={'occasionSwiper'}
+            subtitle={propertiesTexts?.saleSubtitle}
+            title={propertiesTexts?.saleTitle}
+            translations={translations}
+            currentLocale={currentLocale}
+            localesEnum={localesEnum}
+        />
         <Counter {...counter} />
         <Ad {...indexAd} />
         <OurTeam {...ourTeam} />

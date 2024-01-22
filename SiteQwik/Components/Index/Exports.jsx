@@ -4,6 +4,7 @@ import Filter from './Filter'
 import Hero from './Hero'
 import LatestPosts from './LatestPosts'
 import OurTeam from './OurTeam'
+import PropertiesSlider from './PropertiesSlider'
 import QuickAccess from './QuickAccess'
 import Services from './Services'
 import States from './States'
@@ -14,6 +15,7 @@ export { Filter }
 export { Hero }
 export { LatestPosts }
 export { OurTeam }
+export { PropertiesSlider }
 export { QuickAccess }
 export { Services }
 export { States }

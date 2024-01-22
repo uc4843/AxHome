@@ -19,7 +19,7 @@ const States = component$(({
 }) => {
 
     return <>
-        <section class="bg-custom-color21 py-12">
+        <section class="bg-custom-color3 py-12">
             <div class="max-w-7xl mx-auto px-5">
                 <SectionTitle
                     description={description}

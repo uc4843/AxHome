@@ -25,7 +25,7 @@ const LatestPosts = component$(({
 }) => {
 
     return <>
-        <section class="w-full px-5 mb-10">
+        <section class="w-full px-5 mt-12 mb-10">
             <SectionTitle
                 description={description}
                 title={title}
