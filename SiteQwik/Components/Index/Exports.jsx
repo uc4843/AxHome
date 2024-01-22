@@ -2,6 +2,7 @@ import Ad from './Ad'
 import Counter from './Counter'
 import Filter from './Filter'
 import Hero from './Hero'
+import LatestPosts from './LatestPosts'
 import OurTeam from './OurTeam'
 import QuickAccess from './QuickAccess'
 import Services from './Services'
@@ -11,6 +12,7 @@ export { Ad }
 export { Counter }
 export { Filter }
 export { Hero }
+export { LatestPosts }
 export { OurTeam }
 export { QuickAccess }
 export { Services }

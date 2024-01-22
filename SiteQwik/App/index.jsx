@@ -20,6 +20,7 @@ import {
     Counter,
     Filter,
     Hero,
+    LatestPosts,
     OurTeam,
     Services,
     States,
@@ -38,7 +39,7 @@ const getData = routeLoader$(async props => {
         allDealTypes,
         allPropertyTypes,
     ] = await useAsync([
-        getLatestPosts(6),
+        getLatestPosts(10),
         getPage('home', props),
         getLatestDealType('sale'),
         getLatestDealType('rent'),
@@ -71,6 +72,7 @@ const Index = component$(() => {
         allCityDivision,
         allDealTypes,
         allPropertyTypes,
+        blogTexts,
         counter,
         currentLocale,
         hero,
@@ -98,6 +100,11 @@ const Index = component$(() => {
         <Ad {...indexAd} />
         <OurTeam {...ourTeam} />
         <States {...states} />
+        <LatestPosts
+            {...blogTexts}
+            latestPosts={latestPosts}
+            localePathPrefix={data.localePathPrefix}
+        />
     </main>
 })
 
