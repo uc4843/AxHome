@@ -1,5 +1,6 @@
 import AddComment from './AddComment'
 import Backdrop from './Backdrop'
+import BlogCategories from './BlogCategories'
 import Breadcrumb from './Breadcrumb'
 import CommentsList from './CommentsList'
 import Message from './Message'
@@ -10,6 +11,7 @@ import SectionTitle from './SectionTitle'
 
 export { AddComment }
 export { Backdrop }
+export { BlogCategories }
 export { Breadcrumb }
 export { CommentsList }
 export { Message }
