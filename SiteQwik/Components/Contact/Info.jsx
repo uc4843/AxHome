@@ -8,74 +8,45 @@ import {
 
 const Info = ({
     address,
+    description,
     email,
-    fax,
-    firstPhoneNumber,
-    mobile,
-    secondPhoneNumber,
+    phone,
     title,
 }) => {
 
     return <>
-        <div class="w-full md:w-1/2 font-bold">
+        <div class="w-full md:w-1/2">
 
-            <p class="py-4 mb-4">{title}</p>
+            <p class="py-4 text-lg text-bold inline-block border-b-2 border-custom-color1">{title}</p>
+            <p class="text-lg my-2">{description}</p>
 
             <div class="flex flex-col gap-4 p-6">
 
-                <div class="flex gap-4 items-start">
-                    <Location class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
-                        {address}
-                    </p>
-                </div>
-
                 <a
-                    href={`tel:${firstPhoneNumber}`}
-                    class="flex gap-4 items-start"
+                    href={`tel:${phone}`}
+                    class="flex gap-4 items-start text-custom-color4 hover:text-custom-color transition-all1"
                 >
                     <Phone class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
-                        {firstPhoneNumber}
-                    </p>
-                </a>
-
-                <a
-                    href={`tel:${secondPhoneNumber}`}
-                    class="flex gap-4 items-start">
-                    <Phone class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
-                        {secondPhoneNumber}
-                    </p>
-                </a>
-
-                <a
-                    href={`tel:${mobile}`}
-                    class="flex gap-4 items-start">
-                    <Mobile class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
-                        {mobile}
-                    </p>
-                </a>
-
-                <a
-                    href={`tel:${mobile}`}
-                    class="flex gap-4 items-start"
-                >
-                    <Fax class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
-                        {fax}
+                    <p class="w-[calc(100%-20px)] leading-8">
+                        {phone}
                     </p>
                 </a>
 
                 <a
                     href={`mailto:${email}`}
-                    class="flex gap-4 items-start">
+                    class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all">
                     <Envelope class="w-7 aspect-square fill-custom-color1" />
-                    <p class="w-[calc(100%-20px)] leading-8 text-sm">
+                    <p class="w-[calc(100%-20px)] leading-8">
                         {email}
                     </p>
                 </a>
+
+                <div class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all">
+                    <Location class="w-7 aspect-square fill-custom-color1" />
+                    <p class="w-[calc(100%-20px)] leading-8">
+                        {address}
+                    </p>
+                </div>
 
             </div>
 

@@ -44,16 +44,23 @@ const Contact = component$(() => {
 
     return <>
         <Breadcrumb items={breadcrumb} />
-        <section class="flex flex-col md:flex-row gap-14 w-full max-w-7xl mx-auto px-5 my-10 md:my-20">
-            <div class="w-full md:w-1/2 flex flex-col-reverse md:flex-row gap-6 lg:gap-20">
-                <Form
-                    form={form}
-                    fields={fields}
-                />
+        <section>
+            <h1 class="mt-4 mb-10 text-3xl mx-auto text-center font-bold relative px-5 after:w-10 after:absolute after:content-[''] after:-bottom-5 after:end-1/2 after:translate-x-[-50%] after:w-10 after:bg-custom-color1 after:h-1.5">
+                {page?.title}
+            </h1>
+            <div class="bg-custom-color3 py-10 px-4">
+                <div class="flex flex-col md:flex-row gap-14 w-full max-w-7xl mx-auto bg-white px-8 py-8 rounded-lg">
+                    <div class="w-full md:w-1/2 flex flex-col-reverse md:flex-row gap-6 lg:gap-20">
+                        <Form
+                            form={form}
+                            fields={fields}
+                        />
+                    </div>
+                    <Info
+                        {...contactInfo}
+                    />
+                </div>
             </div>
-            <Info
-                {...contactInfo}
-            />
         </section>
         <section>
             <Map
