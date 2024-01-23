@@ -5,6 +5,7 @@ import Close from './Close'
 import Envelope from './Envelope'
 import Eye from './Eye'
 import Fax from './Fax'
+import Folder from './Folder'
 import KeyboardArrowDown from './KeyboardArrowDown'
 import Loading from './Loading'
 import Location from './Location'
@@ -21,6 +22,7 @@ export { Close }
 export { Envelope }
 export { Eye }
 export { Fax }
+export { Folder }
 export { KeyboardArrowDown }
 export { Loading }
 export { Location }

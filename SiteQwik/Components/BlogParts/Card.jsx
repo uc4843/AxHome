@@ -8,9 +8,8 @@ import {
     usePostUrl,
 } from 'Blog'
 import {
-    ArrowLeft,
     Calendar,
-    Text,
+    Folder,
 } from 'Svg'
 
 const Card = component$(({
@@ -24,7 +23,7 @@ const Card = component$(({
         {
             items?.map(item => <div
                 key={item?.id}
-                class="w-full max-w-[400px] sm:max-w-full sm:w-[calc(50%-10px)] md:w-full flex flex-col md:grid md:grid-rows-1 md:grid-cols-3 mx-auto bg-white"
+                class="w-full max-w-[400px] sm:max-w-full sm:w-[calc(50%-10px)] md:w-full flex flex-col md:grid md:grid-rows-1 md:grid-cols-3 mx-auto bg-white rounded-xl overflow-hidden"
             >
                 <div class="self-stretch md:col-span-1 flex items-center">
                     <a
@@ -59,7 +58,7 @@ const Card = component$(({
                                 href={useCategoryUrl(item?.relatedItems?.hierarchies[0]?.slug, localePathPrefix)}
                                 class="flex gap-1 items-center"
                             >
-                                <Text class="w-6 aspect-square" />
+                                <Folder class="w-6 aspect-square" />
                                 <span class="max-w-[calc(100%-20px)] line-clamp-1">
                                     {item?.relatedItems?.hierarchies[0]?.title}
                                 </span>
