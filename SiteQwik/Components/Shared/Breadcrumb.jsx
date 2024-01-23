@@ -3,12 +3,12 @@ import { DefaultBreadcrumb } from 'Base'
 const Breadcrumb = ({ breadcrumb }) => {
 
     return <>
-        <section class="max-w-7xl mx-auto py-3">
+        <section class="w-full max-w-7xl mx-auto px-4 2xl:px-0">
             <DefaultBreadcrumb
-                wrapperClass="max-w-7xl mx-auto px-5 flex items-center gap-1 overflow-x-auto text-xs md:text-sm text-custom-color4"
-                itemClass="min-w-fit whitespace-nowrap flex hover:text-custom-color1 transition-all"
-                lastItemClass="min-w-fit whitespace-nowrap text-custom-color1"
-                separator={'/'}
+                wrapperClass="flex max-w-7xl mx-auto py-4 items-center gap-1 overflow-x-auto text-sm text-custom-color41"
+                itemClass="min-w-fit whitespace-nowrap flex py-2 hover:text-custom-color1 transition-all"
+                lastItemClass="min-w-fit whitespace-nowrap cursor-auto"
+                separator={'>'}
                 breadcrumb={breadcrumb}
             />
         </section>

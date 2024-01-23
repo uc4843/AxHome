@@ -11,7 +11,6 @@ const PropertyCard = ({
     age,
     area,
     currentLocale,
-    featuredLabelTitle,
     item,
     localesEnum,
     location,
@@ -22,38 +21,40 @@ const PropertyCard = ({
 }) => {
 
     return <>
-        <div class="rounded-2xl overflow-hidden shadow-md group transition-all duration-300 ma-w-[400px]">
-            <div class="relative">
+        <div class="rounded-lg overflow-hidden block shadow-md shadow-gray-200 bg-white border border-custom-color3 group transition-all duration-300 ma-w-[400px]">
+            <div class="relative w-full aspect-[6/4] z-10">
                 <a
                     href={usePropertyUrl(item?.slug)}>
                     <Image
                         src={item?.relatedItems?.imageUrl}
                         alt={item?.title}
-                        containerClass="relative max-w-[350px] w-full aspect-[350/220]"
+                        containerClass="relative w-full aspect-[6/4] z-10"
                     />
                 </a>
                 <a
                     href={useListingUrl({ dealType: item?.dealTypeSlug })}
-                    class="absolute z-10 bottom-2 start-2 bg-custom-color21/30 text-slate-50 rounded-xl text-xs px-2 pt-.5 pb-1">
+                    class="absolute start-4 top-4 bg-custom-color1 bg-opacity-70 p-1.5 text-white text-xs text-bold rounded-sm z-20">
                     {item?.dealTypeName}
                 </a>
-                {item?.isOccasion &&
-                    <p class="absolute z-10 top-2 start-2 bg-custom-color1/80 text-slate-50 rounded-xl text-xs px-2 py-1">{occasionLabelTitle}</p>
-                }
-                {item?.isFeatured &&
-                    <p class="absolute z-10 top-1 end-2 bg-custom-color1 text-slate-950 rounded-bl-xl text-sm px-2 pt-.5 pb-1 -rotate-90">{featuredLabelTitle}</p>
-                }
+
+                <p class="absolute end-4 top-4 bg-custom-color3 bg-opacity-70 p-1.5 text-black text-xs text-bold rounded-sm z-20">{item?.propertyTypeName}</p>
+
             </div>
-            <div class="bg-white">
-                <div class="px-4 py-3">
+            <div class="p-2 px-2 pb-0 w-full">
+                <div>
                     <a
                         href={usePropertyUrl(item?.slug)}
-                        class="mt-3 mb-4 font-bold line-clamp-1 text-sm md:text-base"
+                        class="w-full flex items-center justify-between"
                     >
-                        {item?.title}
+                        <h3 class='font-bold line-clamp-1 text-custom-color4 text-start text-lg px-0.5 group-hover:text-custom-color1 transition-all'>
+                            {item?.title}
+                        </h3>
+                        {item?.isOccasion &&
+                            <p class="bg-red-50 -rotate-90 px-2 text-custom-color1 mt-2">{occasionLabelTitle}</p>
+                        }
                     </a>
-                    <div class="grid grid-cols-2 gap-2 text-sm">
-                        <div class="flex flex-col gap-4">
+                    <div class="flex flex-col xs:flex-row gap-y-4 justify-between items-start my-6">
+                        <div class="grid grid-cols-1 gap-y-2 text-sm md:text-md justify-items-start">
                             <div class="flex gap-2">
                                 <Image
                                     src={type}
@@ -94,10 +95,10 @@ const PropertyCard = ({
                                 <span>{translations?.age}</span>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-5">
+                        <div class="flex flex-col gap-2 text-sm md:text-md">
                             <a
                                 href={useListingUrl({ cityDivision: item?.cityDivisionSlug })}
-                                class="flex items-center gap-1.5">
+                                class="flex items-center gap-1">
                                 <Image
                                     src={location}
                                     containerClass="w-4 aspect-square"
@@ -108,7 +109,7 @@ const PropertyCard = ({
                                     {item?.cityDivisionName}
                                 </span>
                             </a>
-                            <div class="w-full flex items-center justify-between gap-.5 px-1.5 py-1.5 border rounded">
+                            <div class="w-full flex items-center justify-between gap-.5 border rounded text-slate-600 border-slate-300 text-xs p-2">
                                 {
                                     item?.dealTypeKey === 'rent'
                                         ?
@@ -121,7 +122,7 @@ const PropertyCard = ({
                                 </span>
                             </div>
 
-                            <div class="w-full flex items-center justify-between gap-.5 bg-custom-color1 px-1.5 py-1.5 rounded">
+                            <div class="w-full flex items-center justify-between gap-.5 bg-custom-color1 p-2 rounded text-white text-xs">
                                 {
                                     item?.dealTypeKey === 'rent'
                                         ?
@@ -136,16 +137,16 @@ const PropertyCard = ({
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between items-center gap-2 border-t mt-3 px-4 py-3">
+                <div class="flex justify-between items-center gap-2 border-t border-slate-300 py-3">
                     {
                         item?.relatedItems?.agent ?
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1">
                                 <Image
                                     src={item?.relatedItems?.agent?.relatedItems?.imageUrl}
                                     alt={item?.displayName}
                                     containerClass={`w-9 aspect-square rounded-full overflow-hidden ${item?.relatedItems?.agent ? '' : 'invisible'}`}
                                 />
-                                <p class="line-clamp-1 w-32">
+                                <p class="text-sm text-custom-color41">
                                     {item?.relatedItems?.agent?.displayName}
                                 </p>
                             </div>
@@ -153,7 +154,7 @@ const PropertyCard = ({
                             <div class="w-9 aspect-square"></div>
                     }
 
-                    <div class="text-sm text-gray-600">
+                    <div class="text-sm text-custom-color4">
                         <TimeAgo
                             utcDate={item?.modificationUtcDate}
                             localKey={currentLocale?.key}
