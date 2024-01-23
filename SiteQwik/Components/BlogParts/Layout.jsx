@@ -22,11 +22,11 @@ const Layout = component$(({
 
         <Breadcrumb breadcrumb={breadcrumb} />
 
-        {/* <section>
+        <section>
             <h1 class="mt-4 mb-10 text-3xl mx-auto text-center font-bold relative px-5 after:w-10 after:absolute after:content-[''] after:-bottom-5 after:end-1/2 after:translate-x-[-50%] after:w-10 after:bg-custom-color1 after:h-1.5">
                 {seo?.PageTitle}
             </h1>
-        </section> */}
+        </section>
         <section class="bg-custom-color3 pt-10 relative mx-auto px-5 flex flex-col xl:flex-row gap-16">
 
             <article class="w-full xl:w-[calc(100%-350px)] mb-20">
