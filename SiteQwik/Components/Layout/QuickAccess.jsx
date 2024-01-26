@@ -6,7 +6,10 @@ const QuickAccess = ({
 }) => {
 
     return <div class="text-white w-full md:w-[20%]">
-        <FooterTitle title={title} />
+        <FooterTitle
+            title={title}
+            isSmall
+        />
         <div class="grid grid-cols-2 gap-2 items-start text-sm lg:text-md">
             {
                 items?.map(item => <>

@@ -1,0 +1,36 @@
+import {
+    CityDivisions,
+    LatestPosts,
+} from 'PropertiesParts'
+
+const Side = ({
+    allCityDivisions,
+    blogTexts,
+    latestPosts,
+    localePathPrefix,
+    propertiesTexts,
+    rootCityDivisions,
+}) => {
+
+    return <>
+        <div class='h-full w-full'>
+            <div class='sticky top-10 start-0 shadow-lg shadow-gray-200 rounded-lg px-4 pb-10 border-t-8 border-custom-color1 bg-white'>
+
+                <CityDivisions
+                    allCityDivisions={allCityDivisions}
+                    cityDivisionsTitle={propertiesTexts?.cityDivisionsTitle}
+                    rootCityDivisions={rootCityDivisions}
+                />
+                <LatestPosts
+                    latestPosts={latestPosts}
+                    localePathPrefix={localePathPrefix}
+                    seeMore={blogTexts?.seeMore}
+                    title={blogTexts?.latestPostsTitle}
+                />
+
+            </div>
+        </div>
+    </>
+}
+
+export default Side

@@ -18,12 +18,12 @@ const PropertiesSlider = component$(({
     currentLocale,
     featuredLabelTitle,
     localesEnum,
+    occasionDescription,
     occasionLabelTitle,
+    occasionTitle,
     properties,
     propertyImages,
     sliderName,
-    occasionDescription,
-    occasionTitle,
     translations,
 }) => {
 

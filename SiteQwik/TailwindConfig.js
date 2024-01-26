@@ -11,6 +11,7 @@ const config = {
                     color1: '#D7181E',
                     color2: '#ef7f80',
                     color3: '#EEEEEE', // header -- all gray color
+                    color31: '#ffffff',
                     color4: '#57585A', // search - footer
                     color41: '#000',
                     border: '#707070',

@@ -78,6 +78,7 @@ const Index = component$(() => {
         currentLocale,
         hero,
         homeFilter,
+        filter,
         indexAd,
         latestPosts,
         localePathPrefix,

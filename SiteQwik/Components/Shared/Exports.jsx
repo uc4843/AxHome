@@ -5,6 +5,7 @@ import Breadcrumb from './Breadcrumb'
 import CommentsList from './CommentsList'
 import Message from './Message'
 import Pagination from './Pagination'
+import PostCard from './PostCard'
 import PropertyCard from './PropertyCard'
 import RichText from './RichText'
 import SectionTitle from './SectionTitle'
@@ -16,6 +17,7 @@ export { Breadcrumb }
 export { CommentsList }
 export { Message }
 export { Pagination }
+export { PostCard }
 export { PropertyCard }
 export { RichText }
 export { SectionTitle }
