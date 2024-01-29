@@ -4,27 +4,26 @@ import { PostCard } from 'Shared'
 const LatestPosts = component$(({
     latestPosts,
     localePathPrefix,
-    seeMore,
+    title,
 }) => {
 
     const lastThreePosts = latestPosts.slice(0, 3)
 
     return <>
         <div class="mb-2 mt-8 p-4">
-            <h2 class="text-xl">
-                5555
-            </h2>
-            <div class="text-center">
-                {lastThreePosts?.map(item => <>
+            <p class='text-xl my-4'>
+                {title}555
+            </p>
+            {lastThreePosts?.map(item => <>
+                <div class="text-center mt-8">
                     <PostCard
                         key={item?.id}
                         item={item}
-                        seeMore={seeMore}
                         localePathPrefix={localePathPrefix}
                     />
-                </>)
-                }
-            </div>
+                </div>
+            </>)
+            }
         </div>
     </>
 })

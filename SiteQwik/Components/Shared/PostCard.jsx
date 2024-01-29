@@ -4,11 +4,12 @@ import { usePostUrl } from 'Blog'
 const PostCard = ({
     item,
     localePathPrefix,
+    readMore,
 }) => {
 
     return <>
 
-        <div class="max-w-md overflow-hidden block mt-8 mx-auto rounded-lg">
+        <div class="max-w-md overflow-hidden block mx-auto rounded-lg">
             <div class="w-full group">
                 <a
                     href={usePostUrl(item?.slug, localePathPrefix)}
@@ -24,11 +25,12 @@ const PostCard = ({
                 <h2 class="w-full border-b p-2 px-4">
                     <a
                         href={usePostUrl(item?.slug, localePathPrefix)}
-                        class="font-bold line-clamp-1 text-lg my-3 text-center group-hover:text-custom-color1"
+                        class="font-bold line-clamp-1 text-sm md:text-lg my-3 text-center group-hover:text-custom-color1"
                     >
                         {item?.title}
                     </a>
                 </h2>
+                <p class='text-md text-center text-custom-color4 group-hover:text-custom-color41 py-4'>{readMore}555</p>
             </div>
         </div>
 

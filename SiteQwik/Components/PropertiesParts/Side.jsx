@@ -14,7 +14,7 @@ const Side = ({
 
     return <>
         <div class='h-full w-full'>
-            <div class='sticky top-10 start-0 shadow-lg shadow-gray-200 rounded-lg px-4 pb-10 border-t-8 border-custom-color1 bg-white'>
+            <div class='sticky top-10 start-0 shadow-lg shadow-gray-200 rounded-lg px-4 pb-10 mb-8 border-t-8 border-custom-color1 bg-white'>
 
                 <CityDivisions
                     allCityDivisions={allCityDivisions}
@@ -23,9 +23,8 @@ const Side = ({
                 />
                 <LatestPosts
                     latestPosts={latestPosts}
+                    title={blogTexts?.sideLatestPostsTitle}
                     localePathPrefix={localePathPrefix}
-                    seeMore={blogTexts?.seeMore}
-                    title={blogTexts?.latestPostsTitle}
                 />
 
             </div>

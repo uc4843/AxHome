@@ -6,7 +6,6 @@ const Main = component$(({
     featuredLabelTitle,
     items,
     localesEnum,
-    metadata,
     occasionLabelTitle,
     propertyImages,
     translations,
