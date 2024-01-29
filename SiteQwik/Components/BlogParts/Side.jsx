@@ -1,9 +1,3 @@
-import { PostCard } from 'Shared'
-import {
-    Swiper,
-    SwiperSlide,
-    zero,
-} from 'Base'
 import {
     Categories,
     LatestPosts,

@@ -8,7 +8,6 @@ const PostCard = ({
 }) => {
 
     return <>
-
         <div class="max-w-md overflow-hidden block mx-auto rounded-lg">
             <div class="w-full group">
                 <a

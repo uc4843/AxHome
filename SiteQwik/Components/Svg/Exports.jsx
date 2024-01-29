@@ -2,6 +2,7 @@ import AddBox from './AddBox'
 import Bars from './Bars'
 import Calendar from './Calendar'
 import Category from './Category'
+import ChevronLeft from './ChevronLeft'
 import Close from './Close'
 import Envelope from './Envelope'
 import Eye from './Eye'
@@ -23,6 +24,7 @@ export { AddBox }
 export { Bars }
 export { Calendar }
 export { Category }
+export { ChevronLeft }
 export { Close }
 export { Envelope }
 export { Eye }

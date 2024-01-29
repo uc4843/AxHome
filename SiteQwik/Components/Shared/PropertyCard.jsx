@@ -1,5 +1,6 @@
 import {
     Image,
+    LocalizedDate,
     TimeAgo,
 } from 'Base'
 import {
@@ -160,6 +161,7 @@ const PropertyCard = ({
                             localKey={currentLocale?.key}
                             localesEnum={localesEnum}
                         />
+
                     </div>
 
                 </div>

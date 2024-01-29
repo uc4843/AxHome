@@ -23,19 +23,21 @@ const Header = component$(({
     const isOpen = useSignal(false)
 
     return <header class='py:2 md:py-4 bg-custom-color3'>
-        <div class="relative w-full flex items-center justify-between max-w-wide mx-auto px-4 2xl:px-0">
-            <DesktopMainMenu menuItems={menuItems} />
-            <div
-                class="py-2"
-                onClick$={() => isOpen.value = !isOpen.value}
-            >
-                <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-none" />
+        <div class="relative flex items-center justify-between max-w-wide mx-auto px-4 2xl:px-0">
+            <div class='flex w-[calc(50%-64px)]'>
+                <DesktopMainMenu menuItems={menuItems} />
+                <div
+                    class="py-2"
+                    onClick$={() => isOpen.value = !isOpen.value}
+                >
+                    <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-none" />
+                </div>
+                <MobileMainMenu
+                    branding={branding}
+                    isOpen={isOpen}
+                    menuItems={menuItems}
+                />
             </div>
-            <MobileMainMenu
-                branding={branding}
-                isOpen={isOpen}
-                menuItems={menuItems}
-            />
             <a
                 href="/">
                 <Image
@@ -46,7 +48,7 @@ const Header = component$(({
                     priority
                 />
             </a>
-            <div class='w-[calc(50%-64px)] flex items-center justify-end gap-4'>
+            <div class='flex items-center w-[calc(50%-64px)] justify-end gap-2'>
                 <a
                     href={headerCta?.ctaLink}
                     class="flex lg:hidden items-center gap-1 hover:translate-y-0.5 transition-all duration-300 text-slate-400 bg-custom-color3 p-1 rounded-md"

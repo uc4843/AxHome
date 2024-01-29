@@ -7,7 +7,7 @@ const Ad = ({
 }) => {
 
     return <>
-        <section class="max-w-3xl px-5 mx-auto my-5 px-5">
+        <section class="max-w-3xl px-0 mx-auto my-5 md:px-5">
             <a
                 href={link}
                 aria-label={title}

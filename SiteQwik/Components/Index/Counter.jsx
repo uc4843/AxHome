@@ -9,7 +9,7 @@ const Counter = ({
 }) => {
 
     return <>
-        <section class="relative bg-custom-color1 py-12">
+        <section class="relative bg-custom-color1 py-8">
             <Image
                 src={bgImage}
                 alt={title}
@@ -21,7 +21,7 @@ const Counter = ({
                     title={title}
                     class="text-white"
                 />
-                <div class="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-y-8">
+                <div class="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-y-8 px-4 my-6 md:my-16">
                     {
                         items?.map(item => <>
                             <div

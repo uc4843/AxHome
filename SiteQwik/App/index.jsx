@@ -76,18 +76,18 @@ const Index = component$(() => {
         blogTexts,
         counter,
         currentLocale,
+        filter,
         hero,
         homeFilter,
-        filter,
         indexAd,
         latestPosts,
         localePathPrefix,
         localesEnum,
+        occasionProperties,
         ourTeam,
         propertiesTexts,
         propertyImages,
         rentProperties,
-        occasionProperties,
         services,
         states,
         translations,
@@ -101,18 +101,18 @@ const Index = component$(() => {
         />
         <Services {...services} />
         <PropertiesSlider
-            {...propertiesTexts}
             properties={occasionProperties}
             propertyImages={propertyImages}
             sliderName={'occasionSwiper'}
             translations={translations}
             currentLocale={currentLocale}
             localesEnum={localesEnum}
+            propertiesTexts={propertiesTexts}
         />
+        <States {...states} />
         <Counter {...counter} />
         <Ad {...indexAd} />
         <OurTeam {...ourTeam} />
-        <States {...states} />
         <LatestPosts
             {...blogTexts}
             latestPosts={latestPosts}

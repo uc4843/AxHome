@@ -59,7 +59,6 @@ const Layout = component$(({
                     readMore={propertiesTexts?.readMore}
                     title={blogTexts?.categoryTitle}
                 />
-
             </section>
 
         </div>

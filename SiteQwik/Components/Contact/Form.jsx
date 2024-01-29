@@ -38,7 +38,7 @@ const Form = component$(({
             <div>
                 <Text
                     type="text"
-                    class="w-full border bg-custom-color3/30 px-4 py-3 mt-4 text-sm focus:outline-none placeholder-gray-500 text-slate-50 rounded-xl"
+                    class="block w-full border border-gray-300 bg-gray-50 px-4 py-3 mt-4 text-sm focus:outline-blue-700 placeholder-gray-500 text-gray-900 rounded-xl"
                     modelBind={model}
                     placeholder={fullName?.placeholder}
                     property={fullName?.key}
@@ -47,7 +47,7 @@ const Form = component$(({
             <div>
                 <Text
                     type="mail"
-                    class="w-full border bg-custom-color3/30 px-4 py-3 mt-4 text-sm focus:outline-none placeholder-gray-500 text-slate-50 rounded-xl"
+                    class="block w-full border border-gray-300 bg-gray-50 px-4 py-3 mt-4 text-sm focus:outline-blue-700 placeholder-gray-500 text-gray-900 rounded-xl"
                     modelBind={model}
                     placeholder={email?.placeholder}
                     property={email?.key}
@@ -56,7 +56,7 @@ const Form = component$(({
 
             <div>
                 <LongText
-                    class="w-full mt-4 border bg-custom-color3/30 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 text-slate-50 rounded-xl"
+                    class="block w-full mt-4 border border-gray-300 bg-gray-50 px-4 py-3 text-sm focus:outline-blue-700 placeholder-gray-500 text-gray-900 rounded-xl resize-none"
                     modelBind={model}
                     placeholder={message?.placeholder}
                     property={message?.key}
@@ -68,7 +68,7 @@ const Form = component$(({
                 <button
                     id="buttonSubmit"
                     aria-label={form.ctaText}
-                    class={`${progress.value ? "bg-gray-300" : ""} relative z-0 w-36 py-2 inline-block mx-auto text-center text-lg text-slate-50 rounded-xl hover: transition-all`}
+                    class={`${progress.value ? "bg-gray-300" : ""} relative z-0 w-36 py-2 inline-block mx-auto text-center text-lg text-slate-900 border border-gray-300 rounded-xl hover: transition-all`}
                     onClick$={handleSubmit}
                 >
                     <span class="relative z-20">

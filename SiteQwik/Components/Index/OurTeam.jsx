@@ -19,7 +19,7 @@ const OurTeam = component$(({
 }) => {
 
     return <>
-        <section class="max-w-7xl mx-auto px-5 my-12">
+        <section class="relative max-w-3xl mx-auto">
             <SectionTitle
                 description={description}
                 title={title}
@@ -27,9 +27,9 @@ const OurTeam = component$(({
             <Swiper
                 name='teamSlider'
                 containerClass="pb-14"
-                paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color1"
+                paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                 config={{
-                    autoplay: true,
+                    autoplay: false,
                     loop: false,
                     speed: 800,
                     breakpoints: {
@@ -60,27 +60,26 @@ const OurTeam = component$(({
                     }
                 }}
             >
-                {
-                    items?.map(item => <SwiperSlide
-                        key={item?.id}>
-                        <a
-                            class="block shadow-xl rounded-2xl p-4 text-center hover:text-custom-color1 transition-all"
-                            href={item?.link}
-                        >
-                            <Image
-                                src={item?.image}
-                                containerClass="w-full aspect-square"
-                            />
-
-                            <p class="my-1 font-bold text-lg line-clamp-1">
+                {items?.map(item => <SwiperSlide
+                    key={item?.id}>
+                    <a
+                        class="block shadow-xl rounded-2xl my-5 md:my-10 text-center"
+                        href={item?.link}
+                    >
+                        <Image
+                            src={item?.image}
+                            containerClass="w-full aspect-square"
+                        />
+                        <div class='py-8'>
+                            <p class="py-1 font-bold text-lg line-clamp-1">
                                 {item?.title}
                             </p>
                             <p class="text-slate-500 text-md line-clamp-1">
                                 {item?.jobPosition}
                             </p>
-                        </a>
-                    </SwiperSlide>)}
-
+                        </div>
+                    </a>
+                </SwiperSlide>)}
             </Swiper>
         </section>
     </>

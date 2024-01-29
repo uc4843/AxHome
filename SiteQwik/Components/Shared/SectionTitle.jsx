@@ -1,12 +1,12 @@
 const SectionTitle = ({
-    class: containerClass,
+    class: internalClass,
     description,
     title,
 }) => {
 
-    return <div class={`${containerClass}`}>
-        <h2 class="text-center pt-6 text-3xl font-bold ">{title}</h2>
-        <p class="text-slate-1000 text-center text-lg pt-4 mb-14">{description}</p>
+    return <div class={`${internalClass}`}>
+        <h2 class="text-center pt-2 text-2xl md:text-3xl font-bold">{title}</h2>
+        <p class="text-center text-md md:text-lg py-2">{description}</p>
     </div>
 }
 

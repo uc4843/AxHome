@@ -10,6 +10,7 @@ const LatestPosts = component$(({
     blogTexts,
     latestPosts,
     localePathPrefix,
+    propertiesTexts,
     readMore,
 }) => {
 
@@ -42,7 +43,7 @@ const LatestPosts = component$(({
                                 <PostCard
                                     item={item}
                                     localePathPrefix={localePathPrefix}
-                                    readMore={readMore}
+                                    propertiesTexts={propertiesTexts?.readMore}
                                 />
                             </div>
                         </SwiperSlide>

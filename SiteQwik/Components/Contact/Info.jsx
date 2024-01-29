@@ -20,7 +20,7 @@ const Info = ({
             <p class="py-4 text-lg text-bold inline-block border-b-2 border-custom-color1">{title}</p>
             <p class="text-lg my-2">{description}</p>
 
-            <div class="flex flex-col gap-4 p-6">
+            <div class="flex flex-col gap-4 py-6">
 
                 <a
                     href={`tel:${phone}`}
