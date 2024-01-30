@@ -12,7 +12,7 @@ const Contact = ({
         <div class="w-full md:w-[30%]">
             <FooterTitle title={title} />
 
-            <div class="flex flex-col gap-1 items-start ">
+            <div class="flex flex-col gap-1 items-start">
                 <a
                     class="block hover:text-custom-color1 transition-all duration-300"
                     href={`tel:${phone}`}

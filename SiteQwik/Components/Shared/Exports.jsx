@@ -1,4 +1,5 @@
 import AddComment from './AddComment'
+import AdvancedSearch from './AdvancedSearch'
 import Backdrop from './Backdrop'
 import BlogCategories from './BlogCategories'
 import Breadcrumb from './Breadcrumb'
@@ -8,9 +9,12 @@ import Pagination from './Pagination'
 import PostCard from './PostCard'
 import PropertyCard from './PropertyCard'
 import RichText from './RichText'
+import Search from './Search'
 import SectionTitle from './SectionTitle'
+import Select from './Select'
 
 export { AddComment }
+export { AdvancedSearch }
 export { Backdrop }
 export { BlogCategories }
 export { Breadcrumb }
@@ -20,4 +24,6 @@ export { Pagination }
 export { PostCard }
 export { PropertyCard }
 export { RichText }
+export { Search }
 export { SectionTitle }
+export { Select }

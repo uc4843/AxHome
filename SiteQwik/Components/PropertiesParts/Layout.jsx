@@ -1,6 +1,7 @@
 import {
     Breadcrumb,
     Pagination,
+    Search,
 } from 'Shared'
 import {
     Main,
@@ -10,12 +11,16 @@ import {
 
 const Layout = ({
     agent,
+    allCityDivision,
+    allDealTypes,
+    allPropertyTypes,
     averagePrices,
     blogTexts,
     breadcrumb,
     cityDivisionWrapper,
     currentLocale,
     faqPages,
+    filter,
     latestPosts,
     localePathPrefix,
     localesEnum,
@@ -30,6 +35,7 @@ const Layout = ({
     return <>
         <div class='bg-custom-color3'>
             <Breadcrumb breadcrumb={breadcrumb} />
+
         </div>
 
         <section class='max-w-7xl mx-auto px-4'>

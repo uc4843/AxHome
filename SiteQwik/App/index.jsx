@@ -96,8 +96,11 @@ const Index = component$(() => {
     return <main>
         <Hero {...hero} />
         <Filter
-            class="bg-custom-color4"
             {...homeFilter}
+            filter={filter}
+            allCityDivision={allCityDivision}
+            allDealTypes={allDealTypes}
+            allPropertyTypes={allPropertyTypes}
         />
         <Services {...services} />
         <PropertiesSlider

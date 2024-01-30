@@ -10,7 +10,7 @@ const QuickAccess = ({
             title={title}
             isSmall
         />
-        <div class="grid grid-cols-2 gap-2 items-start text-sm lg:text-md">
+        <div class="flex flex-col gap-1 items-start text-sm lg:text-md">
             {
                 items?.map(item => <>
                     <a
