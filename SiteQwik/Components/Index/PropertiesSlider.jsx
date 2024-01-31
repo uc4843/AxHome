@@ -18,6 +18,7 @@ import { ChevronLeft } from 'Svg'
 const PropertiesSlider = component$(({
     currentLocale,
     featuredLabelTitle,
+    localePathPrefix,
     localesEnum,
     occasionDescription,
     occasionLabelTitle,
@@ -77,6 +78,7 @@ const PropertiesSlider = component$(({
                                     currentLocale={currentLocale}
                                     featuredLabelTitle={featuredLabelTitle}
                                     item={item}
+                                    localePathPrefix={localePathPrefix}
                                     localesEnum={localesEnum}
                                     occasionLabelTitle={occasionLabelTitle}
                                     translations={translations}

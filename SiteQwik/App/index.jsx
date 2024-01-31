@@ -104,13 +104,14 @@ const Index = component$(() => {
         />
         <Services {...services} />
         <PropertiesSlider
+            currentLocale={currentLocale}
+            localePathPrefix={localePathPrefix}
+            localesEnum={localesEnum}
             properties={occasionProperties}
+            propertiesTexts={propertiesTexts}
             propertyImages={propertyImages}
             sliderName={'occasionSwiper'}
             translations={translations}
-            currentLocale={currentLocale}
-            localesEnum={localesEnum}
-            propertiesTexts={propertiesTexts}
         />
         <States {...states} />
         <Counter {...counter} />

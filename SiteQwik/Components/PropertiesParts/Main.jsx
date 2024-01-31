@@ -5,6 +5,7 @@ const Main = component$(({
     currentLocale,
     featuredLabelTitle,
     items,
+    localePathPrefix,
     localesEnum,
     occasionLabelTitle,
     propertyImages,
@@ -18,12 +19,13 @@ const Main = component$(({
                 items?.map(item => <>
                     <PropertyCard
                         {...propertyImages}
+                        currentLocale={currentLocale}
                         featuredLabelTitle={featuredLabelTitle}
                         item={item}
+                        localePathPrefix={localePathPrefix}
+                        localesEnum={localesEnum}
                         occasionLabelTitle={occasionLabelTitle}
                         translations={translations}
-                        currentLocale={currentLocale}
-                        localesEnum={localesEnum}
                     />
                 </>)
             }

@@ -23,6 +23,7 @@ const Layout = ({
     filter,
     latestPosts,
     localePathPrefix,
+    localePathPrefix,
     localesEnum,
     properties,
     propertiesTexts,
@@ -55,6 +56,7 @@ const Layout = ({
                         currentLocale={currentLocale}
                         faqPages={faqPages}
                         items={properties?.data}
+                        localePathPrefix={localePathPrefix}
                         localesEnum={localesEnum}
                         metadata={properties?.metadata}
                         propertiesTexts={propertiesTexts}

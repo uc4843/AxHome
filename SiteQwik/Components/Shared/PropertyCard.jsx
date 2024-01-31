@@ -13,6 +13,7 @@ const PropertyCard = ({
     area,
     currentLocale,
     item,
+    localePathPrefix,
     localesEnum,
     location,
     occasionLabelTitle,
@@ -25,7 +26,7 @@ const PropertyCard = ({
         <div class="rounded-lg overflow-hidden block shadow-md shadow-gray-200 bg-white border border-custom-color3 group transition-all duration-300 ma-w-[400px]">
             <div class="relative w-full aspect-[6/4] z-10">
                 <a
-                    href={usePropertyUrl(item?.slug)}>
+                    href={usePropertyUrl(item?.slug, localePathPrefix)}>
                     <Image
                         src={item?.relatedItems?.imageUrl}
                         alt={item?.title}
@@ -44,7 +45,7 @@ const PropertyCard = ({
             <div class="p-2 px-2 pb-0 w-full">
                 <div>
                     <a
-                        href={usePropertyUrl(item?.slug)}
+                        href={usePropertyUrl(item?.slug, localePathPrefix)}
                         class="w-full flex items-center justify-between"
                     >
                         <h3 class='font-bold line-clamp-1 text-custom-color4 text-start text-lg px-0.5 group-hover:text-custom-color1 transition-all'>
