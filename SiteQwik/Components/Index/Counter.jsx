@@ -28,8 +28,12 @@ const Counter = ({
                                 key={item?.id}
                                 class="flex flex-col gap-6 items-center w-1/2 md:w-auto"
                             >
-                                <p class="rounded-full w-28 h-28 bg-white border-[10px] border-custom-color3 flex items-center justify-center text-3xl">{item?.number}</p>
-                                <p class="font-bold text-white text-lg">{item?.title}</p>
+                                <p class="rounded-full w-28 h-28 bg-white border-[10px] border-custom-color3 flex items-center justify-center text-3xl">
+                                    {item?.number}
+                                </p>
+                                <p class="font-bold text-white text-lg">
+                                    {item?.title}
+                                </p>
                             </div>
                         </>)
                     }

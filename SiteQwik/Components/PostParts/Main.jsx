@@ -1,7 +1,6 @@
 import { Image } from 'Base'
 import {
     AddComment,
-    CommentsList,
     RichText,
 } from 'Shared'
 import { FaqPages } from 'Seo'
@@ -12,8 +11,6 @@ import {
 
 const Main = ({
     blogTexts,
-    comments,
-    commentsTexts,
     content,
     faqPages,
     fields,

@@ -91,6 +91,7 @@ const Index = component$(() => {
         services,
         states,
         translations,
+        property,
     } = data
 
     return <main>
@@ -112,6 +113,7 @@ const Index = component$(() => {
             propertyImages={propertyImages}
             sliderName={'occasionSwiper'}
             translations={translations}
+            property={property}
         />
         <States {...states} />
         <Counter {...counter} />

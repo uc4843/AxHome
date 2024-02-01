@@ -11,11 +11,11 @@ const LatestPosts = component$(({
 
     return <>
         <div class="mb-2 mt-8 p-4">
-            <p class='text-xl my-4'>
-                {title}555
+            <p class='block text-xl text-custom-color41 pt-4 pb-3 border-b border-gray-300'>
+                {title}
             </p>
             {lastThreePosts?.map(item => <>
-                <div class="text-center mt-8">
+                <div class="text-center mt-4">
                     <PostCard
                         key={item?.id}
                         item={item}

@@ -5,6 +5,7 @@ import {
     Copyright,
     FooterLinks,
     QuickAccess,
+    ScrollToTop,
     SocialNetworks,
 } from 'Layout'
 
@@ -35,6 +36,7 @@ const Footer = ({
                 <FooterLinks {...firstFooterLinks} />
                 <FooterLinks {...secondFooterLinks} />
                 <QuickAccess {...quickAccess} />
+                <ScrollToTop />
             </div>
             <Copyright {...copyright} />
         </footer>

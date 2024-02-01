@@ -26,10 +26,12 @@ const LatestPosts = component$(({
 
     return <>
         <section class="w-full mt-12 mb-10">
-            <SectionTitle
-                description={blogPageDescription}
-                title={title}
-            />
+            <div class='mb-4'>
+                <SectionTitle
+                    description={blogPageDescription}
+                    title={title}
+                />
+            </div>
             <div class='w-full mb-12 ms-5 md:ms-0'>
                 <Swiper
                     name='LatestPostsSlider'
@@ -85,10 +87,14 @@ const LatestPosts = component$(({
                             </a>
 
                             <a href={usePostUrl(item?.slug, localePathPrefix)}>
-                                <p class='font-bold line-clamp-1 my-3 px-3 group-hover:text-custom-color1 transition-all my-4'>{item?.title}</p>
+                                <p class='font-bold line-clamp-1 my-3 px-3 group-hover:text-custom-color1 transition-all my-4'>
+                                    {item?.title}
+                                </p>
                             </a>
 
-                            <p class='text-gray-600 line-clamp-4 h-[86px] px-3 mb-4 text-[15px]'>{item?.summary}</p>
+                            <p class='text-gray-600 line-clamp-4 h-[86px] px-3 mb-4 text-[15px]'>
+                                {item?.summary}
+                            </p>
 
                             {item?.relatedItems?.hierarchies.length > 0 ?
                                 <a
@@ -97,7 +103,9 @@ const LatestPosts = component$(({
                                     aria-label={item?.relatedItems?.hierarchies[0]?.title}
                                 >
                                     <Text class="w-4 aspect-square fill-gray-600" />
-                                    <span class="line-clamp-1">{item?.relatedItems?.hierarchies[0]?.title}</span>
+                                    <span class="line-clamp-1">
+                                        {item?.relatedItems?.hierarchies[0]?.title}
+                                    </span>
                                 </a>
                                 : <div></div>
                             }

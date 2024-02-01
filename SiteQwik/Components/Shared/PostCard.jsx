@@ -4,7 +4,6 @@ import { usePostUrl } from 'Blog'
 const PostCard = ({
     item,
     localePathPrefix,
-    readMore,
 }) => {
 
     return <>
@@ -29,7 +28,6 @@ const PostCard = ({
                         {item?.title}
                     </a>
                 </h2>
-                <p class='text-md text-center text-custom-color4 group-hover:text-custom-color41 py-4'>{readMore}555</p>
             </div>
         </div>
 

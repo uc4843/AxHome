@@ -1,9 +1,8 @@
 import { Window } from 'Svg'
 
 const Results = ({
-    filter,
     metadata,
-    searchTitle,
+    propertiesTexts,
     translations,
 }) => {
     return <>
@@ -11,7 +10,7 @@ const Results = ({
         <div class='w-full flex justify-center md:justify-between items-center my-4 px-4 py-5 border border-slate-300 rounded-2xl'>
             <div class='flex items-center gap-1 font-light text-custom-color41 text-sm'>
                 <Window class='w-7 h-7 fill-custom-color1' />
-                <h2>{searchTitle}</h2>
+                <h2 class='font-bold'>{propertiesTexts?.propertiesList}</h2>
             </div>
             <div class='hidden md:flex gap-1 text-sm font-light items-center'>
                 <span>{translations?.result}:</span>

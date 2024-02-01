@@ -20,7 +20,7 @@ const Contact = ({
                 >
                     {phone}
                 </a>
-                <a href=""
+                <a
                     target="_blank"
                     aria-label={addressTitle}
                     class="text-white hover:text-custom-color1"

@@ -3,13 +3,9 @@ import { useCategoryUrl } from 'Blog'
 const Categories = ({
     categories,
     localePathPrefix,
-    title,
 }) => {
 
     return <>
-        <p class='text-lg'>
-            {title}
-        </p>
         <div class='mt-3'>
             {
                 categories?.map(item => <>

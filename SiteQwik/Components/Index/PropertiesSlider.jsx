@@ -20,11 +20,9 @@ const PropertiesSlider = component$(({
     featuredLabelTitle,
     localePathPrefix,
     localesEnum,
-    occasionDescription,
-    occasionLabelTitle,
-    occasionTitle,
     properties,
     propertiesTexts,
+    property,
     propertyImages,
     sliderName,
     translations,
@@ -80,8 +78,9 @@ const PropertiesSlider = component$(({
                                     item={item}
                                     localePathPrefix={localePathPrefix}
                                     localesEnum={localesEnum}
-                                    occasionLabelTitle={occasionLabelTitle}
+                                    occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
                                     translations={translations}
+                                    property={property}
                                 />
                             </SwiperSlide>
                         </>)
@@ -90,7 +89,7 @@ const PropertiesSlider = component$(({
             </div>
 
             <div class='px-4'>
-                <a class='flex mx-auto justify-center bg-slate-300 w-full md:w-[250px] p-2 gap-5 hover:brightness-75 transition-all duration-300 rounded-md hover:bg-custom-color1 hover:text-white cursor-pointer'>
+                <a class='flex mx-auto justify-center bg-custom-color1 w-full md:w-[250px] p-2 gap-5 hover:brightness-110 transition-all text-white duration-300 rounded-md cursor-pointer'>
                     <ChevronLeft class='w-6 h-6 items-center rounded-full border border-white fill-white' />
                     <p>{propertiesTexts?.readMore}</p>
                 </a>

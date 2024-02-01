@@ -10,13 +10,12 @@ const LatestPosts = component$(({
     blogTexts,
     latestPosts,
     localePathPrefix,
-    propertiesTexts,
     readMore,
 }) => {
 
     return <>
         <div class='mt-8 p-4'>
-            <p class='text-xl'>
+            <p class='block text-xl text-custom-color41 pt-4 mb-4 pb-3 border-b border-gray-300'>
                 {blogTexts?.sideLatestPostsTitle}
             </p>
 
@@ -27,8 +26,8 @@ const LatestPosts = component$(({
                     paginationClass='active-bullet:bg-custom-color41'
                     config={{
                         navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
+                            nextEl: '.button-next',
+                            prevEl: '.button-prev',
                         },
                         breakpoints: {
                             [zero]: {
@@ -43,15 +42,17 @@ const LatestPosts = component$(({
                                 <PostCard
                                     item={item}
                                     localePathPrefix={localePathPrefix}
-                                    propertiesTexts={propertiesTexts?.readMore}
                                 />
+                                <p class='text-md text-center text-custom-color4 group-hover:text-custom-color41 py-4 mb-4'>
+                                    {readMore}
+                                </p>
                             </div>
                         </SwiperSlide>
                     </>)}
                 </Swiper>
 
-                {/* <div class='swiper-button-next'></div>
-                <div class='swiper-button-prev'></div> */}
+                {/* <div class='button-next'></div>
+                <div class='button-prev'></div> */}
 
             </div>
         </div>

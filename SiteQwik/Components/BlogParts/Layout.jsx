@@ -37,7 +37,6 @@ const Layout = component$(({
                 popularPosts={popularPosts}
                 localePathPrefix={localePathPrefix}
                 blogTexts={blogTexts}
-                propertiesTexts={propertiesTexts}
             />
 
             <section class='relative w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between md:pb-20 mt-10'>
@@ -56,7 +55,7 @@ const Layout = component$(({
                     item={item}
                     latestPosts={latestPosts}
                     localePathPrefix={localePathPrefix}
-                    readMore={propertiesTexts?.readMore}
+                    propertiesTexts={propertiesTexts}
                     title={blogTexts?.categoryTitle}
                 />
             </section>

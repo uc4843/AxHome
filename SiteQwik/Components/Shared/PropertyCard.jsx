@@ -17,6 +17,8 @@ const PropertyCard = ({
     localesEnum,
     location,
     occasionLabelTitle,
+    propertiesTexts,
+    property,
     rooms,
     translations,
     type,
@@ -48,7 +50,7 @@ const PropertyCard = ({
                         href={usePropertyUrl(item?.slug, localePathPrefix)}
                         class="w-full flex items-center justify-between"
                     >
-                        <h3 class='font-bold line-clamp-1 text-custom-color4 text-start text-lg px-0.5 group-hover:text-custom-color1 transition-all'>
+                        <h3 class='font-bold line-clamp-1 text-custom-color4 text-start text-base md:text-lg px-0.5 group-hover:text-custom-color1 transition-all'>
                             {item?.title}
                         </h3>
                         {item?.isOccasion &&
@@ -164,6 +166,10 @@ const PropertyCard = ({
                         />
 
                     </div>
+
+                    {/* <span class="text-sm">
+                        <LocalizedDate utcDate={property?.modificationUtcDate} />
+                    </span> */}
 
                 </div>
             </div>

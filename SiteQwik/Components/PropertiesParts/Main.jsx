@@ -8,6 +8,7 @@ const Main = component$(({
     localePathPrefix,
     localesEnum,
     occasionLabelTitle,
+    property,
     propertyImages,
     translations,
 }) => {
@@ -26,6 +27,7 @@ const Main = component$(({
                         localesEnum={localesEnum}
                         occasionLabelTitle={occasionLabelTitle}
                         translations={translations}
+                        property={property}
                     />
                 </>)
             }

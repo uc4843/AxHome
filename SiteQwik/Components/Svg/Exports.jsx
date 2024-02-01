@@ -1,4 +1,5 @@
 import AddBox from './AddBox'
+import ArrowUp from './ArrowUp'
 import Bars from './Bars'
 import Calendar from './Calendar'
 import Category from './Category'
@@ -16,15 +17,18 @@ import KeyboardArrowDown from './KeyboardArrowDown'
 import Loading from './Loading'
 import Location from './Location'
 import Magnifying from './Magnifying'
+import Minus from './Minus'
 import MinusBox from './MinusBox'
 import Mobile from './Mobile'
 import Person from './Person'
 import Phone from './Phone'
 import PhoneForwarded from './PhoneForwarded'
+import Plus from './Plus'
 import Text from './Text'
 import Window from './Window'
 
 export { AddBox }
+export { ArrowUp }
 export { Bars }
 export { Calendar }
 export { Category }
@@ -42,10 +46,12 @@ export { KeyboardArrowDown }
 export { Loading }
 export { Location }
 export { Magnifying }
+export { Minus }
 export { MinusBox }
 export { Mobile }
 export { Person }
 export { Phone }
 export { PhoneForwarded }
+export { Plus }
 export { Text }
 export { Window }

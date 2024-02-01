@@ -9,8 +9,12 @@ const Hero = ({
 
     return <section class='bg-custom-color3 overflow-hidden relative after:content-[""] after:relative after:block after:w-full after:bg-[length:250%_100%] md:after:bg-[length:115%_100%] after:bg-center after:h-[150px] md:after:h-[320px] after:bg-[url("/images/rounded.svg")] select-none'>
         <div class='pt-10 px-4 2xl:px-0'>
-            <h1 class='text-3xl font-bold text-center'>{title}</h1>
-            <p class='text-lg text-center py-2 mb-6'>{subtitle}</p>
+            <h1 class='text-3xl font-bold text-center'>
+                {title}
+            </h1>
+            <p class='text-lg text-center py-2 mb-6'>
+                {subtitle}
+            </p>
         </div>
         <Image
             containerClass="absolute bottom-[30px] md:bottom-[140px] end-[50%] w-8 h-8 md:w-12 md:h-12 z-40 free-animate"
