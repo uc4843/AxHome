@@ -19,6 +19,7 @@ const PropertyCard = ({
     occasionLabelTitle,
     propertiesTexts,
     property,
+    propertyInfoTexts,
     rooms,
     translations,
     type,
@@ -64,7 +65,7 @@ const PropertyCard = ({
                                     src={type}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={translations?.propertyTypeName}
+                                    alt={propertyInfoTexts?.propertyTypeName}
                                 />
                                 <span>{item?.propertyTypeName}</span>
                             </div>
@@ -73,30 +74,30 @@ const PropertyCard = ({
                                     src={area}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={translations?.area}
+                                    alt={propertyInfoTexts?.area}
                                 />
                                 <span>{item?.area}</span>
-                                <span>{translations?.area}</span>
+                                <span>{propertyInfoTexts?.area}</span>
                             </div>
                             <div class="flex gap-2">
                                 <Image
                                     src={rooms}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={translations?.rooms}
+                                    alt={propertyInfoTexts?.rooms}
                                 />
                                 <span>{item?.roomsCount} </span>
-                                <span>{translations?.rooms}</span>
+                                <span>{propertyInfoTexts?.roomsCount}</span>
                             </div>
                             <div class="flex gap-2">
                                 <Image
                                     src={age}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={translations?.age}
+                                    alt={propertyInfoTexts?.age}
                                 />
                                 <span>{item?.age}</span>
-                                <span>{translations?.age}</span>
+                                <span>{propertyInfoTexts?.age}</span>
                             </div>
                         </div>
                         <div class="flex flex-col gap-2 text-sm md:text-md">
@@ -107,36 +108,46 @@ const PropertyCard = ({
                                     src={location}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={translations?.cityDivisionName}
+                                    alt={item?.cityDivisionName}
                                 />
                                 <span>
                                     {item?.cityDivisionName}
                                 </span>
                             </a>
-                            <div class="w-full flex items-center justify-between gap-.5 border rounded text-slate-600 border-slate-300 text-xs p-2">
+                            <div class="w-full flex items-center justify-between gap-1 border rounded text-slate-600 border-slate-300 text-xs p-2">
                                 {
                                     item?.dealTypeKey === 'rent'
                                         ?
-                                        <span> {translations?.rent}</span>
+                                        <span> {propertiesTexts?.rent}: </span>
                                         :
-                                        <span> {translations?.minorPrice}</span>
+                                        <span> {propertiesTexts?.minorPrice}: </span>
                                 }
-                                <span>
-                                    {item?.minorPrice?.toLocaleString()}
-                                </span>
+                                <div class='flex gap-1'>
+                                    <span>
+                                        {item?.minorPrice?.toLocaleString()}
+                                    </span>
+                                    <span class='text-[10px]'>
+                                        {propertiesTexts?.toman}
+                                    </span>
+                                </div>
                             </div>
 
-                            <div class="w-full flex items-center justify-between gap-.5 bg-custom-color1 p-2 rounded text-white text-xs">
+                            <div class="w-full flex items-center justify-between gap-1 bg-custom-color1 p-2 rounded text-white text-xs">
                                 {
                                     item?.dealTypeKey === 'rent'
                                         ?
-                                        <span> {translations?.mortgage}</span>
+                                        <span> {propertiesTexts?.mortgage}: </span>
                                         :
-                                        <span> {translations?.majorPrice}</span>
+                                        <span> {propertiesTexts?.majorPrice}: </span>
                                 }
-                                <span>
-                                    {item?.majorPrice?.toLocaleString()}
-                                </span>
+                                <div class='flex gap-1'>
+                                    <span>
+                                        {item?.majorPrice?.toLocaleString()}
+                                    </span>
+                                    <span class='text-[10px]'>
+                                        {propertiesTexts?.toman}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>

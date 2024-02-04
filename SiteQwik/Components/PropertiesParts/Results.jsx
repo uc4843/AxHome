@@ -13,14 +13,14 @@ const Results = ({
                 <h2 class='font-bold'>{propertiesTexts?.propertiesList}</h2>
             </div>
             <div class='hidden md:flex gap-1 text-sm font-light items-center'>
-                <span>{translations?.result}:</span>
-                <span>{translations?.properties}</span>
+                <span>{propertiesTexts?.result}:</span>
+                <span>{propertiesTexts?.properties}</span>
                 <span>{metadata?.from}</span>
-                <span>{translations?.to}</span>
+                <span>{propertiesTexts?.to}</span>
                 <span>{metadata?.to}</span>
-                <span>{translations?.from}</span>
+                <span>{propertiesTexts?.from}</span>
                 <span>{metadata?.totalCount}</span>
-                <span>{translations?.property}</span>
+                <span>{propertiesTexts?.property}</span>
             </div>
         </div>
     </>

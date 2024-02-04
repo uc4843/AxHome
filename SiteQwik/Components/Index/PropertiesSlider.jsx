@@ -24,6 +24,7 @@ const PropertiesSlider = component$(({
     propertiesTexts,
     property,
     propertyImages,
+    propertyInfoTexts,
     sliderName,
     translations,
 }) => {
@@ -81,6 +82,8 @@ const PropertiesSlider = component$(({
                                     occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
                                     translations={translations}
                                     property={property}
+                                    propertiesTexts={propertiesTexts}
+                                    propertyInfoTexts={propertyInfoTexts}
                                 />
                             </SwiperSlide>
                         </>)

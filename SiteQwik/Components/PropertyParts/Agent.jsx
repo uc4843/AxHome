@@ -36,7 +36,7 @@ const Agent = ({
                 </div>
             </div>
 
-            <div class='flex items-center justify-start gap-2 mb-4'>
+            <div class='flex items-center justify-start gap-2 my-4'>
                 {relatedItems?.imageUrl &&
                     <a href={useAgentUrl(slug, localePathPrefix)}>
                         <Image

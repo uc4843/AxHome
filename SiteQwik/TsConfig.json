@@ -95,6 +95,9 @@
 			"PostParts": [
 				"src/Components/PostParts/Exports"
 			],
+			"PriceListParts": [
+				"src/Components/PriceListParts/Exports"
+			],
 			"Pricing": [
 				"src/Modules/Pricing/Exports"
 			],

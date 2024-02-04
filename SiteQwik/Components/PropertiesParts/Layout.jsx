@@ -26,6 +26,7 @@ const Layout = ({
     propertiesTexts,
     property,
     propertyImages,
+    propertyInfoTexts,
     propertyTypes,
     seo,
     translations,
@@ -76,6 +77,7 @@ const Layout = ({
                         seo={seo}
                         translations={translations}
                         property={property}
+                        propertyInfoTexts={propertyInfoTexts}
                     />
                     <Pagination
                         first
