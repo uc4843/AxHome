@@ -24,7 +24,7 @@ const CityDivisions = component$(({
 
     return <>
         <div class='mb-4'>
-            <ul class={`my-4 overflow-hidden transition-all duration-300 grid grid-cols-2 gap-x-2 ${activeAccordionId.value === rootCityDivisions?.id ? 'duration-1000 max-h-[215px]' : 'max-h-[800px] duration-[1000ms]'}`}>
+            <ul class={`my-4 overflow-hidden transition-all duration-300 grid grid-cols-2 gap-x-2 ${activeAccordionId.value === rootCityDivisions?.id ? 'duration-1000 max-h-[212px]' : 'max-h-[800px] duration-[1000ms]'}`}>
                 {rootCityDivisions?.map(item => <>
                     <li class='my-2 hover:text-custom-color1 line-clamp-1 overflow-hidden'>
                         <a

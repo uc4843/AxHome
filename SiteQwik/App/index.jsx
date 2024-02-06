@@ -92,6 +92,7 @@ const Index = component$(() => {
         states,
         translations,
         property,
+        propertyInfoTexts,
     } = data
 
     return <main>
@@ -114,6 +115,7 @@ const Index = component$(() => {
             sliderName={'occasionSwiper'}
             translations={translations}
             property={property}
+            propertyInfoTexts={propertyInfoTexts}
         />
         <States {...states} />
         <Counter {...counter} />
