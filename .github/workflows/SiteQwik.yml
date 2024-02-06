@@ -38,7 +38,7 @@ jobs:
           sudo chmod 777 --preserve-root /AxHome
 
       - name: Get HolismHolding/Infra
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismHolding/Infra
           token: ${{ secrets.PAT }}
@@ -48,7 +48,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismHolding/Infra /HolismHolding/Infra
 
       - name: Get HolismHolding/Commands
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismHolding/Commands
           token: ${{ secrets.PAT }}
@@ -58,7 +58,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismHolding/Commands /HolismHolding/Commands
 
       - name: Get HolismHolding/Scripts
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismHolding/Scripts
           token: ${{ secrets.PAT }}
@@ -68,7 +68,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismHolding/Scripts /HolismHolding/Scripts
 
       - name: Get HolismHolding/Docker
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismHolding/Docker
           token: ${{ secrets.PAT }}
@@ -78,7 +78,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismHolding/Docker /HolismHolding/Docker
 
       - name: Get HolismHolding/Fonts
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismHolding/Fonts
           token: ${{ secrets.PAT }}
@@ -88,7 +88,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismHolding/Fonts /HolismHolding/Fonts
 
       - name: Get HolismSite/Infra
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Infra
           token: ${{ secrets.PAT }}
@@ -108,7 +108,7 @@ jobs:
       # Dependencies
 
       - name: Get HolismSite/Accounts
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Accounts
           token: ${{ secrets.PAT }}
@@ -118,7 +118,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Accounts /HolismSite/Accounts
 
       - name: Get HolismSite/Aggregates
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Aggregates
           token: ${{ secrets.PAT }}
@@ -128,7 +128,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Aggregates /HolismSite/Aggregates
 
       - name: Get HolismSite/Attributes
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Attributes
           token: ${{ secrets.PAT }}
@@ -138,7 +138,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Attributes /HolismSite/Attributes
 
       - name: Get HolismSite/Blog
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Blog
           token: ${{ secrets.PAT }}
@@ -148,7 +148,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Blog /HolismSite/Blog
 
       - name: Get HolismSite/Commissions
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Commissions
           token: ${{ secrets.PAT }}
@@ -158,7 +158,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Commissions /HolismSite/Commissions
 
       - name: Get HolismSite/Configuration
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Configuration
           token: ${{ secrets.PAT }}
@@ -168,7 +168,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Configuration /HolismSite/Configuration
 
       - name: Get HolismSite/Contacts
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Contacts
           token: ${{ secrets.PAT }}
@@ -178,7 +178,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Contacts /HolismSite/Contacts
 
       - name: Get HolismSite/Contents
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Contents
           token: ${{ secrets.PAT }}
@@ -188,7 +188,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Contents /HolismSite/Contents
 
       - name: Get HolismSite/Contracts
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Contracts
           token: ${{ secrets.PAT }}
@@ -198,7 +198,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Contracts /HolismSite/Contracts
 
       - name: Get HolismSite/Currencies
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Currencies
           token: ${{ secrets.PAT }}
@@ -208,7 +208,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Currencies /HolismSite/Currencies
 
       - name: Get HolismSite/DataTypes
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/DataTypes
           token: ${{ secrets.PAT }}
@@ -218,7 +218,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/DataTypes /HolismSite/DataTypes
 
       - name: Get HolismSite/Forms
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Forms
           token: ${{ secrets.PAT }}
@@ -228,7 +228,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Forms /HolismSite/Forms
 
       - name: Get HolismSite/Geo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Geo
           token: ${{ secrets.PAT }}
@@ -238,7 +238,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Geo /HolismSite/Geo
 
       - name: Get HolismSite/Globalization
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Globalization
           token: ${{ secrets.PAT }}
@@ -248,7 +248,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Globalization /HolismSite/Globalization
 
       - name: Get HolismSite/Media
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Media
           token: ${{ secrets.PAT }}
@@ -258,7 +258,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Media /HolismSite/Media
 
       - name: Get HolismSite/Modules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Modules
           token: ${{ secrets.PAT }}
@@ -268,7 +268,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Modules /HolismSite/Modules
 
       - name: Get HolismSite/Navigation
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Navigation
           token: ${{ secrets.PAT }}
@@ -278,7 +278,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Navigation /HolismSite/Navigation
 
       - name: Get HolismSite/Pricing
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Pricing
           token: ${{ secrets.PAT }}
@@ -288,7 +288,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Pricing /HolismSite/Pricing
 
       - name: Get HolismSite/Properties
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Properties
           token: ${{ secrets.PAT }}
@@ -298,7 +298,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Properties /HolismSite/Properties
 
       - name: Get HolismSite/Seo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Seo
           token: ${{ secrets.PAT }}
@@ -308,7 +308,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Seo /HolismSite/Seo
 
       - name: Get HolismSite/Social
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Social
           token: ${{ secrets.PAT }}
@@ -318,7 +318,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Social /HolismSite/Social
 
       - name: Get HolismSite/Taxonomy
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Taxonomy
           token: ${{ secrets.PAT }}
@@ -328,7 +328,7 @@ jobs:
           cp -r $GITHUB_WORKSPACE/HolismSite/Taxonomy /HolismSite/Taxonomy
 
       - name: Get HolismSite/Units
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: HolismSite/Units
           token: ${{ secrets.PAT }}
@@ -340,7 +340,7 @@ jobs:
       # Main
       
       - name: Get Holizm/AxHome
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: Holizm/AxHome
           token: ${{ secrets.PAT }}
