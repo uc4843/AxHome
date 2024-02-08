@@ -3,7 +3,7 @@ import { DesktopSubMenu } from 'Layout'
 const DesktopMainMenu = ({ menuItems }) => {
 
     return <>
-        <ul class="hidden lg:flex gap-4 items-center justify-center">
+        <ul class="hidden lg:flex gap-3 xl:gap-6 items-center justify-center">
             {
                 menuItems?.map(item => <>
                     <li
