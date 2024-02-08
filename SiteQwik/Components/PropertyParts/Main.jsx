@@ -7,7 +7,7 @@ import {
 
 const Main = ({
     body,
-    description,
+    propertiesTexts,
     property,
     propertyInfoTexts,
     translations,
@@ -33,7 +33,7 @@ const Main = ({
 
             <Body
                 body={body}
-                description={description}
+                propertiesTexts={propertiesTexts}
             />
         </div>
     </>

@@ -12,6 +12,7 @@ const Layout = ({
     currentLocale,
     localePathPrefix,
     localesEnum,
+    properties,
     propertiesTexts,
     property,
     propertyImages,
@@ -29,7 +30,7 @@ const Layout = ({
                         property={property}
                         translations={translations}
                         propertyInfoTexts={propertyInfoTexts}
-                        {...propertiesTexts}
+                        propertiesTexts={propertiesTexts}
                     />
                     <Side
                         agent={agent}
@@ -50,9 +51,9 @@ const Layout = ({
                 localePathPrefix={localePathPrefix}
                 localesEnum={localesEnum}
                 propertiesTexts={propertiesTexts}
-                propertyImages={propertyImages}
+                {...propertyImages}
                 translations={translations}
-                property={property}
+                {...properties}
             />
         </section>
     </>
