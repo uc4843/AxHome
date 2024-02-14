@@ -3,6 +3,7 @@ import ArrowUp from './ArrowUp'
 import Bars from './Bars'
 import Calendar from './Calendar'
 import Category from './Category'
+import Check from './Check'
 import Checked from './Checked'
 import ChevronDown from './ChevronDown'
 import ChevronLeft from './ChevronLeft'
@@ -33,6 +34,7 @@ export { ArrowUp }
 export { Bars }
 export { Calendar }
 export { Category }
+export { Check }
 export { Checked }
 export { ChevronDown }
 export { ChevronLeft }
