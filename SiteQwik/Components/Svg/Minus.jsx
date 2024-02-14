@@ -1,8 +1,8 @@
-const Minus = ({ class: internalClass }) => {
+const Minus = props => {
 
     return <>
         <svg
-            class={internalClass || ""}
+            {...props}
             viewBox="0 -960 960 960"
         >
             <path d="M200-450v-60h560v60H200Z" />
