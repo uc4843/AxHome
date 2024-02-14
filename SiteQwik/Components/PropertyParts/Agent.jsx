@@ -13,20 +13,20 @@ const Agent = ({
     localePathPrefix,
     localesEnum,
     property,
-    propertyCode,
+    propertyAdCodeTitle,
     relatedItems,
     slug,
 }) => {
 
     return <>
-        <div class="w-full p-4 rounded-md shadow-lg shadow-gray-200 bg-white border border-custom-color3 basis-[50%] px-4">
+        <div class="w-full p-4 rounded-md shadow-lg shadow-gray-200 bg-white border border-custom-color3 basis-[50%] px-4 text-sm">
 
             <div class="flex flex-col items-end gap-1">
                 <div class="flex gap-2 items-center">
-                    <span>{propertyCode} :</span>
+                    <span>{propertyAdCodeTitle} :</span>
                     <span>{property?.id}</span>
                 </div>
-                <div class="text-sm text-custom-color4">
+                <div class="text-custom-color4">
                     <TimeAgo
                         utcDate={item?.modificationUtcDate}
                         localKey={currentLocale?.key}

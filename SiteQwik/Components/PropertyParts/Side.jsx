@@ -13,7 +13,7 @@ const Side = ({
     localePathPrefix,
     localesEnum,
     property,
-    propertyCode,
+    propertyAdCodeTitle,
 }) => {
     return <>
         <div class='flex justify-end items-start mb-4'>
@@ -24,7 +24,7 @@ const Side = ({
                         agentTitle={agentTitle}
                         localePathPrefix={localePathPrefix}
                         property={property}
-                        propertyCode={propertyCode}
+                        propertyAdCodeTitle={propertyAdCodeTitle}
                         localesEnum={localesEnum}
                         item={item}
                         currentLocale={currentLocale}

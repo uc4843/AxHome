@@ -40,20 +40,16 @@ const Slider = component$(({
             watchSlidesProgress: true,
             breakpoints: {
                 [zero]: {
-                    slidesPerView: 2.4,
+                    slidesPerView: 1.4,
                     spaceBetween: 5
                 },
                 [xs]: {
-                    slidesPerView: 3.2,
+                    slidesPerView: 2.2,
                     spaceBetween: 5,
                 },
                 [sm]: {
-                    slidesPerView: 3.6,
+                    slidesPerView: 3,
                     spaceBetween: 10,
-                },
-                [md]: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
                 },
             },
         })
