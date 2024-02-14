@@ -30,7 +30,7 @@ const PropertiesSlider = component$(({
 }) => {
 
     return <>
-        <section class="max-w-7xl mx-auto px-5">
+        <section class="max-w-7xl mx-auto px-5 mb-10">
             <SectionTitle
                 description={propertiesTexts?.occasionDescription}
                 title={propertiesTexts?.occasionTitle}
@@ -39,7 +39,7 @@ const PropertiesSlider = component$(({
                 <Swiper
                     name={sliderName}
                     containerClass="pb-16"
-                    paginationClass="active-bullet:bg-custom-color4 active-bullet:rounded-md"
+                    paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                     config={{
                         breakpoints: {
                             [zero]: {
@@ -59,13 +59,9 @@ const PropertiesSlider = component$(({
                                 spaceBetween: 15,
                             },
                             [lg]: {
-                                slidesPerView: 3.3,
+                                slidesPerView: 3,
                                 spaceBetween: 20,
-                            },
-                            [xl]: {
-                                slidesPerView: 4.2,
-                                spaceBetween: 20,
-                            },
+                            }
                         },
                     }}
                 >

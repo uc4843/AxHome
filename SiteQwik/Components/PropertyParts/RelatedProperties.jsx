@@ -34,7 +34,7 @@ const RelatedProperties = component$(({
                 <Swiper
                     name="relatedSwiper"
                     containerClass="pb-16"
-                    paginationClass="active-bullet:bg-custom-color1 active-bullet:w-5 active-bullet:rounded-md"
+                    paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                     config={{
                         breakpoints: {
                             [zero]: {
