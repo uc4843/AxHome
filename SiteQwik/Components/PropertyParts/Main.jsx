@@ -14,7 +14,7 @@ const Main = ({
 }) => {
 
     return <>
-        <div class="grid grid-cols-1 gap-4 items-start self-start">
+        <div class="w-full md:mb-6">
 
             <Slider
                 {...property}

@@ -110,6 +110,12 @@
 			"PropertyParts": [
 				"src/Components/PropertyParts/Exports"
 			],
+			"Qwik": [
+				"node_modules/@builder.io/qwik"
+			],
+			"QwikCity": [
+				"node_modules/@builder.io/qwik-city"
+			],
 			"RichTextComponents": [
 				"src/RichTextComponents"
 			],

@@ -12,19 +12,20 @@ const Layout = ({
     currentLocale,
     localePathPrefix,
     localesEnum,
-    properties,
     propertiesTexts,
     property,
     propertyImages,
     propertyInfoTexts,
+    relatedProperties,
     translations,
 }) => {
+
     return <>
         <section>
             <Breadcrumb breadcrumb={breadcrumb} />
 
             <div class="w-full max-w-7xl mx-auto">
-                <div class='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0 '>
+                <div class='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0'>
                     <Main
                         body={content}
                         property={property}
@@ -50,10 +51,11 @@ const Layout = ({
                 currentLocale={currentLocale}
                 localePathPrefix={localePathPrefix}
                 localesEnum={localesEnum}
+                properties={relatedProperties}
                 propertiesTexts={propertiesTexts}
-                {...propertyImages}
+                propertyImages={propertyImages}
+                propertyInfoTexts={propertyInfoTexts}
                 translations={translations}
-                {...properties}
             />
         </section>
     </>

@@ -31,9 +31,9 @@ const PropertyCard = ({
                 <a
                     href={usePropertyUrl(item?.slug, localePathPrefix)}>
                     <Image
-                        src={item?.relatedItems?.imageUrl}
                         alt={item?.title}
                         containerClass="relative w-full aspect-[6/4] z-10"
+                        src={item?.relatedItems?.imageUrl}
                     />
                 </a>
                 <a
@@ -62,29 +62,29 @@ const PropertyCard = ({
                         <div class="grid grid-cols-1 gap-y-2 text-sm md:text-md justify-items-start">
                             <div class="flex gap-2">
                                 <Image
-                                    src={type}
+                                    alt={propertyInfoTexts?.propertyTypeName}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={propertyInfoTexts?.propertyTypeName}
+                                    src={type}
                                 />
                                 <span>{item?.propertyTypeName}</span>
                             </div>
                             <div class="flex gap-2">
                                 <Image
-                                    src={area}
+                                    alt={propertyInfoTexts?.area}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={propertyInfoTexts?.area}
+                                    src={area}
                                 />
                                 <span>{item?.area}</span>
                                 <span>{propertyInfoTexts?.area}</span>
                             </div>
                             <div class="flex gap-2">
                                 <Image
-                                    src={rooms}
+                                    alt={propertyInfoTexts?.rooms}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={propertyInfoTexts?.rooms}
+                                    src={rooms}
                                 />
                                 <span>{item?.roomsCount} </span>
                                 <span>{propertyInfoTexts?.roomsCount}</span>
@@ -105,10 +105,10 @@ const PropertyCard = ({
                                 href={useListingUrl({ cityDivision: item?.cityDivisionSlug })}
                                 class="flex items-center gap-1">
                                 <Image
-                                    src={location}
+                                    alt={item?.cityDivisionName}
                                     containerClass="w-4 aspect-square"
                                     imageClass="w-full h-auto object-contain"
-                                    alt={item?.cityDivisionName}
+                                    src={location}
                                 />
                                 <span>
                                     {item?.cityDivisionName}
@@ -157,9 +157,9 @@ const PropertyCard = ({
                         item?.relatedItems?.agent ?
                             <div class="flex items-center gap-1">
                                 <Image
-                                    src={item?.relatedItems?.agent?.relatedItems?.imageUrl}
-                                    alt={item?.displayName}
+                                    alt={item?.relatedItems?.agent?.displayName}
                                     containerClass={`w-9 aspect-square rounded-full overflow-hidden ${item?.relatedItems?.agent ? '' : 'invisible'}`}
+                                    src={item?.relatedItems?.agent?.relatedItems?.imageUrl}
                                 />
                                 <p class="text-sm text-custom-color41">
                                     {item?.relatedItems?.agent?.displayName}
@@ -171,9 +171,9 @@ const PropertyCard = ({
 
                     <div class="text-sm text-custom-color4">
                         <TimeAgo
-                            utcDate={item?.modificationUtcDate}
-                            localKey={currentLocale?.key}
                             localesEnum={localesEnum}
+                            localKey={currentLocale?.key}
+                            utcDate={item?.modificationUtcDate}
                         />
 
                     </div>

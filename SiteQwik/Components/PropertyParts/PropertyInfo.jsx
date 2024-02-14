@@ -37,8 +37,7 @@ const PropertyInfo = ({
             label,
             slug,
             value,
-        }) => (
-            <div class='flex gap-4 items-center text-md group'>
+        }) => <div class='flex gap-4 items-center text-md group'>
                 <p
                     class='w-1/2 md:w-1/6'>
                     {label}:
@@ -53,7 +52,7 @@ const PropertyInfo = ({
                     <p>{value}</p>
                 )}
             </div>
-        ))}
+        )}
     </div>
 )
 

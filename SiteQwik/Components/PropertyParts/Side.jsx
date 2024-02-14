@@ -16,7 +16,7 @@ const Side = ({
     propertyCode,
 }) => {
     return <>
-        <div class='w-full h-full'>
+        <div class='flex justify-end items-start mb-4'>
             <div class="sticky top-10 start-0 px-4">
                 {agent &&
                     <Agent

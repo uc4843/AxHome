@@ -7,7 +7,7 @@ const Heading = component$(({
     return <>
         <div>
 
-            <div class="flex gap-4 justify-between">
+            <div class="flex gap-4 justify-between my-6">
                 <h1 class="font-bold text-lg md:text-xl lg:text-2xl">
                     {property?.title}
                 </h1>

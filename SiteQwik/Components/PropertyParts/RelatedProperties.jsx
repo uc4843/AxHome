@@ -19,6 +19,7 @@ const RelatedProperties = component$(({
     properties,
     propertiesTexts,
     propertyImages,
+    propertyInfoTexts,
     translations,
 }) => {
 
@@ -74,6 +75,8 @@ const RelatedProperties = component$(({
                                     localePathPrefix={localePathPrefix}
                                     localesEnum={localesEnum}
                                     occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
+                                    propertiesTexts={propertiesTexts}
+                                    propertyInfoTexts={propertyInfoTexts}
                                     translations={translations}
                                 />
                             </SwiperSlide>
