@@ -63,6 +63,7 @@ const OurTeam = component$(({
                 {items?.map(item => <SwiperSlide
                     key={item?.id}>
                     <a
+                        aria-label={item?.title}
                         class="block shadow-xl rounded-2xl my-5 md:my-10 text-center"
                         href={item?.link}
                     >

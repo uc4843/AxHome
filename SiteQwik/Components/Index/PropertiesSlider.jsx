@@ -88,7 +88,11 @@ const PropertiesSlider = component$(({
             </div>
 
             <div class='px-4'>
-                <a class='flex mx-auto justify-center bg-custom-color1 w-full md:w-[250px] p-2 gap-5 hover:brightness-110 transition-all text-white duration-300 rounded-md cursor-pointer'>
+                <a
+                    aria-label={propertiesTexts?.readMore}
+                    class='flex mx-auto justify-center bg-custom-color1 w-full md:w-[250px] p-2 gap-5 hover:brightness-110 transition-all text-white duration-300 rounded-md cursor-pointer'
+                    href="/properties"
+                >
                     <ChevronLeft class='w-6 h-6 items-center rounded-full border border-white fill-white' />
                     <p>{propertiesTexts?.readMore}</p>
                 </a>
