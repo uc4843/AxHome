@@ -61,25 +61,33 @@ const OurTeam = component$(({
                 }}
             >
                 {items?.map(item => <SwiperSlide
-                    key={item?.id}>
+                    class="block shadow-xl rounded-2xl my-5 md:my-10 text-center"
+                    key={item?.id}
+                >
                     <a
                         aria-label={item?.title}
-                        class="block shadow-xl rounded-2xl my-5 md:my-10 text-center"
                         href={item?.link}
                     >
                         <Image
-                            src={item?.image}
+                            alt={item?.title}
                             containerClass="w-full aspect-square"
+                            src={item?.image}
                         />
-                        <div class='py-8'>
+
+                    </a>
+                    <div class="py-8">
+                        <a
+                            aria-label={item?.title}
+                            href={item?.link}
+                        >
                             <p class="py-1 font-bold text-lg line-clamp-1">
                                 {item?.title}
                             </p>
-                            <p class="text-slate-500 text-md line-clamp-1">
-                                {item?.jobPosition}
-                            </p>
-                        </div>
-                    </a>
+                        </a>
+                        <p class="text-slate-500 text-md line-clamp-1">
+                            {item?.jobPosition}
+                        </p>
+                    </div>
                 </SwiperSlide>)}
             </Swiper>
         </section>

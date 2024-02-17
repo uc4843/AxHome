@@ -18,15 +18,16 @@ const Services = ({
                     {
                         items?.map(item => <>
                             <a
+                                aria-label={item?.title}
                                 class="flex flex-col items-center gap-6 group"
                                 href={item?.link}
                                 key={item?.id}
                             >
                                 <Image
-                                    src={item?.image}
                                     alt={item?.title}
                                     containerClass="bg-white w-20 aspect-square rounded-full border shadow-2xl shadow-black flex justify-center items-center"
                                     imageClass="w-10 aspect-square object-contain group-hover:translate-y-[2px] transition-all duration-300"
+                                    src={item?.image}
                                 />
                                 {item?.title}
                             </a>

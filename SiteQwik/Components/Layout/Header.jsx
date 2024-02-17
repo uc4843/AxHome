@@ -21,7 +21,7 @@ const Header = component$(({
 }) => {
 
     const isOpen = useSignal(false)
-    console.log('qqqqqqqqqqqqqqqqqqq', headerCta);
+
     return <header class='py:2 md:py-4 bg-custom-color3'>
         <div class="relative flex items-center justify-between max-w-wide mx-auto px-4 2xl:px-0">
             <div class='flex w-[calc(50%-64px)]'>

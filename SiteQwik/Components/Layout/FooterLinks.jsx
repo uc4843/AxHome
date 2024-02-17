@@ -14,6 +14,7 @@ const FooterLinks = ({
             {
                 items?.map(item => <>
                     <a
+                        aria-label={item?.title}
                         class="text-white hover:text-custom-color1 transition-all duration-300"
                         href={item.link.replace("search", "listing")}
                         key={item?.id}
