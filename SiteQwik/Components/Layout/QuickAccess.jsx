@@ -1,4 +1,4 @@
-import { FooterTitle } from 'Layout'
+import { FooterTitle } from "Layout"
 
 const QuickAccess = ({
     items,

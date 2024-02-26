@@ -1,10 +1,10 @@
-import { component$ } from '@builder.io/qwik'
-import { useComment } from 'Social'
+import { component$ } from "@builder.io/qwik"
+import { useComment } from "Social"
 import {
     LongText,
     Text,
-} from 'Forms'
-import { Message } from 'Shared'
+} from "Forms"
+import { Message } from "Shared"
 
 const AddComment = component$(({
     body,

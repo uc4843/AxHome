@@ -1,4 +1,4 @@
-import { Window } from 'Svg'
+import { Window } from "Svg"
 
 const Results = ({
     metadata,

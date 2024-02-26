@@ -1,6 +1,6 @@
-import { component$ } from '@builder.io/qwik'
-import { Pagination as DefaultPagination } from 'Base'
-import { useLocation } from '@builder.io/qwik-city'
+import { component$ } from "@builder.io/qwik"
+import { Pagination as DefaultPagination } from "Base"
+import { useLocation } from "@builder.io/qwik-city"
 
 const Pagination = component$(({ metadata }) => {
 

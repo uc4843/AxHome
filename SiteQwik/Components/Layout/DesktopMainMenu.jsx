@@ -1,4 +1,4 @@
-import { DesktopSubMenu } from 'Layout'
+import { DesktopSubMenu } from "Layout"
 
 const DesktopMainMenu = ({ menuItems }) => {
 

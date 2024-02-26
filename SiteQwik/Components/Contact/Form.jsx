@@ -1,11 +1,11 @@
-import { component$ } from '@builder.io/qwik'
-import { Message } from 'Base'
+import { component$ } from "@builder.io/qwik"
+import { Message } from "Base"
 import {
     LongText,
     Text,
     useForm,
-} from 'Forms'
-import { Loading } from 'Svg'
+} from "Forms"
+import { Loading } from "Svg"
 
 const Form = component$(({
     fields,

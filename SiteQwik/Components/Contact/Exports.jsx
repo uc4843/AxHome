@@ -1,5 +1,5 @@
-import Form from './Form'
-import Info from './Info'
+import Form from "./Form"
+import Info from "./Info"
 
 export { Form }
 export { Info }

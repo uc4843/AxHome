@@ -2,17 +2,17 @@ import {
     $,
     component$,
     useSignal,
-} from '@builder.io/qwik'
-import { useSearch } from 'Properties'
+} from "@builder.io/qwik"
+import { useSearch } from "Properties"
 import {
     AddBox,
     Magnifying,
     MinusBox,
-} from 'Svg'
+} from "Svg"
 import {
     AdvancedSearch,
     Select,
-} from 'Shared'
+} from "Shared"
 
 const Search = component$(({
     allCityDivision,

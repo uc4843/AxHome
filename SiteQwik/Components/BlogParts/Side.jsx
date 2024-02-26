@@ -1,7 +1,7 @@
 import {
     Categories,
     LatestPosts,
-} from 'BlogParts'
+} from "BlogParts"
 
 const Side = ({
     blogTexts,

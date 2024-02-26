@@ -1,7 +1,7 @@
 import {
     Breadcrumb,
     RichText,
-} from 'Shared'
+} from "Shared"
 
 const Layout = ({
     breadcrumb,

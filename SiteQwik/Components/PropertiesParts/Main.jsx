@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik'
-import { PropertyCard } from 'Shared'
+import { component$ } from "@builder.io/qwik"
+import { PropertyCard } from "Shared"
 
 const Main = component$(({
     currentLocale,

@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     lg,
     md,
@@ -7,8 +7,8 @@ import {
     SwiperSlide,
     xs,
     zero,
-} from 'Base'
-import { PostCard } from 'Shared'
+} from "Base"
+import { PostCard } from "Shared"
 
 const Specials = component$(({
     blogTexts,

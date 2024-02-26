@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     Image,
     lg,
@@ -9,8 +9,8 @@ import {
     xl,
     xs,
     zero,
-} from 'Base'
-import { SectionTitle } from 'Shared'
+} from "Base"
+import { SectionTitle } from "Shared"
 
 const States = component$(({
     description,

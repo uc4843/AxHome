@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     Image,
     lg,
@@ -8,12 +8,12 @@ import {
     SwiperSlide,
     xs,
     zero,
-} from 'Base'
+} from "Base"
 import {
     PropertyCard,
     SectionTitle,
-} from 'Shared'
-import { ChevronLeft } from 'Svg'
+} from "Shared"
+import { ChevronLeft } from "Svg"
 
 const PropertiesSlider = component$(({
     currentLocale,

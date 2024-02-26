@@ -1,5 +1,5 @@
-import { LocalizedDate } from 'Base'
-import { Person } from 'Svg'
+import { LocalizedDate } from "Base"
+import { Person } from "Svg"
 
 const CommentsList = ({
     data,

@@ -1,8 +1,8 @@
 import {
     Image,
     LocalizedDate,
-} from 'Base'
-import { usePostUrl } from 'Blog'
+} from "Base"
+import { usePostUrl } from "Blog"
 
 const Related = ({
     localePathPrefix,

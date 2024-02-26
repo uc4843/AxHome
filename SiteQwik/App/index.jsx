@@ -1,20 +1,20 @@
-import { component$ } from '@builder.io/qwik'
-import { routeLoader$ } from '@builder.io/qwik-city'
-import { useAsync } from 'Base'
+import { component$ } from "@builder.io/qwik"
+import { routeLoader$ } from "@builder.io/qwik-city"
+import { useAsync } from "Base"
 import {
     getGlobalization,
     getLocalePathPrefix,
-} from 'Globalization'
-import { getAllCityDivisions } from 'Geo'
-import { useSeo } from 'Seo'
-import { getPage } from 'Contents'
-import { getLatestPosts } from 'Blog'
+} from "Globalization"
+import { getAllCityDivisions } from "Geo"
+import { useSeo } from "Seo"
+import { getPage } from "Contents"
+import { getLatestPosts } from "Blog"
 import {
     getAllDealTypes,
     getAllPropertyTypes,
     getLatestDealType,
     getLatestOccasion,
-} from 'Properties'
+} from "Properties"
 import {
     Ad,
     Counter,
@@ -25,7 +25,7 @@ import {
     PropertiesSlider,
     Services,
     States,
-} from 'Index'
+} from "Index"
 
 const getData = routeLoader$(async props => {
 
@@ -41,9 +41,9 @@ const getData = routeLoader$(async props => {
         allPropertyTypes,
     ] = await useAsync([
         getLatestPosts(10),
-        getPage('home', props),
-        getLatestDealType('sale'),
-        getLatestDealType('rent'),
+        getPage("home", props),
+        getLatestDealType("sale"),
+        getLatestDealType("rent"),
         getLatestOccasion(),
         getGlobalization(props),
         getAllCityDivisions(props),
@@ -116,7 +116,7 @@ const Index = component$(() => {
             property={property}
             propertyImages={propertyImages}
             propertyInfoTexts={propertyInfoTexts}
-            sliderName={'occasionSwiper'}
+            sliderName={"occasionSwiper"}
             translations={translations}
         />
         <States {...states} />

@@ -1,6 +1,6 @@
-import { component$ } from '@builder.io/qwik'
-import { Card } from 'BlogParts'
-import { Pagination } from 'Shared'
+import { component$ } from "@builder.io/qwik"
+import { Card } from "BlogParts"
+import { Pagination } from "Shared"
 
 const Main = component$(({
     currentLocale,

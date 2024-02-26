@@ -1,4 +1,4 @@
-import { RichText as InfraRichText } from 'Base'
+import { RichText as InfraRichText } from "Base"
 
 const RichText = props => {
     return <InfraRichText

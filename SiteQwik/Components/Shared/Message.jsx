@@ -1,8 +1,8 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     Checked,
     Close,
-} from 'Svg'
+} from "Svg"
 
 const Message = component$(({
     isSuccess,

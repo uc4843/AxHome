@@ -1,17 +1,17 @@
 import {
     component$,
     useSignal,
-} from '@builder.io/qwik'
-import { Image } from 'Base'
+} from "@builder.io/qwik"
+import { Image } from "Base"
 import {
     Bars,
     Person,
     PhoneForwarded,
-} from 'Svg'
+} from "Svg"
 import {
     DesktopMainMenu,
     MobileMainMenu,
-} from 'Layout'
+} from "Layout"
 
 const Header = component$(({
     branding,

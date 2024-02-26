@@ -1,4 +1,4 @@
-import { RichText } from 'Shared'
+import { RichText } from "Shared"
 
 const Body = ({
     body,

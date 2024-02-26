@@ -4,9 +4,9 @@ import {
     useSignal,
     useTask$,
     useVisibleTask$,
-} from '@builder.io/qwik'
-import { useLocation } from '@builder.io/qwik-city'
-import { ChevronDown } from 'Svg'
+} from "@builder.io/qwik"
+import { useLocation } from "@builder.io/qwik-city"
+import { ChevronDown } from "Svg"
 
 const Select = component$(({
     all,

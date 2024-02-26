@@ -1,4 +1,4 @@
-import { DefaultBreadcrumb } from 'Base'
+import { DefaultBreadcrumb } from "Base"
 
 const Breadcrumb = ({ breadcrumb }) => {
 

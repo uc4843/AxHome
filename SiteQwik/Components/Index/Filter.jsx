@@ -1,5 +1,5 @@
-import { Image } from 'Base'
-import { Search } from 'Shared'
+import { Image } from "Base"
+import { Search } from "Shared"
 
 const Filter = ({
     allCityDivision,

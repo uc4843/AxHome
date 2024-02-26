@@ -1,9 +1,9 @@
 import {
     Image,
     TimeAgo,
-} from 'Base'
-import { useAgentUrl } from 'Properties'
-import { Mobile } from 'Svg'
+} from "Base"
+import { useAgentUrl } from "Properties"
+import { Mobile } from "Svg"
 
 const Agent = ({
     agentTitle,

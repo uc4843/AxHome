@@ -3,7 +3,7 @@ import {
     Heading,
     PropertyInfo,
     Slider,
-} from 'PropertyParts'
+} from "PropertyParts"
 
 const Main = ({
     body,

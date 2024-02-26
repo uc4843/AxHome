@@ -1,17 +1,17 @@
-import { component$ } from '@builder.io/qwik'
-import { routeLoader$ } from '@builder.io/qwik-city'
+import { component$ } from "@builder.io/qwik"
+import { routeLoader$ } from "@builder.io/qwik-city"
 import {
     Map,
     useAsync,
-} from 'Base'
-import { useSeo } from 'Seo'
-import { getForm } from 'Forms'
-import { getPage } from 'Contents'
-import { Breadcrumb } from 'Shared'
+} from "Base"
+import { useSeo } from "Seo"
+import { getForm } from "Forms"
+import { getPage } from "Contents"
+import { Breadcrumb } from "Shared"
 import {
     Form,
     Info,
-} from 'Contact'
+} from "Contact"
 
 const getData = routeLoader$(async props => {
 
@@ -20,8 +20,8 @@ const getData = routeLoader$(async props => {
         form,
     ] = await useAsync(
         [
-            getPage('contact', props),
-            getForm('contact', props),
+            getPage("contact", props),
+            getForm("contact", props),
         ]
     )
 
@@ -66,13 +66,13 @@ const Contact = component$(() => {
 
         <section>
             <Map
-                containerClass='relative z-0 w-full h-[440px]'
+                containerClass="relative z-0 w-full h-[440px]"
                 zoom={15}
                 coordinates={[contactInfo?.mapLatitude, contactInfo?.mapLongitude]}
                 marker={{
                     coordinates: [contactInfo?.mapLatitude, contactInfo?.mapLongitude]
                 }}
-                id='contactMap'
+                id="contactMap"
             />
         </section>
     </>

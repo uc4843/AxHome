@@ -1,4 +1,4 @@
-import { Image } from 'Base'
+import { Image } from "Base"
 
 const Hero = ({
     animateCircleImage,
@@ -15,11 +15,11 @@ const Hero = ({
             class="absolute bg-custom-color3 start-1/2 translate-x-1/2 mx-auto top-0 w-[250%] md:w-[115%] h-full"
         />
 
-        <div class='relative z-10 pt-10 px-4 2xl:px-0'>
-            <h1 class='text-3xl font-bold text-center'>
+        <div class="relative z-10 pt-10 px-4 2xl:px-0">
+            <h1 class="text-3xl font-bold text-center">
                 {title}
             </h1>
-            <p class='text-lg text-center py-2 mb-6'>
+            <p class="text-lg text-center py-2 mb-6">
                 {subtitle}
             </p>
         </div>
@@ -36,7 +36,7 @@ const Hero = ({
             priority
             src={animateCircleImage}
         />
-        <div class=' aspect-[1/1] w-[400px] md:w-[500px] lg:w-[800px] rounded-[100%] bg-gradient-to-r from-custom-color4 to-transparent opacity-[0.6] absolute end-1/2 translate-x-[-50%] top-1/2 translate-y-[12%] md:translate-y-[-5%] lg:translate-y-[0] '>
+        <div class=" aspect-[1/1] w-[400px] md:w-[500px] lg:w-[800px] rounded-[100%] bg-gradient-to-r from-custom-color4 to-transparent opacity-[0.6] absolute end-1/2 translate-x-[-50%] top-1/2 translate-y-[12%] md:translate-y-[-5%] lg:translate-y-[0] ">
             <Image
                 containerClass="absolute animate-up-down-two delay-2 top-[50px] md:top-[90px] start-[150px] md:start-[30%] w-6 h-6 z-40"
                 imageClass="object-contain"

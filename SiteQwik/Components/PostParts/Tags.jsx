@@ -1,4 +1,4 @@
-import { useTagUrl } from 'Blog'
+import { useTagUrl } from "Blog"
 
 const Tags = ({ tags }) => {
 

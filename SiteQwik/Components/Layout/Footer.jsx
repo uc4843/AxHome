@@ -1,4 +1,4 @@
-import { Image } from 'Base'
+import { Image } from "Base"
 import {
     About,
     Contact,
@@ -7,7 +7,7 @@ import {
     QuickAccess,
     ScrollToTop,
     SocialNetworks,
-} from 'Layout'
+} from "Layout"
 
 const Footer = ({
     about,

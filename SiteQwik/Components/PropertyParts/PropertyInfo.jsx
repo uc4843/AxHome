@@ -1,6 +1,6 @@
-import { component$ } from '@builder.io/qwik'
-import { useListingUrl } from 'Properties'
-import { Check } from 'Svg'
+import { component$ } from "@builder.io/qwik"
+import { useListingUrl } from "Properties"
+import { Check } from "Svg"
 
 const PropertyInfo = component$(({
     property,

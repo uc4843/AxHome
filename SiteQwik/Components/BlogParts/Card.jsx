@@ -1,16 +1,16 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     Image,
     useLocalizedDate,
-} from 'Base'
+} from "Base"
 import {
     useCategoryUrl,
     usePostUrl,
-} from 'Blog'
+} from "Blog"
 import {
     Calendar,
     Folder,
-} from 'Svg'
+} from "Svg"
 
 const Card = component$(({
     currentLocale,

@@ -2,8 +2,8 @@ import {
     $,
     component$,
     useSignal,
-} from '@builder.io/qwik'
-import { useListingUrl } from 'Properties'
+} from "@builder.io/qwik"
+import { useListingUrl } from "Properties"
 
 const CityDivisions = component$(({
     propertiesTexts,

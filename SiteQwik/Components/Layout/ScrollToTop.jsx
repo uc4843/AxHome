@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik'
-import { ArrowUp } from 'Svg'
+import { component$ } from "@builder.io/qwik"
+import { ArrowUp } from "Svg"
 
 const ScrollToTop = component$(() => {
 

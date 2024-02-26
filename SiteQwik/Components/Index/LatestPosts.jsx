@@ -1,8 +1,8 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     useCategoryUrl,
     usePostUrl,
-} from 'Blog'
+} from "Blog"
 import {
     Image,
     lg,
@@ -13,9 +13,9 @@ import {
     xl,
     xs,
     zero,
-} from 'Base'
-import { SectionTitle } from 'Shared'
-import { Text } from 'Svg'
+} from "Base"
+import { SectionTitle } from "Shared"
+import { Text } from "Svg"
 
 const LatestPosts = component$(({
     blogPageDescription,

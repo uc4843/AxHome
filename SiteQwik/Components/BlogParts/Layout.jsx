@@ -1,11 +1,11 @@
-import { component$ } from '@builder.io/qwik'
-import { Breadcrumb } from 'Shared'
+import { component$ } from "@builder.io/qwik"
+import { Breadcrumb } from "Shared"
 import {
     Heading,
     Main,
     Side,
     Specials,
-} from 'BlogParts'
+} from "BlogParts"
 
 const Layout = component$(({
     blogTexts,

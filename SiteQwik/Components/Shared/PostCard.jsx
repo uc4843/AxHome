@@ -1,5 +1,5 @@
-import { Image } from 'Base'
-import { usePostUrl } from 'Blog'
+import { Image } from "Base"
+import { usePostUrl } from "Blog"
 
 const PostCard = ({
     item,

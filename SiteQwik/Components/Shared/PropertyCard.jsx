@@ -2,11 +2,11 @@ import {
     Image,
     LocalizedDate,
     TimeAgo,
-} from 'Base'
+} from "Base"
 import {
     useListingUrl,
     usePropertyUrl,
-} from 'Properties'
+} from "Properties"
 
 const PropertyCard = ({
     age,

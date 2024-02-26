@@ -1,4 +1,4 @@
-import { Font } from 'Base'
+import { Font } from "Base"
 
 const Head = () => {
     return <>

@@ -1,4 +1,4 @@
-import { KeyboardArrowDown } from 'Svg'
+import { KeyboardArrowDown } from "Svg"
 
 const Nav = ({ menuItems }) => {
 

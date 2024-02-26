@@ -1,8 +1,8 @@
-import { Breadcrumb } from 'Shared'
+import { Breadcrumb } from "Shared"
 import {
     Main,
     Side,
-} from 'PostParts'
+} from "PostParts"
 
 const Layout = ({
     blogTexts,

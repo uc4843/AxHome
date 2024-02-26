@@ -1,7 +1,7 @@
 import {
     $,
     component$
-} from '@builder.io/qwik'
+} from "@builder.io/qwik"
 
 const AdvancedSearch = component$(({
     maxArea,

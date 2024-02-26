@@ -1,10 +1,10 @@
-import { component$ } from '@builder.io/qwik'
-import { PostCard } from 'Shared'
+import { component$ } from "@builder.io/qwik"
+import { PostCard } from "Shared"
 import {
     Swiper,
     SwiperSlide,
     zero,
-} from 'Base'
+} from "Base"
 
 const LatestPosts = component$(({
     blogTexts,

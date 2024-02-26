@@ -2,23 +2,23 @@ import {
     component$,
     useStyles$,
     useVisibleTask$,
-} from '@builder.io/qwik'
-import swiperStyles from 'swiper/css?inline'
-import swiperThumbsStyles from 'swiper/css/thumbs?inline'
-import swiperFreeModeStyles from 'swiper/css/free-mode?inline'
-import swiperNavigationStyles from 'swiper/css/navigation?inline'
-import Swiper from 'swiper'
+} from "@builder.io/qwik"
+import swiperStyles from "swiper/css?inline"
+import swiperThumbsStyles from "swiper/css/thumbs?inline"
+import swiperFreeModeStyles from "swiper/css/free-mode?inline"
+import swiperNavigationStyles from "swiper/css/navigation?inline"
+import Swiper from "swiper"
 import {
     Navigation,
     Thumbs,
-} from 'swiper/modules'
+} from "swiper/modules"
 import {
     Image,
     md,
     sm,
     xs,
     zero,
-} from 'Base'
+} from "Base"
 
 const Slider = component$(({
     relatedItems,
@@ -31,7 +31,7 @@ const Slider = component$(({
     useStyles$(swiperNavigationStyles)
 
     useVisibleTask$(() => {
-        const thumbsSwiper = new Swiper('.thumbs-swiper', {
+        const thumbsSwiper = new Swiper(".thumbs-swiper", {
             modules: [Thumbs],
             clickable: true,
             slidesPerView: 4,
@@ -54,7 +54,7 @@ const Slider = component$(({
             },
         })
 
-        const mainSwiper = new Swiper('.main-swiper', {
+        const mainSwiper = new Swiper(".main-swiper", {
             modules: [Thumbs, Navigation],
             navigation: {
                 nextEl: ".product-next",
@@ -66,7 +66,7 @@ const Slider = component$(({
             },
         })
     }, {
-        strategy: 'document-ready'
+        strategy: "document-ready"
     })
 
     return <>
@@ -74,10 +74,10 @@ const Slider = component$(({
             relatedItems?.images && relatedItems?.images.length > 0 &&
             <div class="max-w-4xl bg-white">
 
-                <div class='main-swiper swiper mb-6'>
-                    <div class='swiper-wrapper'>
+                <div class="main-swiper swiper mb-6">
+                    <div class="swiper-wrapper">
                         {
-                            relatedItems?.images?.map(item => <div class='swiper-slide'>
+                            relatedItems?.images?.map(item => <div class="swiper-slide">
                                 <Image
                                     src={item?.relatedItems?.url}
                                     alt={title}
@@ -89,11 +89,11 @@ const Slider = component$(({
                 </div>
 
                 <div>
-                    <div class='thumbs-swiper swiper'>
-                        <div class='swiper-wrapper'>
+                    <div class="thumbs-swiper swiper">
+                        <div class="swiper-wrapper">
                             {
                                 relatedItems?.images?.map(item => <div
-                                    class='swiper-slide'
+                                    class="swiper-slide"
                                     key={item?.relatedItems?.id}
                                 >
                                     <Image
@@ -107,11 +107,11 @@ const Slider = component$(({
                         </div>
                     </div>
 
-                    {/* <div class='flex items-center justify-center gap-x-2 mt-6'>
-                    <div class='cursor-pointer w-5 text-center rounded-md product-next bg-gray-200 hover:bg-gray-300 inline-block transition duration-200 fill-black'>
+                    {/* <div class="flex items-center justify-center gap-x-2 mt-6">
+                    <div class="cursor-pointer w-5 text-center rounded-md product-next bg-gray-200 hover:bg-gray-300 inline-block transition duration-200 fill-black">
                         <KeyboardArrowDown class="fill-black p-0.5 text-sm " />
                     </div>
-                    <div class='cursor-pointer w-5 text-center rounded-md product-prev bg-gray-200 hover:bg-gray-300 inline-block transition duration-200 fill-black'>
+                    <div class="cursor-pointer w-5 text-center rounded-md product-prev bg-gray-200 hover:bg-gray-300 inline-block transition duration-200 fill-black">
                         <KeyboardArrowUp class="fill-black p-0.5 text-sm " />
                     </div>
                 </div> */}

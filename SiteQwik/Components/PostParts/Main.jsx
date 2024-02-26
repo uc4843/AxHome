@@ -1,13 +1,13 @@
-import { Image } from 'Base'
+import { Image } from "Base"
 import {
     AddComment,
     RichText,
-} from 'Shared'
-import { FaqPages } from 'Seo'
+} from "Shared"
+import { FaqPages } from "Seo"
 import {
     Icons,
     Tags,
-} from 'PostParts'
+} from "PostParts"
 
 const Main = ({
     blogTexts,

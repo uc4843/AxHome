@@ -1,20 +1,20 @@
 import {
     component$,
     useContext,
-} from '@builder.io/qwik'
+} from "@builder.io/qwik"
 import {
     LocalizedDate,
     Rating,
-} from 'Base'
+} from "Base"
 import {
     PostContext,
     useCategoryUrl,
-} from 'Blog'
+} from "Blog"
 import {
     Calendar,
     Eye,
     Folder,
-} from 'Svg'
+} from "Svg"
 
 const Icons = component$(({
     blogTexts,

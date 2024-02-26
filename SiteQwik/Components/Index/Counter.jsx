@@ -1,5 +1,5 @@
-import { Image } from 'Base'
-import { SectionTitle } from 'Shared'
+import { Image } from "Base"
+import { SectionTitle } from "Shared"
 
 const Counter = ({
     bgImage,

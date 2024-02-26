@@ -1,7 +1,7 @@
 import {
     Agent,
     Description,
-} from 'PropertyParts'
+} from "PropertyParts"
 
 const Side = ({
     agent,

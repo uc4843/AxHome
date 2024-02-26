@@ -1,4 +1,4 @@
-import { useCategoryUrl } from 'Blog'
+import { useCategoryUrl } from "Blog"
 
 const Categories = ({
     categories,

@@ -2,7 +2,7 @@ import {
     Envelope,
     Location,
     Phone,
-} from 'Svg'
+} from "Svg"
 
 const Info = ({
     address,

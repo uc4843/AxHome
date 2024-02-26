@@ -2,11 +2,11 @@ import {
     $,
     component$,
     useSignal,
-} from '@builder.io/qwik'
-import { Image } from 'Base'
-import { MobileSubMenu } from 'Layout'
-import { Backdrop } from 'Shared'
-import { Close } from 'Svg'
+} from "@builder.io/qwik"
+import { Image } from "Base"
+import { MobileSubMenu } from "Layout"
+import { Backdrop } from "Shared"
+import { Close } from "Svg"
 
 const MobileMainMenu = component$(({
     branding,

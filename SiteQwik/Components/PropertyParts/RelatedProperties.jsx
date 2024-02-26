@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$ } from "@builder.io/qwik"
 import {
     lg,
     md,
@@ -8,8 +8,8 @@ import {
     xl,
     xs,
     zero,
-} from 'Base'
-import { PropertyCard } from 'Shared'
+} from "Base"
+import { PropertyCard } from "Shared"
 
 const RelatedProperties = component$(({
     currentLocale,

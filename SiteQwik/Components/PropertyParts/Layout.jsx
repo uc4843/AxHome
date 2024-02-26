@@ -2,8 +2,8 @@ import {
     Main,
     RelatedProperties,
     Side,
-} from 'PropertyParts'
-import { Breadcrumb } from 'Shared'
+} from "PropertyParts"
+import { Breadcrumb } from "Shared"
 
 const Layout = ({
     agent,
