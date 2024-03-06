@@ -1,8 +1,6 @@
 name: AdminPanel
 
 on:
-  # schedule:
-  #   - cron: '30 7 * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,341 +9,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Base
-
-      - name: Add commands directory to PATH
+      - name: Initialize
         run: |
           echo "/HolismHolding/Commands" >> $GITHUB_PATH
-
-      - name: Create /HolismHolding directory
-        run: |
           sudo mkdir /HolismHolding
           sudo chmod 777 --preserve-root /HolismHolding
-
-      - name: Create /HolismPanel directory
-        run: |
-          sudo mkdir /HolismPanel
-          sudo chmod 777 --preserve-root /HolismPanel
-
-      - name: Create /Holizm directory
-        run: |
-          sudo mkdir /Holizm
-          sudo chmod 777 --preserve-root /Holizm
-
-      - name: Get HolismHolding/Infra
-        uses: actions/checkout@v3
-        with:
-          repository: HolismHolding/Infra
-          token: ${{ secrets.PAT }}
-          path: HolismHolding/Infra
-      - name: Copy HolismHolding/Infra to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismHolding/Infra /HolismHolding/Infra
-
-      - name: Get HolismHolding/Commands
-        uses: actions/checkout@v3
-        with:
-          repository: HolismHolding/Commands
-          token: ${{ secrets.PAT }}
-          path: HolismHolding/Commands
-      - name: Copy HolismHolding/Commands to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismHolding/Commands /HolismHolding/Commands
-
-      - name: Get HolismHolding/Scripts
-        uses: actions/checkout@v3
-        with:
-          repository: HolismHolding/Scripts
-          token: ${{ secrets.PAT }}
-          path: HolismHolding/Scripts
-      - name: Copy HolismHolding/Scripts to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismHolding/Scripts /HolismHolding/Scripts
-
-      - name: Get HolismHolding/Docker
-        uses: actions/checkout@v3
-        with:
-          repository: HolismHolding/Docker
-          token: ${{ secrets.PAT }}
-          path: HolismHolding/Docker
-      - name: Copy HolismHolding/Docker to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismHolding/Docker /HolismHolding/Docker
-
-      - name: Get HolismHolding/Fonts
-        uses: actions/checkout@v3
-        with:
-          repository: HolismHolding/Fonts
-          token: ${{ secrets.PAT }}
-          path: HolismHolding/Fonts
-      - name: Copy HolismHolding/Fonts to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismHolding/Fonts /HolismHolding/Fonts
-
-      - name: Get HolismPanel/Infra
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Infra
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Infra
-      - name: Copy HolismPanel/Infra to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Infra /HolismPanel/Infra
-
-      - name: Create /AxHome directory
-        run: |
-          sudo mkdir /AxHome
-          sudo chmod 777 --preserve-root /AxHome
-
-      # Dependencies
-
-      - name: Get HolismPanel/Accounts
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Accounts
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Accounts
-      - name: Copy HolismPanel/Accounts to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Accounts /HolismPanel/Accounts
-
-      - name: Get HolismPanel/Aggregates
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Aggregates
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Aggregates
-      - name: Copy HolismPanel/Aggregates to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Aggregates /HolismPanel/Aggregates
-
-      - name: Get HolismPanel/Attributes
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Attributes
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Attributes
-      - name: Copy HolismPanel/Attributes to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Attributes /HolismPanel/Attributes
-
-      - name: Get HolismPanel/Blog
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Blog
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Blog
-      - name: Copy HolismPanel/Blog to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Blog /HolismPanel/Blog
-
-      - name: Get HolismPanel/Commissions
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Commissions
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Commissions
-      - name: Copy HolismPanel/Commissions to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Commissions /HolismPanel/Commissions
-
-      - name: Get HolismPanel/Configuration
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Configuration
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Configuration
-      - name: Copy HolismPanel/Configuration to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Configuration /HolismPanel/Configuration
-
-      - name: Get HolismPanel/Contacts
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Contacts
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Contacts
-      - name: Copy HolismPanel/Contacts to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Contacts /HolismPanel/Contacts
-
-      - name: Get HolismPanel/Contents
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Contents
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Contents
-      - name: Copy HolismPanel/Contents to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Contents /HolismPanel/Contents
-
-      - name: Get HolismPanel/Contracts
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Contracts
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Contracts
-      - name: Copy HolismPanel/Contracts to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Contracts /HolismPanel/Contracts
-
-      - name: Get HolismPanel/Currencies
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Currencies
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Currencies
-      - name: Copy HolismPanel/Currencies to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Currencies /HolismPanel/Currencies
-
-      - name: Get HolismPanel/DataTypes
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/DataTypes
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/DataTypes
-      - name: Copy HolismPanel/DataTypes to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/DataTypes /HolismPanel/DataTypes
-
-      - name: Get HolismPanel/Forms
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Forms
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Forms
-      - name: Copy HolismPanel/Forms to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Forms /HolismPanel/Forms
-
-      - name: Get HolismPanel/Geo
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Geo
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Geo
-      - name: Copy HolismPanel/Geo to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Geo /HolismPanel/Geo
-
-      - name: Get HolismPanel/Globalization
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Globalization
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Globalization
-      - name: Copy HolismPanel/Globalization to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Globalization /HolismPanel/Globalization
-
-      - name: Get HolismPanel/Media
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Media
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Media
-      - name: Copy HolismPanel/Media to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Media /HolismPanel/Media
-
-      - name: Get HolismPanel/Modules
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Modules
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Modules
-      - name: Copy HolismPanel/Modules to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Modules /HolismPanel/Modules
-
-      - name: Get HolismPanel/Navigation
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Navigation
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Navigation
-      - name: Copy HolismPanel/Navigation to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Navigation /HolismPanel/Navigation
-
-      - name: Get HolismPanel/Pricing
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Pricing
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Pricing
-      - name: Copy HolismPanel/Pricing to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Pricing /HolismPanel/Pricing
-
-      - name: Get HolismPanel/Properties
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Properties
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Properties
-      - name: Copy HolismPanel/Properties to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Properties /HolismPanel/Properties
-
-      - name: Get HolismPanel/Seo
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Seo
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Seo
-      - name: Copy HolismPanel/Seo to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Seo /HolismPanel/Seo
-
-      - name: Get HolismPanel/Social
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Social
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Social
-      - name: Copy HolismPanel/Social to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Social /HolismPanel/Social
-
-      - name: Get HolismPanel/Taxonomy
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Taxonomy
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Taxonomy
-      - name: Copy HolismPanel/Taxonomy to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Taxonomy /HolismPanel/Taxonomy
-
-      - name: Get HolismPanel/Units
-        uses: actions/checkout@v3
-        with:
-          repository: HolismPanel/Units
-          token: ${{ secrets.PAT }}
-          path: HolismPanel/Units
-      - name: Copy HolismPanel/Units to root
-        run: |
-          cp -r $GITHUB_WORKSPACE/HolismPanel/Units /HolismPanel/Units
-
-      # Main
+          sudo mkdir /LocalSecrets
+          sudo chmod 777 --preserve-root /LocalSecrets
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH }}" > ~/.ssh/id_ed25519
+          chmod --preserve-root 400 ~/.ssh/id_ed25519
+          echo "${{ secrets.PAT }}" > /LocalSecrets/GitHubAccessToken
+          cd /HolismHolding
+          git clone git@github.com:HolismHolding/Commands
+          git clone git@github.com:HolismHolding/Scripts
+          IFS="/" read -r -a repo_array <<< "$GITHUB_REPOSITORY"
+          echo "GitHubOrganization=${repo_array[0]}" >> $GITHUB_ENV
+          echo "GitHubRepository=${repo_array[1]}" >> $GITHUB_ENV
       
-      - name: Get Holizm/AxHome
-        uses: actions/checkout@v3
-        with:
-          repository: Holizm/AxHome
-          token: ${{ secrets.PAT }}
-          path: Holizm/AxHome
-      - name: Copy Holizm/AxHome to root
+      - name: Clone Holding
         run: |
-          cp -r $GITHUB_WORKSPACE/Holizm/AxHome /Holizm/AxHome
+          Clone HolismHolding
 
-      - name: Move /Holizm/AxHome to /AxHome
+      - name: Clone Panel
         run: |
-          sudo cp -a /Holizm/AxHome/. /AxHome
-          ls /AxHome -lah
-      
+          Clone HolismPanel
+
+      - name: Change Docker image directory ownership
+        run: sudo chown -R $USER:$USER /var/lib/docker/image
+
+      - name: Cache Docker
+        uses: actions/cache@v4
+        with:
+          path: |
+            /var/lib/docker/image
+          key: docker-layers-${{ runner.os }}-pull-image
+
+      - name: Pull images
+        run: |
+          docker pull holism/panel
+          docker pull node:lts-bookworm-slim
+
+      - name: Get runnable
+        run: |
+          Clone $GitHubOrganization $GitHubRepository
+
       - name: Build production docker
         run: |
           cd /AxHome/AdminPanel

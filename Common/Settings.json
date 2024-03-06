@@ -6,5 +6,9 @@
     "WebsiteUrl": "https://axhome.local",
     "DatabaseServer": "database",
     "DatabaseUser": "root",
-    "DatabasePassword": "IC1joYMLZTT0fQMJ5qcz"
+    "DatabasePassword": "IC1joYMLZTT0fQMJ5qcz",
+    "AccountsClient": "Panel",
+    "AccountsRealm": "Development",
+    "AccountsUrl": "https://accounts.pydr.ir",
+    "SiteUrl": "https://axhome.local"
 }
