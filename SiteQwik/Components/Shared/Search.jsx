@@ -21,8 +21,8 @@ const Search = component$(({
     filter,
 }) => {
     const {
-        model,
         handleSearch,
+        model,
         resetAdvance,
     } = useSearch()
     const isShown = useSignal(false)
@@ -39,12 +39,12 @@ const Search = component$(({
                 childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
                 items={allDealTypes}
                 name="dealtype"
-                selected={model.value.dealType}
+                selected={model.dealType}
                 label={filter?.dealTypeTitle}
                 all={filter?.allTextFilter}
                 onChange={$((e, value) => {
-                    model.value = {
-                        ...model.value,
+                    model = {
+                        ...model,
                         dealType: value
                     }
                 })}
@@ -54,12 +54,12 @@ const Search = component$(({
                 childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
                 items={allPropertyTypes}
                 name="dealtype"
-                selected={model.value.propertyType}
+                selected={model.propertyType}
                 label={filter?.propertyTypeTitle}
                 all={filter?.allTextFilter}
                 onChange={$((e, value) => {
-                    model.value = {
-                        ...model.value,
+                    model = {
+                        ...model,
                         propertyType: value
                     }
                 })}
@@ -69,12 +69,12 @@ const Search = component$(({
                 childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
                 items={allCityDivision}
                 name="dealtype"
-                selected={model.value.cityDivision}
+                selected={model.cityDivision}
                 label={filter?.cityDivisionType}
                 all={filter?.allTextFilter}
                 onChange={$((e, value) => {
-                    model.value = {
-                        ...model.value,
+                    model = {
+                        ...model,
                         cityDivision: value
                     }
                 })}
@@ -83,7 +83,7 @@ const Search = component$(({
             />
 
             <div onClick$={toggleAdvanceSearch}>
-                <div class='max-w-3xl mx-auto'>
+                <div class="max-w-3xl mx-auto">
                     {
                         isShown.value ?
                             <div class="flex items-center gap-2 text-custom-color31 hover:text-custom-color2 group cursor-pointer">
@@ -98,7 +98,7 @@ const Search = component$(({
 
             <div class="hidden lg:block">
                 <button
-                    class='flex justify-center items-center w-32 gap-4 bg-custom-color1 text-white rounded-md py-1.5 font-bold cursor-pointer hover:brightness-110 transition-all duration-300 group'
+                    class="flex justify-center items-center w-32 gap-4 bg-custom-color1 text-white rounded-md py-1.5 font-bold cursor-pointer hover:brightness-110 transition-all duration-300 group"
                     type="button"
                     onClick$={handleSearch}
                 >
@@ -107,17 +107,17 @@ const Search = component$(({
             </div>
 
             <div class="block md:hidden">
-                <div class={`flex flex-col gap-y-1 bg-transparent rounded-md justify-center items-center overflow-hidden duration-1000 transition-all ${isShown.value ? ' duration-1000 transition-all max-h-[50vh]' : ' duration-1000 transition-all max-h-0'}`}>
+                <div class={`flex flex-col gap-y-1 bg-transparent rounded-md justify-center items-center overflow-hidden duration-1000 transition-all ${isShown.value ? " duration-1000 transition-all max-h-[50vh]" : " duration-1000 transition-all max-h-0"}`}>
                     <AdvancedSearch
-                        model={model}
                         {...filter}
                         isShown={isShown.value}
+                        model={model}
                     />
                 </div>
             </div>
             <div class="lg:hidden text-center my-2 w-full">
                 <button
-                    class='inline-flex justify-center items-center gap-4 mx-auto bg-custom-color1 text-white rounded-md px-6 py-2 cursor-pointer hover:bg-custom-color2 transition-all duration-300 group'
+                    class="inline-flex justify-center items-center gap-4 mx-auto bg-custom-color1 text-white rounded-md px-6 py-2 cursor-pointer hover:bg-custom-color2 transition-all duration-300 group"
                     type="button"
                     onClick$={handleSearch}
                 >
@@ -126,11 +126,11 @@ const Search = component$(({
                 </button>
             </div>
             <div class="hidden md:block">
-                <div class={`flex flex-col gap-y-1 bg-transparent rounded-md justify-center items-center overflow-hidden duration-1000 transition-all lg:w-[90%] ${isShown.value ? ' duration-1000 transition-all max-h-[50vh]' : ' duration-1000 transition-all max-h-0'}`}>
+                <div class={`flex flex-col gap-y-1 bg-transparent rounded-md justify-center items-center overflow-hidden duration-1000 transition-all lg:w-[90%] ${isShown.value ? " duration-1000 transition-all max-h-[50vh]" : " duration-1000 transition-all max-h-0"}`}>
                     <AdvancedSearch
-                        model={model}
                         {...filter}
                         isShown={isShown.value}
+                        model={model}
                     />
                 </div>
             </div>

@@ -16,92 +16,92 @@ const AdvancedSearch = component$(({
 
     return <>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 rounded-md max-w-7xl mx-auto">
-            <div class='rounded-md overflow-hidden'>
+            <div class="rounded-md overflow-hidden">
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={minArea}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             minArea: e.target.value.toString()
                         }
                     })}
-                    value={model.value['minArea']}
+                    placeholder={minArea}
+                    type="number"
+                    value={model["minArea"]}
                 />
             </div>
-            <div class='rounded-md overflow-hidden'>
+            <div class="rounded-md overflow-hidden">
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={maxArea}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             maxArea: e.target.value.toString()
                         }
                     })}
-                    value={model.value['maxArea']}
+                    placeholder={maxArea}
+                    type="number"
+                    value={model["maxArea"]}
                 />
             </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 rounded-md max-w-7xl mx-auto">
-            <div class='rounded-md overflow-hidden'>
+            <div class="rounded-md overflow-hidden">
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={minDeposit}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             minRentUpfront: e.target.value.toString()
                         }
                     })}
-                    value={model.value['minDeposit']}
+                    placeholder={minDeposit}
+                    type="number"
+                    value={model["minDeposit"]}
                 />
             </div>
-            <div class='rounded-md overflow-hidden'>
+            <div class="rounded-md overflow-hidden">
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={maxDeposit}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             maxRentUpfront: e.target.value.toString()
                         }
                     })}
-                    value={model.value['maxDeposit']}
+                    placeholder={maxDeposit}
+                    type="number"
+                    value={model["maxDeposit"]}
                 />
             </div>
         </div>
         {
-            model.value.dealType == 'rent' &&
+            model.dealType == "rent" &&
             <div class="flex flex-col md:flex-row gap-4">
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={minRent}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             minMonthlyRent: e.target.value.toString()
                         }
                     })}
-                    value={model.value['minRent']}
+                    placeholder={minRent}
+                    type="number"
+                    value={model["minRent"]}
                 />
                 <input
-                    type="number"
                     class={inputStyle}
-                    placeholder={maxRent}
                     onInput$={$((e) => {
-                        model.value = {
-                            ...model.value,
+                        model = {
+                            ...model,
                             maxMonthlyRent: e.target.value.toString()
                         }
                     })}
-                    value={model.value['maxRent']}
+                    placeholder={maxRent}
+                    type="number"
+                    value={model["maxRent"]}
                 />
             </div>
         }
