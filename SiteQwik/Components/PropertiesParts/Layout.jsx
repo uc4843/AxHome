@@ -42,10 +42,11 @@ const Layout = ({
                         {filter?.searchTitle}
                     </p>
                     <Search
-                    allCityDivision={cityDivisionWrapper.allCityDivisions}
-                    allDealTypes={dealTypes}
-                    allPropertyTypes={propertyTypes}
-                    filter={filter}
+                        allCityDivision={cityDivisionWrapper.allCityDivisions}
+                        allDealTypes={dealTypes}
+                        allPropertyTypes={propertyTypes}
+                        filter={filter}
+                        localePathPrefix={localePathPrefix}
                     />
                 </form>
             </div>

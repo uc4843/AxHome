@@ -3,6 +3,7 @@ import { useListingUrl } from "Properties"
 import { Check } from "Svg"
 
 const PropertyInfo = component$(({
+    localePathPrefix,
     property,
     propertyInfoTexts,
 }) => {
@@ -22,6 +23,7 @@ const PropertyInfo = component$(({
                             href={useListingUrl({
                                 cityDivision: property?.cityDivisionSlug,
                                 dealType: property?.dealTypeSlug,
+                                localePathPrefix: localePathPrefix,
                             })}
                         >
                             {property?.cityDivisionName}
@@ -35,6 +37,7 @@ const PropertyInfo = component$(({
                             href={useListingUrl({
                                 cityDivision: property?.cityDivisionSlug,
                                 dealType: property?.dealTypeSlug,
+                                localePathPrefix: localePathPrefix,
                             })}
                         >
                             {property?.dealTypeName}
@@ -48,6 +51,7 @@ const PropertyInfo = component$(({
                             href={useListingUrl({
                                 cityDivision: property?.cityDivisionSlug,
                                 propertyType: property?.propertyTypeSlug,
+                                localePathPrefix: localePathPrefix,
                             })}
                         >
                             {property?.propertyTypeName}
@@ -80,9 +84,9 @@ const PropertyInfo = component$(({
                         property?.relatedItems?.entityAttributes?.map(item => <>
                             <div
                                 class="flex items-center gap-1 text-md"
-                                key={item?.id}
+                                key={item.id}
                             >
-                                <p class="w-1/3">{item?.attributesAttributeTitle}</p>
+                                <p class="w-1/3">{item.attributesAttributeTitle}</p>
                                 <Check class="w-6 aspect-square border border-black bg-custom-color3 fill-custom-color1 stroke-2" />
                             </div>
                         </>)

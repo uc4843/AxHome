@@ -21,13 +21,14 @@ const Side = ({
                 <CityDivisions
                     allCityDivisions={allCityDivisions}
                     cityDivisionsTitle={propertiesTexts?.cityDivisionsTitle}
-                    rootCityDivisions={rootCityDivisions}
+                    localePathPrefix={localePathPrefix}
                     propertiesTexts={propertiesTexts}
+                    rootCityDivisions={rootCityDivisions}
                 />
                 <LatestPosts
                     latestPosts={latestPosts}
-                    title={blogTexts?.sideLatestPostsTitle}
                     localePathPrefix={localePathPrefix}
+                    title={blogTexts?.sideLatestPostsTitle}
                 />
 
             </div>

@@ -1,9 +1,9 @@
 import { Image } from "Base"
+import { FaqPages } from "Seo"
 import {
     AddComment,
     RichText,
 } from "Shared"
-import { FaqPages } from "Seo"
 import {
     Icons,
     Tags,
@@ -24,8 +24,8 @@ const Main = ({
 
             <Icons
                 blogTexts={blogTexts}
-                post={post}
                 localePathPrefix={localePathPrefix}
+                post={post}
             />
 
             <h1 class="font-bold font-bold text-xl my-4">
@@ -33,20 +33,20 @@ const Main = ({
             </h1>
 
             <Image
-                src={post?.relatedItems?.imageUrl}
                 alt={post?.title}
-                containerClass='relative'
-                imageClass='object-contain w-full aspect-[2/1]'
+                containerClass="relative"
+                imageClass="object-contain w-full aspect-[2/1]"
+                src={post?.relatedItems?.imageUrl}
             />
 
             <div class="w-full">
                 <RichText
-                    content={content}
                     class="leading-8"
-                    h1='font-bold mt-[10px] mb-[20px] text-[1.75rem]'
-                    h2='font-bold mt-[10px] mb-[15px] text-[1.5rem]'
-                    h3='font-bold mt-[10px] mb-[15px] text-[1.25rem]'
-                    p='mb-[10px]'
+                    content={content}
+                    h1="font-bold mt-[10px] mb-[20px] text-[1.75rem]"
+                    h2="font-bold mt-[10px] mb-[15px] text-[1.5rem]"
+                    h3="font-bold mt-[10px] mb-[15px] text-[1.25rem]"
+                    p="mb-[10px]"
                 />
             </div>
 
@@ -62,8 +62,7 @@ const Main = ({
             <AddComment
                 {...fields}
                 {...form}
-                entityGuid={post.guid}
-                entityType={post?.relatedItems?.entityType || 'BlogPost'}
+                entity={post}
             />
 
         </div>

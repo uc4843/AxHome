@@ -100,10 +100,11 @@ const Index = component$(() => {
         <Hero {...hero} />
         <Filter
             {...homeFilter}
-            filter={filter}
             allCityDivision={allCityDivision}
             allDealTypes={allDealTypes}
             allPropertyTypes={allPropertyTypes}
+            filter={filter}
+            localePathPrefix={localePathPrefix}
         />
         <Services {...services} />
         <PropertiesSlider

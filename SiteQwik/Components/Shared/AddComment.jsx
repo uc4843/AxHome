@@ -9,8 +9,7 @@ import { Message } from "Shared"
 const AddComment = component$(({
     body,
     ctaText,
-    entityGuid,
-    entityType,
+    entity,
     errorMessage,
     name,
     submit: textButton,
@@ -24,7 +23,7 @@ const AddComment = component$(({
         isSuccess,
         model,
         progress,
-    } = useComment(entityType, entityGuid)
+    } = useComment(entity)
 
     const submitText = ctaText || textButton
 
