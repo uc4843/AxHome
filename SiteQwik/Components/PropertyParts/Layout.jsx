@@ -28,10 +28,11 @@ const Layout = ({
                 <div class='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0'>
                     <Main
                         body={content}
-                        property={property}
-                        translations={translations}
-                        propertyInfoTexts={propertyInfoTexts}
+                        localePathPrefix={localePathPrefix}
                         propertiesTexts={propertiesTexts}
+                        property={property}
+                        propertyInfoTexts={propertyInfoTexts}
+                        translations={translations}
                     />
                     <Side
                         agent={agent}

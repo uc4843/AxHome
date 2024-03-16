@@ -68,7 +68,7 @@ const OurTeam = component$(({
                     }
                 }}
             >
-                {items?.map(item => <SwiperSlide key={item?.id} class="px-4">
+                {items?.map((item, index) => <SwiperSlide key={item?.id} class="px-4">
                     <div class="block shadow-xl rounded-2xl my-5 md:my-10 text-center">
                         <a
                             aria-label={item?.title}
@@ -77,6 +77,7 @@ const OurTeam = component$(({
                             <Image
                                 alt={item?.title}
                                 containerClass="w-full aspect-square"
+                                priority={index < 3}
                                 src={item?.image}
                             />
 

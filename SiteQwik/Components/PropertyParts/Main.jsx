@@ -7,6 +7,7 @@ import {
 
 const Main = ({
     body,
+    localePathPrefix,
     propertiesTexts,
     property,
     propertyInfoTexts,
@@ -27,6 +28,7 @@ const Main = ({
             />
 
             <PropertyInfo
+                localePathPrefix={localePathPrefix}
                 property={property}
                 propertyInfoTexts={propertyInfoTexts}
             />
