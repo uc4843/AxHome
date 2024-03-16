@@ -1,8 +1,4 @@
 import {
-    component$,
-    useContext,
-} from "@builder.io/qwik"
-import {
     LocalizedDate,
     Rating,
 } from "Base"
@@ -16,48 +12,47 @@ import {
     Folder,
 } from "Svg"
 
-const Icons = component$(({
+const Icons = ({
     blogTexts,
     localePathPrefix,
     post,
+    visitCount,
 }) => {
 
-    const viewCount = useContext(PostContext)
+    return <div class="flex flex-wrap items-center justify-start my-5 gap-10 text-xs sm:text-sm">
 
-    return <>
-        <div class='flex flex-wrap items-center justify-start my-5 gap-10 text-xs sm:text-sm'>
+        {
+            post?.relatedItems?.hierarchies.length > 0 &&
+            <a
+                class="flex items-center gap-1"
+                href={useCategoryUrl(post?.relatedItems?.hierarchies?.[0]?.slug, localePathPrefix)}
+            >
+                <Folder class="w-5 aspect-square" />
+                {post?.relatedItems?.hierarchies?.[0]?.title}
+            </a>
+        }
 
-            {post?.relatedItems?.hierarchies.length > 0 &&
-                <a
-                    href={useCategoryUrl(post?.relatedItems?.hierarchies?.[0]?.slug, localePathPrefix)}
-                    class='flex items-center gap-1'>
-                    <Folder class='w-5 aspect-square' />
-                    {post?.relatedItems?.hierarchies?.[0]?.title}
-                </a>
-            }
+        <span class="flex items-center gap-1">
+            <Calendar class="w-5 aspect-square" />
+            <LocalizedDate utcDate={post?.utcDate} />
+        </span>
 
-            <span class='flex items-center gap-1'>
-                <Calendar class='w-5 aspect-square' />
-                <LocalizedDate utcDate={post?.utcDate} />
-            </span>
+        <span class="flex items-center gap-1">
+            <Eye class="w-6 aspect-square" />
+            {visitCount}
+        </span>
 
-            <span class='flex items-center gap-1'>
-                <Eye class='w-6 aspect-square' />
-                {viewCount}
-            </span>
+        <Rating
+            containerClass="ms-auto"
+            entityGuid={post.guid}
+            entityType="BlogPost"
+            once
+            value={post.relatedItems?.ratingAverage?.value}
+            {...blogTexts}
+        />
 
-            <Rating
-                once
-                containerClass='ms-auto'
-                entityGuid={post.guid}
-                entityType='BlogPost'
-                value={post.relatedItems?.ratingAverage?.value}
-                {...blogTexts}
-            />
-
-        </div>
-    </>
-})
+    </div>
+}
 
 export default Icons
 

@@ -17,8 +17,9 @@ const Main = ({
     form,
     localePathPrefix,
     post,
+    visitCount,
 }) => {
-
+    console.log("post?.relatedItems?.imageUrl", post?.relatedItems?.imageUrl)
     return <>
         <div class="px-4 py-2 shadow-lg shadow-gray-200 rounded-lg">
 
@@ -26,6 +27,7 @@ const Main = ({
                 blogTexts={blogTexts}
                 localePathPrefix={localePathPrefix}
                 post={post}
+                visitCount={visitCount}
             />
 
             <h1 class="font-bold font-bold text-xl my-4">
