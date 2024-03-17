@@ -2,6 +2,7 @@ import {
     component$,
     useSignal,
 } from "@builder.io/qwik"
+import { useHomeUrl } from "Globalization"
 import { Image } from "Base"
 import {
     Bars,
@@ -17,6 +18,7 @@ const Header = component$(({
     branding,
     contactInfo,
     headerCta,
+    localePathPrefix,
     menuItems,
 }) => {
 
@@ -35,13 +37,17 @@ const Header = component$(({
                 <MobileMainMenu
                     branding={branding}
                     isOpen={isOpen}
+                    localePathPrefix={localePathPrefix}
                     menuItems={menuItems}
                 />
             </div>
             <a
-                href="/">
+                aria-label={branding?.brand}
+                class="ms-4"
+                href={useHomeUrl(localePathPrefix)}
+            >
                 <Image
-                    containerClass="relative hidden xs:block h-[60px] md:h-[70px] aspect-square mt-2 md:mt-0"
+                    containerClass="relative hidden xs:block w-auto h-[60px] md:h-[70px] aspect-square mt-2 md:mt-0"
                     imageClass="w-full h-full object-contain"
                     src={branding?.logo}
                     alt={branding?.brand}

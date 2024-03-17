@@ -4,6 +4,7 @@ import {
     useSignal,
 } from "@builder.io/qwik"
 import { Image } from "Base"
+import { useHomeUrl } from "Globalization"
 import { MobileSubMenu } from "Layout"
 import { Backdrop } from "Shared"
 import { Close } from "Svg"
@@ -11,6 +12,7 @@ import { Close } from "Svg"
 const MobileMainMenu = component$(({
     branding,
     isOpen,
+    localePathPrefix,
     menuItems,
 }) => {
 
@@ -28,11 +30,12 @@ const MobileMainMenu = component$(({
         <div class={`lg:hidden w-[90%] max-w-[300px] fixed overflow-y-scroll bg-white top-0 start-0 h-[100vh] z-50 transition duration-300 divide-y-[.5px] divide-gray-300 divide-opacity-2 ${isOpen.value ? "translate-x-0" : "translate-x-full"} `}>
             <div class="flex justify-between bg-slate-100">
                 <a
-                    href="/"
+                    aria-label={branding?.brand}
                     class="ms-4"
-                    >
+                    href={useHomeUrl(localePathPrefix)}
+                >
                     <Image
-                        containerClass="relative hidden xs:block h-[60px] md:h-[70px] aspect-square mt-2 md:mt-0"
+                        containerClass="relative w-auto h-[60px] mt-2 md:mt-0"
                         imageClass="w-full h-full object-contain"
                         src={branding?.logo}
                         alt={branding?.brand}

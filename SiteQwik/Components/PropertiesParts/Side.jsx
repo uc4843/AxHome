@@ -1,6 +1,7 @@
 import {
     CityDivisions,
     LatestPosts,
+    SeoDescription,
 } from "PropertiesParts"
 
 const Side = ({
@@ -10,6 +11,7 @@ const Side = ({
     localePathPrefix,
     propertiesTexts,
     rootCityDivisions,
+    seo,
 }) => {
 
     return <>
@@ -25,6 +27,12 @@ const Side = ({
                     propertiesTexts={propertiesTexts}
                     rootCityDivisions={rootCityDivisions}
                 />
+
+                <SeoDescription
+                {...propertiesTexts}
+                {...seo}
+                />
+
                 <LatestPosts
                     latestPosts={latestPosts}
                     localePathPrefix={localePathPrefix}

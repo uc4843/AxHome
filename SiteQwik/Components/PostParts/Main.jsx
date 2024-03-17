@@ -19,7 +19,7 @@ const Main = ({
     post,
     visitCount,
 }) => {
-    console.log("post?.relatedItems?.imageUrl", post?.relatedItems?.imageUrl)
+
     return <>
         <div class="px-4 py-2 shadow-lg shadow-gray-200 rounded-lg">
 
@@ -36,8 +36,8 @@ const Main = ({
 
             <Image
                 alt={post?.title}
-                containerClass="relative"
-                imageClass="object-contain w-full aspect-[2/1]"
+                containerClass="relative w-full aspect-[2/1]"
+                imageClass="object-contain"
                 src={post?.relatedItems?.imageUrl}
             />
 

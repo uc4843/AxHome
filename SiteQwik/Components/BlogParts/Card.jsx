@@ -30,7 +30,7 @@ const Card = component$(({
                 <Image
                     src={item?.relatedItems?.imageUrl}
                     alt={item?.title}
-                    containerClass='relative h-[220px] sm:h-[200px] xl:h-[250px] aspect-[245/163]'
+                    containerClass='relative w-full h-[220px] sm:h-[200px] xl:h-[250px] aspect-[245/163]'
                 />
             </a>
 

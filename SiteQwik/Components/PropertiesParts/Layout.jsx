@@ -1,9 +1,11 @@
+import { FaqPages } from "Seo"
 import {
     Breadcrumb,
     Pagination,
     Search,
 } from "Shared"
 import {
+    ChartAveragePrice,
     Main,
     Results,
     Side,
@@ -52,6 +54,15 @@ const Layout = ({
             </div>
         </div>
 
+        {averagePrices &&
+            <ChartAveragePrice
+                title={cityDivisionWrapper?.currentCityDivision?.name}
+                currentLocale={currentLocale}
+                prices={averagePrices}
+                translations={translations}
+            />
+        }
+
         <section class="max-w-7xl mx-auto px-4">
 
             <Results
@@ -93,8 +104,15 @@ const Layout = ({
                     latestPosts={latestPosts}
                     localePathPrefix={localePathPrefix}
                     propertiesTexts={propertiesTexts}
+                    seo={seo}
                     translations={translations}
                 />
+            </section>
+
+            <section>
+                {
+                    faqPages && <FaqPages faqPages={faqPages} />
+                }
             </section>
 
         </section>
