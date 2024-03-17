@@ -11,7 +11,7 @@ const LatestPosts = component$(({
 
     return <>
         <div class="mb-2 mt-8 p-4">
-            <p class='block text-xl text-custom-color41 pt-4 pb-3 border-b border-gray-300'>
+            <p class='block text-xl font-bold text-custom-color41 pt-4 pb-3 border-b border-gray-300'>
                 {title}
             </p>
             {lastThreePosts?.map(item => <>

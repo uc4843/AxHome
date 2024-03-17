@@ -9,12 +9,14 @@ import {
 } from "Base"
 
 const ChartAveragePrice = component$(({
+    chartTitle,
     currentLocale,
     label,
     prices,
     title,
     translations,
 }) => {
+
     useVisibleTask$(() => {
         new Chart(
             document.getElementById("chart"),
@@ -37,25 +39,23 @@ const ChartAveragePrice = component$(({
                         }
                     ]
                 },
-                options: {
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: title,
-                        }
-                    }
-                }
             }
         )
-
     })
+
     return <>
-            <section class="my-4 md:my-10 aspect-[2/1] px-4">
-                <canvas
-                    class="w-full"
-                    id="chart"
-                >
-                </canvas>
+        <section class="max-w-3xl mx-auto px-4 my-0 md:my-10 aspect-[2/1] px-4">
+
+            <div className="flex flex-wrap justify-center gap-1 font-bold mb-3">
+                <p>{chartTitle}</p>
+                <p>{title}</p>
+            </div>
+
+            <canvas
+                class="w-full"
+                id="chart"
+            >
+            </canvas>
         </section>
     </>
 })

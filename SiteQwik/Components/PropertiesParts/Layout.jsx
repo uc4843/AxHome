@@ -56,9 +56,10 @@ const Layout = ({
 
         {averagePrices &&
             <ChartAveragePrice
-                title={cityDivisionWrapper?.currentCityDivision?.name}
+                {...propertiesTexts}
                 currentLocale={currentLocale}
                 prices={averagePrices}
+                title={cityDivisionWrapper?.currentCityDivision?.name}
                 translations={translations}
             />
         }

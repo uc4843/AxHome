@@ -5,6 +5,8 @@ import {
 import { RichText } from "Shared"
 
 const SeoDescription = component$(({
+    pageTitle,
+    metaDescription,
     relatedItems,
     showLess,
     showMore,
@@ -13,7 +15,9 @@ const SeoDescription = component$(({
     const isShownMore = useSignal(false)
 
     return <>
-        <div class={`${isShownMore.value ? "" : "h-28 overflow-hidden"}`}>
+        <h1 class="text-xl font-bold mt-10 mb-3">{pageTitle}</h1>
+        <p>{metaDescription}</p>
+        <div class={`${isShownMore.value ? "" : "h-0 overflow-hidden"}`}>
             <RichText content={relatedItems?.content} />
         </div>
         <p
