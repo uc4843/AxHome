@@ -29,9 +29,6 @@ const OurTeam = component$(({
                 title={title}
             />
             <Swiper
-                name="teamSlider"
-                containerClass="pb-14"
-                paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                 config={{
                     autoplay: false,
                     loop: false,
@@ -67,49 +64,53 @@ const OurTeam = component$(({
                         }
                     }
                 }}
+                containerClass="pb-14"
+                name="teamSlider"
+                paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
             >
-                {items?.map((item, index) => <SwiperSlide key={item?.id} class="px-4">
-                    <div class="block shadow-xl rounded-2xl my-5 md:my-10 text-center">
-                        <a
-                            aria-label={item?.title}
-                            href={item?.link}
-                        >
-                            <Image
-                                alt={item?.title}
-                                containerClass="w-full aspect-square"
-                                priority={index < 3}
-                                src={item?.image}
-                            />
-
-                        </a>
-                        <div class="py-8">
+                {
+                    items?.map((item, index) => <SwiperSlide
+                        class="px-4"
+                        key={item.id}
+                    >
+                        <div class="block shadow-xl rounded-2xl my-5 md:my-10 text-center">
                             <a
-                                aria-label={item?.title}
-                                href={item?.link}
+                                aria-label={item.title}
+                                href={item.link}
                             >
-                                <p class="py-1 font-bold text-lg line-clamp-1">
-                                    {item?.title}
-                                </p>
+                                <Image
+                                    alt={item.title}
+                                    containerClass="w-full aspect-square"
+                                    priority={index < 3}
+                                    src={item.image}
+                                />
+
                             </a>
-                            <p class="text-slate-500 text-md line-clamp-1">
-                                {item?.jobPosition}
-                            </p>
+                            <div class="py-8">
+                                <a
+                                    aria-label={item.title}
+                                    href={item.link}
+                                >
+                                    <p class="py-1 font-bold text-lg line-clamp-1">
+                                        {item.title}
+                                    </p>
+                                </a>
+                                <p class="text-slate-500 text-md line-clamp-1">
+                                    {item.jobPosition}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>)}
+                    </SwiperSlide>)
+                }
             </Swiper>
         </div>
 
-        <div class="relative max-w-4xl mx-auto px-5 h-24 mb-72">
+        <div class="relative max-w-4xl mx-auto px-5 h-24 lg:mb-60">
             <div class="hidden lg:flex justify-between items-center mx-auto -mt-72">
-                <div
-                    class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-next bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 swiper-button-disabled nextTeamSlider"
-                >
+                <div class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-next bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 swiper-button-disabled nextTeamSlider">
                     <ChevronRight class="w-8 aspect-square" />
                 </div>
-                <div
-                    class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-prev bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 previousTeamSlider"
-                >
+                <div class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-prev bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 previousTeamSlider">
                     <ChevronLeft class="w-8 aspect-square" />
 
                 </div>

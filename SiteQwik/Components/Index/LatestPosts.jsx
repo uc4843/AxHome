@@ -1,9 +1,5 @@
 import { component$ } from "@builder.io/qwik"
 import {
-    useCategoryUrl,
-    usePostUrl,
-} from "Blog"
-import {
     Image,
     lg,
     md,
@@ -14,6 +10,10 @@ import {
     xs,
     zero,
 } from "Base"
+import {
+    useCategoryUrl,
+    usePostUrl,
+} from "Blog"
 import { SectionTitle } from "Shared"
 import { Text } from "Svg"
 
@@ -24,97 +24,99 @@ const LatestPosts = component$(({
     title,
 }) => {
 
-    return <>
-        <section class="w-full mt-12 mb-10">
-            <div class='mb-4'>
-                <SectionTitle
-                    description={blogPageDescription}
-                    title={title}
-                />
-            </div>
-            <div class='w-full mb-12 ms-5 md:ms-0'>
-                <Swiper
-                    name='LatestPostsSlider'
-                    containerClass="pb-14"
-                    paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
-                    config={{
-                        autoplay: false,
-                        loop: false,
-                        speed: 800,
-                        breakpoints: {
-                            [zero]: {
-                                slidesPerView: 1.1,
-                                spaceBetween: 10,
-                            },
-                            [xs]: {
-                                slidesPerView: 1.6,
-                                spaceBetween: 10,
-                            },
-                            [sm]: {
-                                slidesPerView: 2.5,
-                                spaceBetween: 15,
-                            },
-                            [md]: {
-                                slidesPerView: 3.5,
-                                spaceBetween: 15,
-                            },
-                            [lg]: {
-                                slidesPerView: 4.5,
-                                spaceBetween: 15,
-                            },
-                            [xl]: {
-                                slidesPerView: 5.5,
-                                spaceBetween: 15,
-                            }
+    return <section class="w-full mb-10">
+        <div class="mb-4">
+            <SectionTitle
+                description={blogPageDescription}
+                title={title}
+            />
+        </div>
+        <div class="w-full mb-12 ms-5 md:ms-0">
+            <Swiper
+                config={{
+                    autoplay: false,
+                    loop: false,
+                    speed: 800,
+                    breakpoints: {
+                        [zero]: {
+                            slidesPerView: 1.1,
+                            spaceBetween: 10,
+                        },
+                        [xs]: {
+                            slidesPerView: 1.4,
+                            spaceBetween: 10,
+                        },
+                        [sm]: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 15,
+                        },
+                        [md]: {
+                            slidesPerView: 3.5,
+                            spaceBetween: 15,
+                        },
+                        [lg]: {
+                            slidesPerView: 4.5,
+                            spaceBetween: 15,
+                        },
+                        [xl]: {
+                            slidesPerView: 5.5,
+                            spaceBetween: 15,
                         }
-                    }}
-                >
-                    {latestPosts?.map(item => <SwiperSlide
-                        key={item?.id}>
-                        <div class='max-w-[260px] sm:max-w-[500px] mx-auto border rounded-xl overflow-hidden shadow-xl group'>
+                    }
+                }}
+                containerClass="pb-14"
+                name="LatestPostsSlider"
+                paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
+            >
+                {
+                    latestPosts?.map(item => <SwiperSlide key={item.id}>
+                        <div class="max-w-[260px] sm:max-w-[500px] mx-auto border rounded-xl overflow-hidden shadow-xl group">
 
                             <a
-                                href={usePostUrl(item?.slug, localePathPrefix)}
-                                class='relative w-full block overflow-hidden after:transition-all'
-                                aria-label={item?.title}
+                                aria-label={item.title}
+                                class="relative w-full block overflow-hidden after:transition-all"
+                                href={usePostUrl(item.slug, localePathPrefix)}
                             >
                                 <Image
-                                    containerClass='max-w-[260px] sm:max-w-[500px] mx-auto w-full aspect-[6/4] rounded-xl'
-                                    imageClass='group-hover:scale-110 transition-all duration-500'
-                                    src={item?.relatedItems?.imageUrl}
-                                    alt={item?.title}
+                                    alt={item.title}
+                                    containerClass="max-w-[260px] sm:max-w-[500px] mx-auto w-full aspect-[6/4] rounded-xl"
+                                    imageClass="group-hover:scale-110 transition-all duration-500"
+                                    src={item.relatedItems?.imageUrl}
                                 />
                             </a>
 
-                            <a href={usePostUrl(item?.slug, localePathPrefix)}>
-                                <p class='font-bold line-clamp-1 my-3 px-3 group-hover:text-custom-color1 transition-all my-4'>
-                                    {item?.title}
+                            <a href={usePostUrl(item.slug, localePathPrefix)}>
+                                <p class="font-bold line-clamp-1 my-3 px-3 group-hover:text-custom-color1 transition-all my-4">
+                                    {item.title}
                                 </p>
                             </a>
 
-                            <p class='text-gray-600 line-clamp-4 h-[86px] px-3 mb-4 text-[15px]'>
-                                {item?.summary}
+                            <p class="text-gray-600 line-clamp-4 h-[86px] px-3 mb-4 text-[15px]">
+                                {item.summary}
                             </p>
 
-                            {item?.relatedItems?.hierarchies.length > 0 ?
-                                <a
-                                    href={useCategoryUrl(item?.relatedItems?.hierarchies[0]?.slug, localePathPrefix)}
-                                    class='py-2 border-t border-slate-200 flex items-center gap-1 px-2 text-gray-600 hover:text-slate-800 text-xs transition-all'
-                                    aria-label={item?.relatedItems?.hierarchies[0]?.title}
-                                >
-                                    <Text class="w-4 aspect-square fill-gray-600" />
-                                    <span class="line-clamp-1">
-                                        {item?.relatedItems?.hierarchies[0]?.title}
-                                    </span>
-                                </a>
-                                : <div></div>
+                            {
+                                item.relatedItems?.hierarchies.length > 0
+                                    ?
+                                    <a
+                                        aria-label={item.relatedItems?.hierarchies[0]?.title}
+                                        class="py-2 border-t border-slate-200 flex items-center gap-1 px-2 text-gray-600 hover:text-slate-800 text-xs transition-all"
+                                        href={useCategoryUrl(item.relatedItems?.hierarchies[0]?.slug, localePathPrefix)}
+                                    >
+                                        <Text class="w-4 aspect-square fill-gray-600" />
+                                        <span class="line-clamp-1">
+                                            {item.relatedItems?.hierarchies[0]?.title}
+                                        </span>
+                                    </a>
+                                    :
+                                    <div></div>
                             }
                         </div>
-                    </SwiperSlide>)}
-                </Swiper>
-            </div>
-        </section>
-    </>
+                    </SwiperSlide>)
+                }
+            </Swiper>
+        </div>
+    </section>
 })
 
 export default LatestPosts
