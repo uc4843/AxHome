@@ -8,7 +8,7 @@ const Hero = ({
     title,
 }) => {
 
-    return <section class="overflow-hidden relative after:content-[''] after:relative after:block after:w-full after:h-[150px] md:after:h-[320px] select-none">
+    return <section class="overflow-hidden relative after:content-[''] after:relative after:block after:w-full after:h-[150px] md:after:h-[320px] select-none text-center">
 
         <div
             dangerouslySetInnerHTML={roundedSvg}
@@ -31,7 +31,7 @@ const Hero = ({
             src={locationImage}
         />
         <Image
-            containerClass="absolute animate-spin-custom w-[600px] lg:w-[900px] aspect-square end-0 start-0 mx-auto text-center top-[calc(50%)] md:top-[calc(50%-100px)]"
+            containerClass="absolute animate-spin-custom w-[110%] sm:w-[600px] lg:w-[900px] aspect-square -start-[5%] -end-[5%] sm:start-0 sm:end-0 mx-auto text-center top-[calc(50%)] md:top-[calc(50%-100px)]"
             priority
             src={animateCircleImage}
         />
