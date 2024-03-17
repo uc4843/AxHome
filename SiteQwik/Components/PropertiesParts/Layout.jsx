@@ -67,8 +67,9 @@ const Layout = ({
         <section class="max-w-7xl mx-auto px-4">
 
             <Results
-                propertiesTexts={propertiesTexts}
                 metadata={properties?.metadata}
+                propertiesTexts={propertiesTexts}
+                seo={seo}
                 translations={translations}
             />
 
@@ -85,12 +86,12 @@ const Layout = ({
                         localesEnum={localesEnum}
                         metadata={properties?.metadata}
                         propertiesTexts={propertiesTexts}
+                        property={property}
                         propertyImages={propertyImages}
+                        propertyInfoTexts={propertyInfoTexts}
                         readMore={propertiesTexts?.readMore}
                         seo={seo}
                         translations={translations}
-                        property={property}
-                        propertyInfoTexts={propertyInfoTexts}
                     />
                     <Pagination
                         first
