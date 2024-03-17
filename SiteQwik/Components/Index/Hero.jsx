@@ -31,12 +31,11 @@ const Hero = ({
             src={locationImage}
         />
         <Image
-            containerClass="absolute animate-spin-custom w-[600px] md:w-[600px] lg:w-[900px] aspect-[1/1] end-[calc(50%-300px)] md:end-[calc(50%-300px)] lg:end-[calc(50%-450px)] top-[calc(50%)] md:top-[calc(50%-100px)] lg:top-[calc(50%-100px)]"
-            imageClass="object-cover"
+            containerClass="absolute animate-spin-custom w-[600px] lg:w-[900px] aspect-square end-0 start-0 mx-auto text-center top-[calc(50%)] md:top-[calc(50%-100px)]"
             priority
             src={animateCircleImage}
         />
-        <div class=" aspect-[1/1] w-[400px] md:w-[500px] lg:w-[800px] rounded-[100%] bg-gradient-to-r from-custom-color4 to-transparent opacity-[0.6] absolute end-1/2 translate-x-[-50%] top-1/2 translate-y-[12%] md:translate-y-[-5%] lg:translate-y-[0] ">
+        <div class="aspect-square w-[400px] md:w-[500px] lg:w-[800px] rounded-[100%] bg-gradient-to-r from-custom-color4 to-transparent opacity-[0.6] absolute end-1/2 translate-x-[-50%] top-1/2 translate-y-[12%] md:translate-y-[-5%] lg:translate-y-[0] ">
             <Image
                 containerClass="absolute animate-up-down-two delay-2 top-[50px] md:top-[90px] start-[150px] md:start-[30%] w-6 h-6 z-40"
                 imageClass="object-contain"
