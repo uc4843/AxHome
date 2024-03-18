@@ -37,7 +37,7 @@ const getData = routeLoader$(async props => {
         allDealTypes,
         allPropertyTypes,
     ] = await useAsync([
-        getLatestPosts(10),
+        getLatestPosts(10, props),
         getPage("home", props),
         getLatestDealType("sale"),
         getLatestDealType("rent"),
@@ -112,7 +112,7 @@ const Index = component$(() => {
             property={property}
             propertyImages={propertyImages}
             propertyInfoTexts={propertyInfoTexts}
-            sliderName={"occasionSwiper"}
+            sliderName="occasionSwiper"
             translations={translations}
         />
         <States {...states} />
