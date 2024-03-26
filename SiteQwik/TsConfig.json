@@ -47,9 +47,6 @@
 			"Dashboard": [
 				"src/Components/Dashboard/Exports"
 			],
-			"DefaultLocale": [
-				"src/DefaultLocale.jsx"
-			],
 			"Forms": [
 				"src/Modules/Forms/Exports"
 			],
@@ -73,9 +70,6 @@
 			],
 			"Loaders": [
 				"src/Loaders"
-			],
-			"Locales": [
-				"./src/Locales"
 			],
 			"Media": [
 				"src/Modules/Media/Exports"
@@ -127,9 +121,6 @@
 			],
 			"Social": [
 				"src/Modules/Social/Exports"
-			],
-			"SupportedLocales": [
-				"src/SupportedLocales.jsx"
 			],
 			"Svg": [
 				"src/Components/Svg/Exports"

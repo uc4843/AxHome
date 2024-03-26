@@ -26,14 +26,10 @@ jobs:
           IFS="/" read -r -a repo_array <<< "$GITHUB_REPOSITORY"
           echo "GitHubOrganization=${repo_array[0]}" >> $GITHUB_ENV
           echo "GitHubRepository=${repo_array[1]}" >> $GITHUB_ENV
-      
+
       - name: Clone Holding
         run: |
           Clone HolismHolding
-
-      - name: Clone API
-        run: |
-          Clone HolismApi
 
       - name: Pull holism/api
         run: |
@@ -58,7 +54,7 @@ jobs:
 
       - name: Push the image
         run: |
-          docker push ghcr.io/holizm/axhome/adminapi:latest
+          docker push ghcr.io/paydarnode/axhome/adminapi:latest
 
       - name: Logout from GitHub Container Registry
         run: |

@@ -3,8 +3,8 @@ import { Breadcrumb } from "Shared"
 import {
     Heading,
     Main,
+    Seo,
     Side,
-    Specials,
 } from "BlogParts"
 
 const Layout = component$(({
@@ -31,15 +31,8 @@ const Layout = component$(({
             blogTexts={blogTexts}
         />
 
-        <div class='relative pt-10 mt-16 px-4 bg-custom-color3'>
-
-            <Specials
-                popularPosts={popularPosts}
-                localePathPrefix={localePathPrefix}
-                blogTexts={blogTexts}
-            />
-
-            <section class='relative w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between md:pb-20 mt-10'>
+        <div class="relative pt-10 mt-16 px-4 bg-custom-color3">
+            <section class="relative w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between md:pb-20 mt-10">
 
                 <Main
                     currentLocale={currentLocale}
@@ -59,6 +52,8 @@ const Layout = component$(({
                     title={blogTexts?.categoryTitle}
                 />
             </section>
+
+            <Seo content={seo?.relatedItems.content} />
 
         </div>
     </>
