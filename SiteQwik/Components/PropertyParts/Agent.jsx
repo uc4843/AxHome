@@ -23,12 +23,12 @@ const Agent = ({
 
             <div class="flex flex-col items-end gap-1">
                 <div class="flex gap-2 items-center">
-                    <span>{propertyAdCodeTitle} :</span>
+                    <span>{propertyAdCodeTitle}:</span>
                     <span>{property?.id}</span>
                 </div>
                 <div class="text-custom-color4">
                     <TimeAgo
-                        utcDate={item?.modificationUtcDate}
+                        utcDate={property?.modificationUtcDate}
                         localKey={currentLocale?.key}
                         localesEnum={localesEnum}
                     />
@@ -36,7 +36,7 @@ const Agent = ({
                 </div>
             </div>
 
-            <div class='flex items-center justify-start gap-2 my-4'>
+            <div class="flex items-center justify-start gap-2 my-4">
                 {relatedItems?.imageUrl &&
                     <a href={useAgentUrl(slug, localePathPrefix)}>
                         <Image
@@ -61,19 +61,19 @@ const Agent = ({
 
             <div
                 class="flex flex-col gap-3 items-between justify-center mb-8 border px-4 py-2 rounded-md"
-                dir="ltr">
+                dir="ltr"
+            >
                 {
-                    relatedItems?.phones?.map(item => <>
-                        <a
-                            href={`tel:${item?.phoneValue}`}
-                            class="flex gap-2 items-center justify-between"
-                        >
-                            <Mobile class="w-8 aspect-square p-1 bg-custom-color1 rounded fill-custom-color31" />
-                            <span>
-                                {item?.phoneValue}
-                            </span>
-                        </a>
-                    </>)
+                    relatedItems?.phones?.map(item => <a
+                        class="flex gap-2 items-center justify-between"
+                        href={`tel:${item?.phoneValue}`}
+                        key={item.id}
+                    >
+                        <Mobile class="w-8 aspect-square p-1 bg-custom-color1 rounded fill-custom-color31" />
+                        <span>
+                            {item?.phoneValue}
+                        </span>
+                    </a>)
                 }
             </div>
         </div>
