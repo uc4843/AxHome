@@ -8,6 +8,10 @@ const PropertyInfo = component$(({
     propertyInfoTexts,
 }) => {
 
+    const attributes = property?.relatedItems.entityAttributes
+    const trueBooleanAttributes = attributes?.filter(item => item?.value == "True")
+    const nonBooleanAttributes = attributes?.filter(item => item?.attributesAttributeDataTypeKey?.toLowerCase() != "boolean")
+
     return <>
         <div class="border my-4 flex flex-col sm:flex-row items-start">
             <div class="w-full sm:w-1/2 p-4 border-b md:border-b-0 md:border-l">
@@ -73,6 +77,15 @@ const PropertyInfo = component$(({
                         <p>{property?.area}</p>
                     </div>
 
+                    {
+                        nonBooleanAttributes.map(item => <div
+                            class="flex items-center gap-4 text-md group"
+                            key={item.id}
+                        >
+                            <p class="w-1/3">{item?.attributesAttributeTitle}</p>
+                            <p>{item?.value}</p>
+                        </div>)
+                    }
                 </div>
             </div>
             <div class="w-full sm:w-1/2 p-4">
@@ -81,15 +94,13 @@ const PropertyInfo = component$(({
                 </h3>
                 <div class="my-4 grid grid-cols-2 gap-2">
                     {
-                        property?.relatedItems?.entityAttributes?.map(item => <>
-                            <div
-                                class="flex items-center gap-1 text-md"
-                                key={item.id}
-                            >
-                                <p class="w-1/3">{item.attributesAttributeTitle}</p>
-                                <Check class="w-6 aspect-square border border-black bg-custom-color3 fill-custom-color1 stroke-2" />
-                            </div>
-                        </>)
+                        trueBooleanAttributes.map(item => <div
+                            class="flex items-center gap-1 text-md"
+                            key={item.id}
+                        >
+                            <p class="w-1/3">{item.attributesAttributeTitle}</p>
+                            <Check class="w-6 aspect-square border border-black bg-custom-color3 fill-custom-color1 stroke-2" />
+                        </div>)
                     }
                 </div>
             </div>
