@@ -10,7 +10,7 @@ const PropertyInfo = component$(({
 
     const attributes = property?.relatedItems.entityAttributes
     const trueBooleanAttributes = attributes?.filter(item => item?.value == "True")
-    const nonBooleanAttributes = attributes?.filter(item => item?.attributesAttributeDataTypeKey?.toLowerCase() != "boolean")
+    const nonBooleanAttributes = attributes?.filter(item => item?.attributesAttributeDataTypeKey?.toLowerCase() != "boolean" && item?.value != "")
 
     return <>
         <div class="border my-4 flex flex-col sm:flex-row items-start">
@@ -64,17 +64,17 @@ const PropertyInfo = component$(({
 
                     <div class="flex items-center gap-4 text-md group">
                         <p class="w-1/3">{propertyInfoTexts?.roomsCount}</p>
-                        <p>{property?.roomsCount}</p>
+                        <p>{property?.roomsCount} {propertyInfoTexts?.roomsCountUnit}</p>
                     </div>
 
                     <div class="flex items-center gap-4 text-md group">
                         <p class="w-1/3">{propertyInfoTexts?.age}</p>
-                        <p>{property?.age}</p>
+                        <p>{property?.age} {propertyInfoTexts?.ageUnit}</p>
                     </div>
 
                     <div class="flex items-center gap-4 text-md group">
                         <p class="w-1/3">{propertyInfoTexts?.area}</p>
-                        <p>{property?.area}</p>
+                        <p>{property?.area} {propertyInfoTexts?.areaUnit}</p>
                     </div>
 
                     {
