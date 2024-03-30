@@ -64,16 +64,6 @@ const Select = component$(({
 
     useVisibleTask$(
         () => {
-            const params = new URLSearchParams(location.url.searchParams)
-
-            params.forEach(value => {
-                const selectedFilter = items.find(el => el.slug === value)
-
-                if (selectedFilter) {
-                    selectedItem.value = selectedFilter.name
-                    onChange("e", selectedFilter.slug)
-                }
-            })
             document.addEventListener("mousedown", handleClickOutside)
             return () => document.removeEventListener("mousedown", handleClickOutside)
         }
@@ -92,9 +82,10 @@ const Select = component$(({
             class={`relative selection:text-inherit selection:bg-inherit bg-white w-full md:w-[150px] lg:w-[170px] px-1 py-0.5 rounded-md ${internalClass}`}
         >
             <div
+                class={`flex items-center justify-between cursor-pointer px-2 py-1`}
                 onClick$={clickSelectHandler}
                 ref={selectRef}
-                class={`flex items-center justify-between cursor-pointer px-2 py-1`}>
+            >
                 <p>{selectedItem.value}</p>
                 <div class="pointer-events-none inset-y-0 end-0 flex items-center text-gray-700">
                     <ChevronDown class="w-5 aspect-square fill-black" />
@@ -103,12 +94,12 @@ const Select = component$(({
             <div
                 ref={boxRef}
                 class={`absolute z-10 min-w-full lg:w-auto top-[45px] end-1/2 translate-x-[-50%] bg-white my-1 rounded-lg shadow-xl ${boxClass} ${isOpen.value ? "block" : "hidden"}`}>
-                <div class='max-h-[200px] overflow-y-auto'>
+                <div class="max-h-[200px] overflow-y-auto">
                     {items && items?.length > 0 ? <>
                         {/* filter */}
                         {filter ? <div class="max-h-[200px] overflow-y-auto">
                             <input
-                                class='w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 text-gray-600 rounded-md'
+                                class="w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 text-gray-600 rounded-md"
                                 onInput$={filterChangeHandler}
                                 placeholder={filterText}
                             />
@@ -116,14 +107,14 @@ const Select = component$(({
                         {/*reset select text */}
                         {all ? <p
                             class={`w-full py-2 cursor-pointer px-2 ${childClass}`}
-                            onClick$={(e) => selectItemHandler(e, { name: all, slug: "" })}>{all}</p> : null}
+                            onClick$={(e) => selectItemHandler({ ...e, name: name }, { slug: null })}>{all}</p> : null}
                         {/* items map */}
                         {filteredItems.value?.map(el => <p
                             class={`w-full py-2 cursor-pointer px-2 ${childClass}`}
                             key={el.id}
-                            onClick$={(e) => selectItemHandler(e, el)}
+                            onClick$={(e) => selectItemHandler({ ...e, name: name }, el)}
                         >{el?.name}</p>)}
-                    </> : <p class='text-slate-300 h-12 flex items-center justify-center px-2'>no data !!</p>
+                    </> : <p class="text-slate-300 h-12 flex items-center justify-center px-2">no data !!</p>
                     }
                 </div>
             </div>

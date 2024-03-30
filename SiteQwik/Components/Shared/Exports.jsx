@@ -1,4 +1,5 @@
 import AddComment from "./AddComment"
+import AdvancedInput from "./AdvancedInput"
 import AdvancedSearch from "./AdvancedSearch"
 import Backdrop from "./Backdrop"
 import BlogCategories from "./BlogCategories"
@@ -14,6 +15,7 @@ import SectionTitle from "./SectionTitle"
 import Select from "./Select"
 
 export { AddComment }
+export { AdvancedInput }
 export { AdvancedSearch }
 export { Backdrop }
 export { BlogCategories }

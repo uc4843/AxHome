@@ -25,13 +25,24 @@ const Search = component$(({
         handleSearch,
         model,
         resetAdvance,
+        resetRentUpfront,
     } = useSearch({ localePathPrefix })
     const isShown = useSignal(false)
 
     const toggleAdvanceSearch = $(() => {
-
         isShown.value = !isShown.value
-        resetAdvance()
+        if (isShown.value == false) {
+
+            resetAdvance()
+        }
+    })
+
+    const selectChangeHandler = $((e, value) => {
+
+        model[e.name] = value
+        if (e.name === "dealType") {
+            resetRentUpfront()
+        }
     })
 
     return <>
@@ -41,13 +52,8 @@ const Search = component$(({
             childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
             items={allDealTypes}
             label={filter?.dealTypeTitle}
-            name="dealtype"
-            onChange={$((e, value) => {
-                model = {
-                    ...model,
-                    dealType: value
-                }
-            })}
+            name="dealType"
+            onChange={selectChangeHandler}
             selected={model.dealType}
         />
 
@@ -56,13 +62,8 @@ const Search = component$(({
             childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
             items={allPropertyTypes}
             label={filter?.propertyTypeTitle}
-            name="dealtype"
-            onChange={$((e, value) => {
-                model = {
-                    ...model,
-                    propertyType: value
-                }
-            })}
+            name="propertyType"
+            onChange={selectChangeHandler}
             selected={model.propertyType}
         />
 
@@ -73,13 +74,8 @@ const Search = component$(({
             filterText={filter?.buttonSearchTitle}
             items={allCityDivision}
             label={filter?.cityDivisionType}
-            name="dealtype"
-            onChange={$((e, value) => {
-                model = {
-                    ...model,
-                    cityDivision: value
-                }
-            })}
+            name="cityDivision"
+            onChange={selectChangeHandler}
             selected={model.cityDivision}
         />
 
