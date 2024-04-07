@@ -71,6 +71,9 @@
 			"Loaders": [
 				"src/Loaders"
 			],
+			"LoginParts": [
+				"src/Components/LoginParts/Exports"
+			],
 			"Media": [
 				"src/Modules/Media/Exports"
 			],
