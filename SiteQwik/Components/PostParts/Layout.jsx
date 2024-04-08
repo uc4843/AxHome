@@ -47,7 +47,6 @@ const Layout = ({
                 />
 
                 <Side
-                    post={post}
                     postTitles={postTitles}
                     categories={categories}
                     relatedPosts={relatedPosts}
