@@ -107,6 +107,7 @@ const Layout = ({
                 <Side
                     {...cityDivisionWrapper}
                     blogTexts={blogTexts}
+                    currentDealType={currentDealType}
                     latestPosts={latestPosts}
                     localePathPrefix={localePathPrefix}
                     propertiesTexts={propertiesTexts}

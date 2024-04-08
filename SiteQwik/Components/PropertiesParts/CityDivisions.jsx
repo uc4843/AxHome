@@ -6,6 +6,7 @@ import {
 import { useListingUrl } from "Properties"
 
 const CityDivisions = component$(({
+    currentDealType,
     localePathPrefix,
     propertiesTexts,
     rootCityDivisions,
@@ -31,6 +32,7 @@ const CityDivisions = component$(({
                         <a
                             href={useListingUrl({
                                 cityDivision: item.slug,
+                                dealType: currentDealType?.slug,
                                 localePathPrefix: localePathPrefix,
                             })}
                             key={item.id}

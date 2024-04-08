@@ -7,6 +7,7 @@ import {
 const Side = ({
     allCityDivisions,
     blogTexts,
+    currentDealType,
     latestPosts,
     localePathPrefix,
     propertiesTexts,
@@ -23,6 +24,7 @@ const Side = ({
                 <CityDivisions
                     allCityDivisions={allCityDivisions}
                     cityDivisionsTitle={propertiesTexts?.cityDivisionsTitle}
+                    currentDealType={currentDealType}
                     localePathPrefix={localePathPrefix}
                     propertiesTexts={propertiesTexts}
                     rootCityDivisions={rootCityDivisions}
