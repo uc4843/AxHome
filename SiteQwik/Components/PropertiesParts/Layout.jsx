@@ -17,7 +17,9 @@ const Layout = ({
     blogTexts,
     breadcrumb,
     cityDivisionWrapper,
+    currentDealType,
     currentLocale,
+    currentPropertyType,
     dealTypes,
     faqPages,
     filter,
@@ -67,9 +69,11 @@ const Layout = ({
         <section class="max-w-7xl mx-auto px-4">
 
             <Results
+                cityDivisionWrapper={cityDivisionWrapper}
+                currentDealType={currentDealType}
+                currentPropertyType={currentPropertyType}
                 metadata={properties?.metadata}
                 propertiesTexts={propertiesTexts}
-                seo={seo}
                 translations={translations}
             />
 

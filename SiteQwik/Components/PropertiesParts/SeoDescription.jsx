@@ -18,7 +18,7 @@ const SeoDescription = component$(({
         {
             relatedItems?.content && relatedItems?.content !== "[]" &&
             <>
-                <h1 class="text-xl font-bold mt-10 mb-3">{pageTitle}</h1>
+                <h2 class="text-xl font-bold mt-10 mb-3">{pageTitle}</h2>
                 <p class="leading-7">{metaDescription}</p>
                 <div class={`${isShownMore.value ? "" : "h-0 overflow-hidden"}`}>
                     <RichText
