@@ -8,6 +8,7 @@ import PropertyInfo from "./PropertyInfo"
 import RelatedProperties from "./RelatedProperties"
 import Side from "./Side"
 import Slider from "./Slider"
+import Tags from "./Tags"
 
 export { Agent }
 export { Body }
@@ -19,3 +20,4 @@ export { PropertyInfo }
 export { RelatedProperties }
 export { Side }
 export { Slider }
+export { Tags }

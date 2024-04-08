@@ -56,8 +56,8 @@ const MobileMainMenu = component$(({
                         <div class="flex justify-between items-center">
                             <a
                                 href={item?.url}
-                                key={item?.id}
-                                class={`w-fit text-custom-color24 hover:text-custom-color1 px-5 py-5 font-bold duration-700 after:absolute after:content-[''] after:bg-custom-color1 after:bottom-0 after:start-0 after:w-0 after:h-1 hover:after:w-full after:transition-all after:duration-700 delay-[${index * 1_000_000}ms] ${isOpen.value ? 'translate-x-0' : 'translate-x-[100vw]'}`}
+                                key={item.id}
+                                class={`w-fit text-custom-color24 hover:text-custom-color1 px-5 py-5 font-bold duration-700 after:absolute after:content-[""] after:bg-custom-color1 after:bottom-0 after:start-0 after:w-0 after:h-1 hover:after:w-full after:transition-all after:duration-700 delay-[${index * 1_000_000}ms] ${isOpen.value ? "translate-x-0" : "translate-x-[100vw]"}`}
                             >
                                 {item?.title}
                             </a>
@@ -68,7 +68,7 @@ const MobileMainMenu = component$(({
                                 </div>
                             }
                         </div>
-                        {item.relatedItems.children.length > 0 &&
+                        {item?.relatedItems?.children?.length > 0 &&
                             <MobileSubMenu
                                 isOpenSubMenu={isOpenSubMenu}
                                 items={item.relatedItems.children}

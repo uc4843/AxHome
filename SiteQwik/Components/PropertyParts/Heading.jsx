@@ -15,9 +15,9 @@ const Heading = component$(({
 
             <div class="flex gap-4 justify-start items-center mt-4">
 
-                <div class="flex items-center justify-between p-2 border border-custom-color1 rounded-md">
+                <div class="flex items-center justify-between gap-1.5 p-2 border border-custom-color1 rounded-md">
                     {
-                        property?.dealTypeKey === 'rent'
+                        property?.dealTypeKey === "rent"
                             ?
                             <span> {translations?.rent}</span>
                             :
@@ -26,11 +26,12 @@ const Heading = component$(({
                     <span>
                         {property?.minorPrice?.toLocaleString()}
                     </span>
+                    <span>{translations?.toman}</span>
                 </div>
 
-                <div class="flex items-center justify-between p-2 border border-custom-color1 rounded-md">
+                <div class="flex items-center justify-between gap-1.5 p-2 border border-custom-color1 rounded-md">
                     {
-                        property?.dealTypeKey === 'rent'
+                        property?.dealTypeKey === "rent"
                             ?
                             <span> {translations?.mortgage}</span>
                             :
@@ -39,6 +40,7 @@ const Heading = component$(({
                     <span>
                         {property?.majorPrice?.toLocaleString()}
                     </span>
+                    <span>{translations?.toman}</span>
                 </div>
 
             </div>

@@ -8,6 +8,7 @@ import { Breadcrumb } from "Shared"
 const Layout = ({
     agent,
     breadcrumb,
+    contactInfo,
     content,
     currentLocale,
     localePathPrefix,
@@ -25,7 +26,7 @@ const Layout = ({
             <Breadcrumb breadcrumb={breadcrumb} />
 
             <div class="w-full max-w-7xl mx-auto">
-                <div class='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0'>
+                <div class="grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0">
                     <Main
                         body={content}
                         localePathPrefix={localePathPrefix}
@@ -35,18 +36,19 @@ const Layout = ({
                         translations={translations}
                     />
                     <Side
+                        {...propertiesTexts}
                         agent={agent}
                         agentTitle={propertiesTexts?.agentTitle}
-                        localePathPrefix={localePathPrefix}
-                        {...propertiesTexts}
-                        property={property}
-                        localesEnum={localesEnum}
+                        contactInfo={contactInfo}
                         currentLocale={currentLocale}
+                        localePathPrefix={localePathPrefix}
+                        localesEnum={localesEnum}
+                        property={property}
                     />
                 </div>
             </div>
 
-            <div class='w-full h-0.5 bg-slate-200 my-10'></div>
+            <div class="w-full h-0.5 bg-slate-200 my-10"></div>
 
             <RelatedProperties
                 currentLocale={currentLocale}

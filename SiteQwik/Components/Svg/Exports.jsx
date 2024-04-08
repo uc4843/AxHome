@@ -26,6 +26,7 @@ import Person from "./Person"
 import Phone from "./Phone"
 import PhoneForwarded from "./PhoneForwarded"
 import Plus from "./Plus"
+import Share from "./Share"
 import Text from "./Text"
 import Window from "./Window"
 
@@ -57,5 +58,6 @@ export { Person }
 export { Phone }
 export { PhoneForwarded }
 export { Plus }
+export { Share }
 export { Text }
 export { Window }

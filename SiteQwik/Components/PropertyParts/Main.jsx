@@ -15,7 +15,7 @@ const Main = ({
 }) => {
 
     return <>
-        <div class="w-full md:mb-6">
+        <div class="w-full md:mb-6 px-4">
 
             <Slider
                 {...property}

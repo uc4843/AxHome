@@ -72,12 +72,15 @@ const Slider = component$(({
     return <>
         {
             relatedItems?.images && relatedItems?.images.length > 0 &&
-            <div class="max-w-4xl bg-white">
+            <div class="max-w-4xl bg-white relative z-0">
 
                 <div class="main-swiper swiper mb-6">
                     <div class="swiper-wrapper">
                         {
-                            relatedItems?.images?.map(item => <div class="swiper-slide">
+                            relatedItems?.images?.map(item => <div
+                                class="swiper-slide"
+                                key="item.id"
+                            >
                                 <Image
                                     src={item?.relatedItems?.url}
                                     alt={title}
@@ -94,7 +97,7 @@ const Slider = component$(({
                             {
                                 relatedItems?.images?.map(item => <div
                                     class="swiper-slide"
-                                    key={item?.relatedItems?.id}
+                                    key={item.relatedItems?.id}
                                 >
                                     <Image
                                         src={item?.relatedItems?.url}
