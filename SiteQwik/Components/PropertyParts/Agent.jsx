@@ -66,7 +66,7 @@ const Agent = component$(({
             </div>
 
             <div
-                class="flex flex-col gap-3 items-between justify-center mb-4 border px-4 py-2 rounded-md bg-green-600 text-white"
+                class="flex flex-col gap-3 items-between justify-center mb-4 border px-4 py-2 rounded-md bg-green-600 hover:border-green-500 transition-all text-white font-bold"
                 dir="ltr"
             >
                 {
@@ -75,31 +75,31 @@ const Agent = component$(({
                         href={`tel:${item?.phoneValue}`}
                         key={item.id}
                     >
-                        <p>{agentNum}</p>
                         <p>
                             {item?.phoneValue}
                         </p>
+                        <p>{agentNum}</p>
                     </a>)
                 }
             </div>
 
             <div
-                class="flex flex-col gap-3 items-between justify-center mb-8 border px-4 py-2 rounded-md bg-green-600 text-white"
+                class="flex flex-col gap-3 items-between justify-center mb-8 border px-4 py-2 rounded-md hover:border-custom-color1 transition-all"
                 dir="ltr"
             >
                 <a
                     class="flex gap-2 items-center justify-between"
                     href={`tel:${phone}`}
                 >
-                    <p>{realEstateNum}</p>
                     <p>
                         {phone}
                     </p>
+                    <p>{realEstateNum}</p>
                 </a>
             </div>
 
             <Sharing modalTitle={modalShareTitle}>
-                <div class="flex gap-1 border cursor-pointer py-2 px-2 rounded-md border hover:border-custom-color1 transition-all bg-white cursor-pointer group hover:border-custom-color1 transition-all">
+                <div class="flex gap-1 border cursor-pointer py-2 px-2 rounded-md border bg-white cursor-pointer group hover:border-custom-color1 transition-all">
                     <Share class="w-5 aspect-square cursor-pointer text-white group-hover:text-custom-color1" />
                     <span>{shareTitle}</span>
                 </div>
