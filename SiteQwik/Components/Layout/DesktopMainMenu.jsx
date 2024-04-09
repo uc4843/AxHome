@@ -7,17 +7,18 @@ const DesktopMainMenu = ({ menuItems }) => {
             {
                 menuItems?.map(item => <>
                     <li
-                        key={item?.id}
                         class="group relative"
+                        key={item.id}
                     >
                         <a
-                            href={item?.url}
                             class="block relative py-5 text-slate-800 hover:text-custom-color1 select-none focus:outline-none after:transition-all after:duration-700"
+                            href={item.url}
                         >
-                            {item?.title}
+                            {item.title}
                         </a>
                         {
-                            item?.relatedItems?.children?.length > 0 && <DesktopSubMenu items={item?.relatedItems?.children} />
+                            item.hasChildren &&
+                            <DesktopSubMenu items={item.children} />
                         }
                     </li>
                 </>
