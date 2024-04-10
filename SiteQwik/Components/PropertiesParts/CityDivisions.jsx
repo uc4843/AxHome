@@ -49,9 +49,9 @@ const CityDivisions = component$(({
                 class="flex items-center justify-center pt-4"
                 onClick$={() => { accordionClickHandler(rootCityDivisions?.id) }}
             >
-                <a class="text-custom-color1 text-sm hover:text-custom-color2 transition-all cursor-pointer">
+                <p class="text-custom-color1 text-sm hover:text-custom-color2 transition-all cursor-pointer">
                     {(activeAccordionId.value === rootCityDivisions.id ? propertiesTexts?.showMore : propertiesTexts?.showLess)}
-                </a>
+                </p>
             </div>
         </div>
     </>
