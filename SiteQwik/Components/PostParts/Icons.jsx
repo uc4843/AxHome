@@ -1,11 +1,6 @@
-import {
-    LocalizedDate,
-    Rating,
-} from "Base"
-import {
-    PostContext,
-    useCategoryUrl,
-} from "Blog"
+import { LocalizedDate } from "Base"
+import { Rating } from "Social"
+import { useCategoryUrl } from "Blog"
 import {
     Calendar,
     Eye,
@@ -44,10 +39,10 @@ const Icons = ({
 
         <Rating
             containerClass="ms-auto"
-            entityGuid={post.guid}
-            entityType="BlogPost"
+            entityGuid={post?.guid}
+            entityType={post?.relatedItems.entityType}
             once
-            value={post.relatedItems?.ratingAverage?.value}
+            value={post?.relatedItems.ratingAverage?.value}
             {...blogTexts}
         />
 
