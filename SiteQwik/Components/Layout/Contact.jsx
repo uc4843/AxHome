@@ -2,6 +2,7 @@ import { FooterTitle } from "Layout"
 
 const Contact = ({
     address,
+    addressLink,
     addressTitle,
     phone,
     phoneTitle,
@@ -23,9 +24,10 @@ const Contact = ({
                 <a
                     aria-label={addressTitle}
                     class="text-white hover:text-custom-color1"
-                    href="/contact"
+                    href={addressLink}
+                    rel="nofollow"
                     target="_blank"
-                    >
+                >
                     {address}
                 </a>
             </div>
