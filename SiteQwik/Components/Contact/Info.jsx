@@ -6,6 +6,7 @@ import {
 
 const Info = ({
     address,
+    addressLink,
     description,
     email,
     phone,
@@ -25,8 +26,8 @@ const Info = ({
             <div class="flex flex-col gap-4 py-6">
 
                 <a
-                    href={`tel:${phone}`}
                     class="flex gap-4 items-start text-custom-color4 hover:text-custom-color transition-all1"
+                    href={`tel:${phone}`}
                 >
                     <Phone class="w-7 aspect-square fill-custom-color1" />
                     <p class="w-[calc(100%-20px)] leading-8">
@@ -35,20 +36,26 @@ const Info = ({
                 </a>
 
                 <a
+                    class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all"
                     href={`mailto:${email}`}
-                    class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all">
+                >
                     <Envelope class="w-7 aspect-square fill-custom-color1" />
                     <p class="w-[calc(100%-20px)] leading-8">
                         {email}
                     </p>
                 </a>
 
-                <div class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all">
+                <a
+                    class="flex gap-4 items-start text-custom-color4 hover:text-custom-color1 transition-all"
+                    href={addressLink}
+                    rel="nofollow"
+                    target="_blank"
+                >
                     <Location class="w-7 aspect-square fill-custom-color1" />
                     <p class="w-[calc(100%-20px)] leading-8">
                         {address}
                     </p>
-                </div>
+                </a>
 
             </div>
 

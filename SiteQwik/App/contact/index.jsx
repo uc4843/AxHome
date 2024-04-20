@@ -31,7 +31,7 @@ const getData = routeLoader$(async props => {
     }
 })
 
-const Contact = component$(() => {
+const Index = component$(() => {
 
     const data = getData().value
     const {
@@ -46,7 +46,7 @@ const Contact = component$(() => {
         <Breadcrumb breadcrumb={breadcrumb} />
 
         <section>
-            <h1 class="mt-4 mb-10 text-3xl mx-auto text-center font-bold relative px-5 after:w-10 after:absolute after:content-[''] after:-bottom-5 after:end-1/2 after:translate-x-[-50%] after:w-10 after:bg-custom-color1 after:h-1.5">
+            <h1 class={`mt-4 mb-10 text-3xl mx-auto text-center font-bold relative px-5 after:w-10 after:absolute after:content-[""] after:-bottom-5 after:end-1/2 after:translate-x-[-50%] after:w-10 after:bg-custom-color1 after:h-1.5`}>
                 {page?.title}
             </h1>
             <div class="bg-custom-color3 py-10 px-4">
@@ -67,18 +67,16 @@ const Contact = component$(() => {
         <section>
             <Map
                 containerClass="relative z-0 w-full h-[440px]"
+                currentLocationMarker
+                latitude={contactInfo?.mapLatitude}
+                longitude={contactInfo?.mapLongitude}
                 zoom={15}
-                coordinates={[contactInfo?.mapLatitude, contactInfo?.mapLongitude]}
-                marker={{
-                    coordinates: [contactInfo?.mapLatitude, contactInfo?.mapLongitude]
-                }}
-                id="contactMap"
             />
         </section>
     </>
 })
 
-export default Contact
+export default Index
 
 const head = ({ resolveValue }) => {
     return useSeo(getData, resolveValue)
