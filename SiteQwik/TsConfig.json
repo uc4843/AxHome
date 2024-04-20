@@ -104,6 +104,15 @@
 			"PropertyParts": [
 				"src/Components/PropertyParts/Exports"
 			],
+			"QuestionParts": [
+				"src/Components/QuestionParts/Exports"
+			],
+			"Questions": [
+				"src/Modules/Questions/Exports"
+			],
+			"QuestionsParts": [
+				"src/Components/QuestionsParts/Exports"
+			],
 			"Qwik": [
 				"node_modules/@builder.io/qwik"
 			],

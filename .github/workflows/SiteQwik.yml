@@ -55,7 +55,7 @@ jobs:
           cd /AxHome/SiteQwik
           /HolismHolding/Commands/Build
 
-      - name: Log in to GitHub Container Registry
+      - name: Sign in to GitHub Container Registry
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
@@ -63,6 +63,6 @@ jobs:
         run: |
           docker push ghcr.io/paydarnode/axhome/siteqwik:latest
 
-      - name: Logout from GitHub Container Registry
+      - name: Sign out from GitHub Container Registry
         run: |
           docker logout
