@@ -17,6 +17,7 @@ global using Modules;
 global using Navigation;
 global using Pricing;
 global using Properties;
+global using Questions;
 global using Seo;
 global using Social;
 global using Taxonomy;
