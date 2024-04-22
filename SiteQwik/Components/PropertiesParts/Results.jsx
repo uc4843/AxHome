@@ -6,6 +6,7 @@ const Results = ({
     currentPropertyType,
     metadata,
     propertiesTexts,
+    seo,
     translations,
 }) => {
     return <div class="w-full flex justify-center md:justify-between items-center my-4 px-4 py-5 border border-slate-300 rounded-2xl">
@@ -16,6 +17,7 @@ const Results = ({
                 {currentPropertyType && <span>{currentPropertyType?.name}</span>}
                 {((currentDealType || currentPropertyType) && cityDivisionWrapper?.currentCityDivision) && <span>{translations.in}</span>}
                 {cityDivisionWrapper?.currentCityDivision && <span>{cityDivisionWrapper?.currentCityDivision?.name}</span>}
+                {!currentDealType && !currentPropertyType && !cityDivisionWrapper?.currentCityDivision && seo?.pageTitle}
             </h1>
         </div>
         <div class="hidden md:flex gap-1 text-sm font-light items-center">

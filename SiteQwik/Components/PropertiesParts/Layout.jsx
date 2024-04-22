@@ -74,6 +74,7 @@ const Layout = ({
                 currentPropertyType={currentPropertyType}
                 metadata={properties?.metadata}
                 propertiesTexts={propertiesTexts}
+                seo={seo}
                 translations={translations}
             />
 
