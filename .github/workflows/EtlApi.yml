@@ -1,0 +1,61 @@
+name: EtlApi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  buildAndPush:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Initialize
+        run: |
+          echo "/HolismHolding/Commands" >> $GITHUB_PATH
+          sudo mkdir /HolismHolding
+          sudo chmod 777 --preserve-root /HolismHolding
+          sudo mkdir /LocalSecrets
+          sudo chmod 777 --preserve-root /LocalSecrets
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH }}" > ~/.ssh/id_ed25519
+          chmod --preserve-root 400 ~/.ssh/id_ed25519
+          echo "${{ secrets.PAT }}" > /LocalSecrets/GitHubAccessToken
+          cd /HolismHolding
+          git clone git@github.com:HolismHolding/Commands
+          git clone git@github.com:HolismHolding/Scripts
+          IFS="/" read -r -a repo_array <<< "$GITHUB_REPOSITORY"
+          echo "GitHubOrganization=${repo_array[0]}" >> $GITHUB_ENV
+          echo "GitHubRepository=${repo_array[1]}" >> $GITHUB_ENV
+
+      - name: Clone Holding
+        run: |
+          Clone HolismHolding
+
+      - name: Pull holism/api
+        run: |
+          docker pull holism/api
+
+      - name: Pull holism/api-prod
+        run: |
+          docker pull holism/api-prod
+
+      - name: Get runnable
+        run: |
+          Clone $GitHubOrganization $GitHubRepository
+
+      - name: Build production docker
+        run: |
+          cd /AxHome/EtlApi
+          /HolismHolding/Commands/Build
+
+      - name: Sign in to GitHub Container Registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Push the image
+        run: |
+          docker push ghcr.io/paydarnode/axhome/etlapi:latest
+
+      - name: Sign out from GitHub Container Registry
+        run: |
+          docker logout
