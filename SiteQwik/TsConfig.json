@@ -143,6 +143,9 @@
 			"Taxonomy": [
 				"src/Modules/Taxonomy/Exports"
 			],
+			"Tenants": [
+				"src/Modules/Tenants/Exports"
+			],
 			"Units": [
 				"src/Modules/Units/Exports"
 			]
