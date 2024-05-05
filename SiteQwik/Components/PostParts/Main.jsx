@@ -36,7 +36,7 @@ const Main = ({
 
             <Image
                 alt={post?.title}
-                containerClass="relative w-full aspect-[2/1]"
+                containerClass="relative xs:w-[360px] sm:w-[640px] md:w-[768px] xl:w-[1024px] max-w-full aspect-[2/1]"
                 imageClass="object-contain"
                 src={post?.relatedItems?.imageUrl}
             />
