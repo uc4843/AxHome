@@ -20,17 +20,17 @@ const Related = ({
                     title={item.title}
                 >
                     <Image
-                        src={item.relatedItems?.imageUrl}
                         alt={item.title}
-                        containerClass="h-full aspect-[4/3] rounded-lg overflow-hidden shrink-0"
+                        containerClass="max-w-full h-full aspect-[4/3] rounded-lg overflow-hidden shrink-0"
+                        src={item.relatedItems?.imageUrl}
                     />
                 </a>
 
                 <div class="flex flex-col items-between justify-between w-full h-full">
                     <a
+                        class="line-clamp-2 my-2 group-hover:text-custom-color2 text-sm font-bold transition-all"
                         href={usePostUrl(item.slug, localePathPrefix)}
                         title={item.title}
-                        class="line-clamp-2 my-2 group-hover:text-custom-color2 text-sm font-bold transition-all"
                     >
                         {item.title}
                     </a>
