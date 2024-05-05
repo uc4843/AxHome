@@ -2,7 +2,6 @@ Tester.TestSourceConnection();
 Tester.TestTargetConnection();
 StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
 
-// SeoHelper.Delete();
 // new AccountsImporter().Import();
 // new BlogImporter().Import();
 // new ContentsImporter().Import();
@@ -13,6 +12,5 @@ StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
 // new GeoImporter().Import();
 // new PropertiesImporter().Import();
 // TaxonomyHelper.ImportTaxonomySeo();
-// SeoHelper.ImportHomePageSeoParameter();
 // SeoHelper.ImportRedirects();
 // SeoHelper.ImportGones();
