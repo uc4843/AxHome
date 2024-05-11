@@ -5,9 +5,6 @@
 			"Accounts": [
 				"src/Modules/Accounts/Exports"
 			],
-			"Aggregates": [
-				"src/Modules/Aggregates/Exports"
-			],
 			"Attributes": [
 				"src/Modules/Attributes/Exports"
 			],
@@ -19,9 +16,6 @@
 			],
 			"BlogParts": [
 				"src/Components/BlogParts/Exports"
-			],
-			"Commissions": [
-				"src/Modules/Commissions/Exports"
 			],
 			"CompareParts": [
 				"src/Components/CompareParts/Exports"
@@ -40,9 +34,6 @@
 			],
 			"Contracts": [
 				"src/Modules/Contracts/Exports"
-			],
-			"Currencies": [
-				"src/Modules/Currencies/Exports"
 			],
 			"Dashboard": [
 				"src/Components/Dashboard/Exports"
@@ -145,9 +136,6 @@
 			],
 			"Tenants": [
 				"src/Modules/Tenants/Exports"
-			],
-			"Units": [
-				"src/Modules/Units/Exports"
 			]
 		}
 	}
