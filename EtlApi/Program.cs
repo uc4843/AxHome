@@ -10,7 +10,7 @@ StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
 // new QuestionsImporter().Import();
 // new GalleriesImporter().Import();
 // new GeoImporter().Import();
-// new PropertiesImporter().Import();
+new PropertiesImporter().Import();
 // TaxonomyHelper.ImportTaxonomySeo();
 // SeoHelper.ImportRedirects();
 // SeoHelper.ImportGones();
