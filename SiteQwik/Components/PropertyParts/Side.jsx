@@ -26,7 +26,8 @@ const Side = ({
     return <>
         <div class="flex justify-end items-start mb-4">
             <div class="sticky top-10 start-0 px-4">
-                {agent &&
+                {
+                    agent &&
                     <Agent
                         {...agent}
                         {...contactInfo}
@@ -47,9 +48,11 @@ const Side = ({
                     body={defaultDescription}
                     descriptionText={description}
                 />
-                {property?.relatedItems?.tags.length > 0 &&
+                {
+                    property?.relatedItems?.tags.length > 0 &&
                     <Tags
                         items={property?.relatedItems?.tags}
+                        localePathPrefix={localePathPrefix}
                         title={tagsTitle}
                     />
                 }

@@ -57,7 +57,10 @@ const Main = ({
             {
                 post?.relatedItems?.tags && post?.relatedItems?.tags.length > 0 &&
                 <div class="w-full flex flex-wrap gap-3 my-6 md:my-14">
-                    <Tags tags={post?.relatedItems?.tags} />
+                    <Tags
+                        localePathPrefix={localePathPrefix}
+                        tags={post?.relatedItems?.tags}
+                    />
                 </div>
             }
 
