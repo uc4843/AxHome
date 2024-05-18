@@ -1,4 +1,5 @@
 import { Image } from "Base"
+import { Comments } from "Social"
 import { FaqPages } from "Seo"
 import {
     AddComment,
@@ -11,6 +12,7 @@ import {
 
 const Main = ({
     blogTexts,
+    comments,
     content,
     faqPages,
     fields,
@@ -18,6 +20,7 @@ const Main = ({
     localePathPrefix,
     post,
     visitCount,
+    translations,
 }) => {
 
     return <>
@@ -64,6 +67,11 @@ const Main = ({
                 </div>
             }
 
+            <Comments
+                comments={comments?.data}
+                title={translations?.usersComments}
+                titleClass="w-full"
+            />
             <AddComment
                 {...fields}
                 {...form}
