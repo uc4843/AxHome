@@ -46,7 +46,7 @@ const ChartAveragePrice = component$(({
 
     return <section class="max-w-3xl mx-auto px-4 my-0 md:my-10 aspect-[2/1] px-4">
         <div class="flex justify-center font-bold mb-3">
-            <p>{chartTitle} {title}</p>
+            <h2>{chartTitle} {title}</h2>
         </div>
         <canvas
             class="w-full"
