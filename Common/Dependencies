@@ -2,6 +2,7 @@ Accounts
 Aggregates
 Attributes
 Blog
+ChangeLog
 Commissions
 Configuration
 Contacts
@@ -12,6 +13,7 @@ DataTypes
 Forms
 Geo
 Globalization
+Granularities
 Media
 Modules
 Navigation
@@ -19,7 +21,9 @@ Notifications
 Pricing
 Properties
 Questions
+Scopes
 Seo
+Settings
 Social
 Taxonomy
 Tenants
