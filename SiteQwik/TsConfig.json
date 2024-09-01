@@ -116,6 +116,9 @@
 			"Seo": [
 				"src/Modules/Seo/Exports"
 			],
+			"Settings": [
+				"src/Modules/Settings/Exports"
+			],
 			"Shared": [
 				"src/Components/Shared/Exports"
 			],
@@ -136,6 +139,12 @@
 			],
 			"Tenants": [
 				"src/Modules/Tenants/Exports"
+			],
+			"VirtualTourParts": [
+				"src/Components/VirtualTourParts/Exports"
+			],
+			"VirtualToursParts": [
+				"src/Components/VirtualToursParts/Exports"
 			]
 		}
 	}
