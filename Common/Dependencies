@@ -4,7 +4,6 @@ Attributes
 Blog
 ChangeLog
 Commissions
-Configuration
 Contacts
 Contents
 Contracts
@@ -16,7 +15,9 @@ Globalization
 Granularities
 Media
 Modules
+MonetaryValues
 Navigation
+NewTaxonomy
 Notifications
 Pricing
 Properties
@@ -25,6 +26,5 @@ Scopes
 Seo
 Settings
 Social
-Taxonomy
 Tenants
 Units
