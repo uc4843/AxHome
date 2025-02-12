@@ -26,5 +26,6 @@ global using Scopes;
 global using Seo;
 global using Settings;
 global using Social;
+global using StateMachines;
 global using Tenants;
 global using Units;
