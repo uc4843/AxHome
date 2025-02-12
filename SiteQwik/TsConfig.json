@@ -1,151 +1,145 @@
 {
-	"extends": "./TsConfigBase",
-	"compilerOptions": {
-		"paths": {
-			"Accounts": [
-				"src/Modules/Accounts/Exports"
-			],
-			"Attributes": [
-				"src/Modules/Attributes/Exports"
-			],
-			"Base": [
-				"src/Base/Exports"
-			],
-			"Blog": [
-				"src/Modules/Blog/Exports"
-			],
-			"BlogParts": [
-				"src/Components/BlogParts/Exports"
-			],
-			"CompareParts": [
-				"src/Components/CompareParts/Exports"
-			],
-			"Configuration": [
-				"src/Modules/Configuration/Exports"
-			],
-			"Contact": [
-				"src/Components/Contact/Exports"
-			],
-			"Contacts": [
-				"src/Modules/Contacts/Exports"
-			],
-			"Contents": [
-				"src/Modules/Contents/Exports"
-			],
-			"Contracts": [
-				"src/Modules/Contracts/Exports"
-			],
-			"Dashboard": [
-				"src/Components/Dashboard/Exports"
-			],
-			"Forms": [
-				"src/Modules/Forms/Exports"
-			],
-			"Geo": [
-				"src/Modules/Geo/Exports"
-			],
-			"Globalization": [
-				"src/Modules/Globalization/Exports"
-			],
-			"HierarchiesParts": [
-				"src/Components/HierarchiesParts/Exports"
-			],
-			"HierarchyChildrenParts": [
-				"src/Components/HierarchyChildrenParts/Exports"
-			],
-			"Index": [
-				"src/Components/Index/Exports"
-			],
-			"Layout": [
-				"src/Components/Layout/Exports"
-			],
-			"Loaders": [
-				"src/Loaders"
-			],
-			"Media": [
-				"src/Modules/Media/Exports"
-			],
-			"Modules": [
-				"src/Modules/Modules/Exports"
-			],
-			"Navigation": [
-				"src/Modules/Navigation/Exports"
-			],
-			"PageParts": [
-				"src/Components/PageParts/Exports"
-			],
-			"PaginationBehaviors": [
-				"src/PaginationBehaviors"
-			],
-			"PostParts": [
-				"src/Components/PostParts/Exports"
-			],
-			"PriceListParts": [
-				"src/Components/PriceListParts/Exports"
-			],
-			"Pricing": [
-				"src/Modules/Pricing/Exports"
-			],
-			"Properties": [
-				"src/Modules/Properties/Exports"
-			],
-			"PropertiesParts": [
-				"src/Components/PropertiesParts/Exports"
-			],
-			"PropertyParts": [
-				"src/Components/PropertyParts/Exports"
-			],
-			"QuestionParts": [
-				"src/Components/QuestionParts/Exports"
-			],
-			"Questions": [
-				"src/Modules/Questions/Exports"
-			],
-			"QuestionsParts": [
-				"src/Components/QuestionsParts/Exports"
-			],
-			"Qwik": [
-				"node_modules/@builder.io/qwik"
-			],
-			"QwikCity": [
-				"node_modules/@builder.io/qwik-city"
-			],
-			"RichTextComponents": [
-				"src/RichTextComponents"
-			],
-			"Seo": [
-				"src/Modules/Seo/Exports"
-			],
-			"Settings": [
-				"src/Modules/Settings/Exports"
-			],
-			"Shared": [
-				"src/Components/Shared/Exports"
-			],
-			"SignInParts": [
-				"src/Components/SignInParts/Exports"
-			],
-			"Social": [
-				"src/Modules/Social/Exports"
-			],
-			"Svg": [
-				"src/Components/Svg/Exports"
-			],
-			"TagsParts": [
-				"src/Components/TagsParts/Exports"
-			],
-			"Taxonomy": [
-				"src/Modules/Taxonomy/Exports"
-			],
-			"Tenants": [
-				"src/Modules/Tenants/Exports"
-			],
-			"VirtualTourParts": [
-				"src/Components/VirtualTourParts/Exports"
-			],
-			"VirtualToursParts": [
-				"src/Components/VirtualToursParts/Exports"
-			]
-		}
-	}
+    "extends": "./TsConfigBase",
+    "compilerOptions": {
+        "paths": {
+            "Accounts": [
+                "src/Modules/Accounts/Exports"
+            ],
+            "Attributes": [
+                "src/Modules/Attributes/Exports"
+            ],
+            "Base": [
+                "src/Base/Exports"
+            ],
+            "Blog": [
+                "src/Modules/Blog/Exports"
+            ],
+            "BlogParts": [
+                "src/Components/BlogParts/Exports"
+            ],
+            "CompareParts": [
+                "src/Components/CompareParts/Exports"
+            ],
+            "Contact": [
+                "src/Components/Contact/Exports"
+            ],
+            "Contacts": [
+                "src/Modules/Contacts/Exports"
+            ],
+            "Contents": [
+                "src/Modules/Contents/Exports"
+            ],
+            "Contracts": [
+                "src/Modules/Contracts/Exports"
+            ],
+            "Currencies": [
+                "src/Modules/Currencies/Exports"
+            ],
+            "Dashboard": [
+                "src/Components/Dashboard/Exports"
+            ],
+            "Forms": [
+                "src/Modules/Forms/Exports"
+            ],
+            "Geo": [
+                "src/Modules/Geo/Exports"
+            ],
+            "Globalization": [
+                "src/Modules/Globalization/Exports"
+            ],
+            "Index": [
+                "src/Components/Index/Exports"
+            ],
+            "Layout": [
+                "src/Components/Layout/Exports"
+            ],
+            "Loaders": [
+                "src/Loaders"
+            ],
+            "Media": [
+                "src/Modules/Media/Exports"
+            ],
+            "Modules": [
+                "src/Modules/Modules/Exports"
+            ],
+            "Navigation": [
+                "src/Modules/Navigation/Exports"
+            ],
+            "NewTaxonomy": [
+                "src/Modules/NewTaxonomy/Exports"
+            ],
+            "PageParts": [
+                "src/Components/PageParts/Exports"
+            ],
+            "PaginationBehaviors": [
+                "src/PaginationBehaviors"
+            ],
+            "PostParts": [
+                "src/Components/PostParts/Exports"
+            ],
+            "PriceListParts": [
+                "src/Components/PriceListParts/Exports"
+            ],
+            "Pricing": [
+                "src/Modules/Pricing/Exports"
+            ],
+            "Properties": [
+                "src/Modules/Properties/Exports"
+            ],
+            "PropertiesParts": [
+                "src/Components/PropertiesParts/Exports"
+            ],
+            "PropertyParts": [
+                "src/Components/PropertyParts/Exports"
+            ],
+            "QuestionParts": [
+                "src/Components/QuestionParts/Exports"
+            ],
+            "Questions": [
+                "src/Modules/Questions/Exports"
+            ],
+            "QuestionsParts": [
+                "src/Components/QuestionsParts/Exports"
+            ],
+            "Qwik": [
+                "node_modules/@builder.io/qwik"
+            ],
+            "QwikCity": [
+                "node_modules/@builder.io/qwik-city"
+            ],
+            "RichTextComponents": [
+                "src/RichTextComponents"
+            ],
+            "Seo": [
+                "src/Modules/Seo/Exports"
+            ],
+            "Settings": [
+                "src/Modules/Settings/Exports"
+            ],
+            "Shared": [
+                "src/Components/Shared/Exports"
+            ],
+            "SignInParts": [
+                "src/Components/SignInParts/Exports"
+            ],
+            "Social": [
+                "src/Modules/Social/Exports"
+            ],
+            "Svg": [
+                "src/Components/Svg/Exports"
+            ],
+            "Tenants": [
+                "src/Modules/Tenants/Exports"
+            ],
+            "Units": [
+                "src/Modules/Units/Exports"
+            ],
+            "VirtualTourParts": [
+                "src/Components/VirtualTourParts/Exports"
+            ],
+            "VirtualToursParts": [
+                "src/Components/VirtualToursParts/Exports"
+            ]
+        }
+    }
 }

@@ -8,7 +8,7 @@ import {
     useAsync,
 } from "Base"
 import { getGlobalization } from "Globalization"
-import { getSystemConfig } from "Configuration"
+import { getApplicationSettings } from "Settings"
 import { useLayoutSeo } from "Seo"
 import { getLayout } from "Contents"
 import { getMenu } from "Navigation"
@@ -22,18 +22,18 @@ const getData = routeLoader$(async props => {
         layout,
         menuData,
         globalization,
-        systemConfigs,
+        applicationSettings,
     ] = await useAsync([
         getLayout("main", props),
         getMenu(props),
         getGlobalization(props),
-        getSystemConfig(props),
+        getApplicationSettings(props),
     ])
     return {
         ...globalization,
         ...layout,
         ...menuData,
-        ...systemConfigs,
+        ...applicationSettings,
     }
 })
 
@@ -41,15 +41,15 @@ const Layout = component$(() => {
 
     const data = getData().value
     const {
-        configs,
         currentLocale,
+        settings,
     } = data
 
     return <>
-        <GoogleTagManagerNoScript {...configs} />
+        <GoogleTagManagerNoScript {...settings} />
         <div
-            dir={currentLocale.isRtl ? "rtl" : "ltr"}
             class="scroll-smooth scroll-pb-7 h-auto"
+            dir={currentLocale.isRtl ? "rtl" : "ltr"}
         >
             <Header {...data} />
             <Slot />
