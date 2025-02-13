@@ -37,18 +37,18 @@ const AddComment = component$(({
             <div class="w-full">
                 <Text
                     class="w-full bg-custom-color3 px-5 py-4 mt-4 rounded-md focus:outline-hidden placeholder-gray-500"
-                    type="text"
                     modelBind={model}
-                    property="Name"
                     placeholder={name?.placeholder}
+                    property="Name"
+                    type="text"
                 />
             </div>
             <div class="w-full">
                 <LongText
                     class="w-full mt-4 bg-custom-color3 px-5 py-4 rounded-md focus:outline-hidden placeholder-gray-500 resize-none"
                     modelBind={model}
-                    property="Body"
                     placeholder={body?.placeholder}
+                    property="Body"
                 />
             </div>
             <div class="flex justify-end mt-4">
@@ -61,7 +61,7 @@ const AddComment = component$(({
             </div>
 
             {
-                isMessageShown.value && isSuccess.value &&
+                isMessageShown?.value && isSuccess.value &&
                 <Message
                     isSuccess={isSuccess.value}
                     message={isSuccess.value ? successMessage : errorMessage}
