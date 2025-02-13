@@ -15,7 +15,6 @@ const Icons = ({
 }) => {
 
     return <div class="flex flex-wrap items-center justify-start my-5 gap-10 text-xs sm:text-sm">
-
         {
             post?.relatedItems?.hasCategories &&
             <a
@@ -26,26 +25,21 @@ const Icons = ({
                 {post?.relatedItems?.categories?.[0]?.title}
             </a>
         }
-
         <span class="flex items-center gap-1">
             <Calendar class="w-5 aspect-square" />
             <LocalizedDate utcDate={post?.utcDate} />
         </span>
-
         <span class="flex items-center gap-1">
             <Eye class="w-6 aspect-square" />
             {visitCount}
         </span>
-
         <Rating
             containerClass="ms-auto"
-            entityGuid={post?.guid}
-            entityType={post?.relatedItems.entityType}
+            entity={post}
             once
             value={post?.relatedItems.ratingAverage?.value}
             {...blogTexts}
         />
-
     </div>
 }
 
