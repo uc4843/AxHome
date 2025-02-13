@@ -20,7 +20,7 @@ const PostCard = ({
                         containerClass="relative w-full aspect-[6/4]"
                     />
                 </a>
-                <h2 class="w-full border-b p-2 px-4">
+                <h2 class="w-full border-b border border-b-gray-200 p-2 px-4">
                     <a
                         href={usePostUrl(item?.slug, localePathPrefix)}
                         class="font-bold line-clamp-1 text-sm md:text-lg my-3 text-center group-hover:text-custom-color1"

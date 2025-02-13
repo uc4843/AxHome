@@ -25,7 +25,7 @@ const Services = ({
                             >
                                 <Image
                                     alt={item?.title}
-                                    containerClass="bg-white w-20 aspect-square rounded-full border shadow-2xl shadow-black flex justify-center items-center"
+                                    containerClass="bg-white w-20 aspect-square rounded-full border border-gray-200 shadow-2xl shadow-black flex justify-center items-center"
                                     imageClass="w-10 aspect-square object-contain group-hover:translate-y-[2px] transition-all duration-300"
                                     src={item?.image}
                                 />

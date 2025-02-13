@@ -13,8 +13,8 @@ const PropertyInfo = component$(({
     const nonBooleanAttributes = attributes?.filter(item => item?.attributesAttributeDataTypeKey?.toLowerCase() != "boolean" && item?.value != "")
 
     return <>
-        <div class="border my-4 flex flex-col sm:flex-row items-start">
-            <div class="w-full sm:w-1/2 p-4 border-b md:border-b-0 md:border-l">
+        <div class="border border-gray-200 my-4 flex flex-col sm:flex-row items-start">
+            <div class="w-full sm:w-1/2 p-4 border-b border-gray-200 md:border-b-0 md:border-l">
                 <h3 class="text-xl font-bold">
                     {propertyInfoTexts?.propertyInfoTitle}
                 </h3>

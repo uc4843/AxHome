@@ -70,7 +70,7 @@ const LatestPosts = component$(({
             >
                 {
                     latestPosts?.map(item => <SwiperSlide key={item.id}>
-                        <div class="max-w-[260px] sm:max-w-[500px] mx-auto border rounded-xl overflow-hidden shadow-xl group">
+                        <div class="max-w-[260px] sm:max-w-[500px] mx-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl group">
 
                             <a
                                 aria-label={item.title}

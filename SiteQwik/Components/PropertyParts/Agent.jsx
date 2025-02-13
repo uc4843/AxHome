@@ -66,7 +66,7 @@ const Agent = component$(({
             </div>
 
             <div
-                class="flex flex-col gap-3 items-between justify-center mb-4 border px-4 py-2 rounded-md bg-green-600 hover:border-green-500 transition-all text-white font-bold"
+                class="flex flex-col gap-3 items-between justify-center mb-4 border border-gray-200 px-4 py-2 rounded-md bg-green-600 hover:border-green-500 transition-all text-white font-bold"
                 dir="ltr"
             >
                 {
@@ -84,7 +84,7 @@ const Agent = component$(({
             </div>
 
             <div
-                class="flex flex-col gap-3 items-between justify-center mb-8 border px-4 py-2 rounded-md hover:border-custom-color1 transition-all"
+                class="flex flex-col gap-3 items-between justify-center mb-8 border border-gray-200 px-4 py-2 rounded-md hover:border-custom-color1 transition-all"
                 dir="ltr"
             >
                 <a
@@ -99,7 +99,7 @@ const Agent = component$(({
             </div>
 
             <Sharing modalTitle={modalShareTitle}>
-                <div class="flex gap-1 border cursor-pointer py-2 px-2 rounded-md border bg-white cursor-pointer group hover:border-custom-color1 transition-all">
+                <div class="flex gap-1 cursor-pointer py-2 px-2 rounded-md border border-gray-200 bg-white cursor-pointer group hover:border-custom-color1 transition-all">
                     <Share class="w-5 aspect-square cursor-pointer text-white group-hover:text-custom-color1" />
                     <span>{shareTitle}</span>
                 </div>

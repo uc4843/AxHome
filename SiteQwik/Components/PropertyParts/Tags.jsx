@@ -7,7 +7,7 @@ const Tags = ({
 }) => {
 
     return <>
-        <div class="border p-4 basis-[50%]">
+        <div class="border border-gray-200 p-4 basis-[50%]">
             <p class="w-full text-lg font-bold mb-5 max-w-[90%] mx-auto text-start">{title}</p>
             <div class="flex items-center gap-3 flex-wrap">
                 {
