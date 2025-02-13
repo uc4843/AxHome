@@ -30,7 +30,7 @@ const PropertyInfo = component$(({
                                 localePathPrefix: localePathPrefix,
                             })}
                         >
-                            {property?.cityDivisionName}
+                            {property?.geoCityDivisionName}
                         </a>
                     </div>
 

@@ -111,13 +111,13 @@ const PropertyCard = ({
                             })}
                         >
                             <Image
-                                alt={item?.cityDivisionName}
+                                alt={item?.geoCityDivisionName}
                                 containerClass="w-4 aspect-square"
                                 imageClass="w-full h-auto object-contain"
                                 src={location}
                             />
                             <span>
-                                {item?.cityDivisionName}
+                                {item?.geoCityDivisionName}
                             </span>
                         </a>
                         <div class="w-full flex items-center justify-between gap-1 border rounded-sm text-slate-600 border-slate-300 text-xs p-2">
