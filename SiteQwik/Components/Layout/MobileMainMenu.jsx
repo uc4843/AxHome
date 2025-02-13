@@ -27,7 +27,7 @@ const MobileMainMenu = component$(({
             <Backdrop click={closeMenuHandler} />
         }
 
-        <div class={`lg:hidden w-[90%] max-w-[300px] fixed overflow-y-scroll bg-white top-0 start-0 h-[100vh] z-50 transition duration-300 divide-y-[.5px] divide-gray-300 divide-opacity-2 ${isOpen.value ? "translate-x-0" : "translate-x-full"} `}>
+        <div class={`lg:hidden w-[90%] max-w-[300px] fixed overflow-y-scroll bg-white top-0 start-0 h-[100vh] z-50 transition duration-300 divide-y-[.5px] divide-gray-300/2 ${isOpen.value ? "translate-x-0" : "translate-x-full"} `}>
             <div class="flex justify-between bg-slate-100">
                 <a
                     aria-label={branding?.brand}

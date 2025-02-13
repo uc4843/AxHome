@@ -35,7 +35,7 @@ const PropertyCard = ({
                 />
             </a>
             <a
-                class="absolute start-4 top-4 bg-custom-color1 bg-opacity-70 p-1.5 text-white text-xs text-bold rounded-xs z-20"
+                class="absolute start-4 top-4 bg-custom-color1/70 p-1.5 text-white text-xs text-bold rounded-xs z-20"
                 href={useListingUrl({
                     dealType: item?.dealTypeSlug,
                     localePathPrefix: localePathPrefix,
@@ -44,7 +44,7 @@ const PropertyCard = ({
                 {item?.dealTypeName}
             </a>
 
-            <p class="absolute end-4 top-4 bg-custom-color3 bg-opacity-70 p-1.5 text-black text-xs text-bold rounded-xs z-20">{item?.propertyTypeName}</p>
+            <p class="absolute end-4 top-4 bg-custom-color3/70 p-1.5 text-black text-xs text-bold rounded-xs z-20">{item?.propertyTypeName}</p>
 
         </div>
         <div class="p-2 px-2 pb-0 w-full">
