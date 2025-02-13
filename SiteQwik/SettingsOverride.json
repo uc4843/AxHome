@@ -1,3 +1,4 @@
 {
-    "ApiUrl": "https://api.new.axhome.ir"
+    "ApiUrl": "https://api.new.axhome.ir",
+    "TenantDomain": "new.axhome.ir"
 }
