@@ -17,13 +17,13 @@ const Icons = ({
     return <div class="flex flex-wrap items-center justify-start my-5 gap-10 text-xs sm:text-sm">
 
         {
-            post?.relatedItems?.hierarchies.length > 0 &&
+            post?.relatedItems?.hasCategories &&
             <a
                 class="flex items-center gap-1"
-                href={useCategoryUrl(post?.relatedItems?.hierarchies?.[0]?.slug, localePathPrefix)}
+                href={useCategoryUrl(post?.relatedItems?.categories?.[0]?.slug, localePathPrefix)}
             >
                 <Folder class="w-5 aspect-square" />
-                {post?.relatedItems?.hierarchies?.[0]?.title}
+                {post?.relatedItems?.categories?.[0]?.title}
             </a>
         }
 

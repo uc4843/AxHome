@@ -96,16 +96,16 @@ const LatestPosts = component$(({
                             </p>
 
                             {
-                                item.relatedItems?.hierarchies.length > 0
+                                item.relatedItems?.hasCategories
                                     ?
                                     <a
-                                        aria-label={item.relatedItems?.hierarchies[0]?.title}
+                                        aria-label={item.relatedItems?.categories[0]?.title}
                                         class="py-2 border-t border-slate-200 flex items-center gap-1 px-2 text-gray-600 hover:text-slate-800 text-xs transition-all"
-                                        href={useCategoryUrl(item.relatedItems?.hierarchies[0]?.slug, localePathPrefix)}
+                                        href={useCategoryUrl(item.relatedItems?.categories[0]?.slug, localePathPrefix)}
                                     >
                                         <Text class="w-4 aspect-square fill-gray-600" />
                                         <span class="line-clamp-1">
-                                            {item.relatedItems?.hierarchies[0]?.title}
+                                            {item.relatedItems?.categories[0]?.title}
                                         </span>
                                     </a>
                                     :

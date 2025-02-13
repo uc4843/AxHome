@@ -45,14 +45,15 @@ const Card = component$(({
 
                 <div class='flex flew-wrap items-center justify-between my-5 text-xs text-custom-color41'>
 
-                    {item?.relatedItems?.hierarchies.length > 0 &&
+                    {
+                        item?.relatedItems?.hasCategories &&
                         <a
-                            href={useCategoryUrl(item?.relatedItems?.hierarchies[0]?.slug, localePathPrefix)}
+                            href={useCategoryUrl(item?.relatedItems?.categories[0]?.slug, localePathPrefix)}
                             class='flex gap-1 items-center'
                         >
                             <Folder class='w-6 aspect-square' />
                             <span class='max-w-[calc(100%-20px)] line-clamp-1'>
-                                {item?.relatedItems?.hierarchies[0]?.title}
+                                {item?.relatedItems?.categories[0]?.title}
                             </span>
                         </a>
                     }
