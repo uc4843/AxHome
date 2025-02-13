@@ -17,7 +17,7 @@ const AdvancedSearch = component$(({
     model,
 }) => {
 
-    const inputStyle = "border-none h-full outline-none px-2 py-1 w-full [appearance:textfield]"
+    const inputStyle = "border-none h-full outline-hidden px-2 py-1 w-full [appearance:textfield]"
     const advancedInputChangeHandler = $((name, value) => {
         model[toCamelCase(name)] = value
 

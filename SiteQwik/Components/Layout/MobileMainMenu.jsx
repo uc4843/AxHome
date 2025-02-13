@@ -45,7 +45,7 @@ const MobileMainMenu = component$(({
                 <div class="py-5 px-3"
                     onClick$={() => isOpen.value = false}
                 >
-                    <Close class="w-8 aspect-square text-custom-color22 focus:outline-none" />
+                    <Close class="w-8 aspect-square text-custom-color22 focus:outline-hidden" />
                 </div>
             </div>
             {

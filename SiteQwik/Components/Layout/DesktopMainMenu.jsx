@@ -11,7 +11,7 @@ const DesktopMainMenu = ({ menuItems }) => {
                         key={item.id}
                     >
                         <a
-                            class="block relative py-5 text-slate-800 hover:text-custom-color1 select-none focus:outline-none after:transition-all after:duration-700"
+                            class="block relative py-5 text-slate-800 hover:text-custom-color1 select-none focus:outline-hidden after:transition-all after:duration-700"
                             href={item.url}
                         >
                             {item.title}

@@ -36,7 +36,7 @@ const AddComment = component$(({
 
             <div class="w-full">
                 <Text
-                    class="w-full bg-custom-color3 px-5 py-4 mt-4 rounded-md focus:outline-none placeholder-gray-500"
+                    class="w-full bg-custom-color3 px-5 py-4 mt-4 rounded-md focus:outline-hidden placeholder-gray-500"
                     type="text"
                     modelBind={model}
                     property="Name"
@@ -45,7 +45,7 @@ const AddComment = component$(({
             </div>
             <div class="w-full">
                 <LongText
-                    class="w-full mt-4 bg-custom-color3 px-5 py-4 rounded-md focus:outline-none placeholder-gray-500 resize-none"
+                    class="w-full mt-4 bg-custom-color3 px-5 py-4 rounded-md focus:outline-hidden placeholder-gray-500 resize-none"
                     modelBind={model}
                     property="Body"
                     placeholder={body?.placeholder}

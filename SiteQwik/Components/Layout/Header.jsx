@@ -32,7 +32,7 @@ const Header = component$(({
                     class="py-2"
                     onClick$={() => isOpen.value = !isOpen.value}
                 >
-                    <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-none" />
+                    <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-hidden" />
                 </div>
                 <MobileMainMenu
                     branding={branding}

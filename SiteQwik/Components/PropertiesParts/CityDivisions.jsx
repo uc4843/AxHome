@@ -22,7 +22,7 @@ const CityDivisions = component$(({
         }
     })
 
-    const style = "w-6 p-1 aspect-square bg-custom-color1 rounded font-bold"
+    const style = "w-6 p-1 aspect-square bg-custom-color1 rounded-sm font-bold"
 
     return <>
         <div class="mb-4">

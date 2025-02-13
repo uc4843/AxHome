@@ -35,7 +35,7 @@ const PropertyCard = ({
                 />
             </a>
             <a
-                class="absolute start-4 top-4 bg-custom-color1 bg-opacity-70 p-1.5 text-white text-xs text-bold rounded-sm z-20"
+                class="absolute start-4 top-4 bg-custom-color1 bg-opacity-70 p-1.5 text-white text-xs text-bold rounded-xs z-20"
                 href={useListingUrl({
                     dealType: item?.dealTypeSlug,
                     localePathPrefix: localePathPrefix,
@@ -44,7 +44,7 @@ const PropertyCard = ({
                 {item?.dealTypeName}
             </a>
 
-            <p class="absolute end-4 top-4 bg-custom-color3 bg-opacity-70 p-1.5 text-black text-xs text-bold rounded-sm z-20">{item?.propertyTypeName}</p>
+            <p class="absolute end-4 top-4 bg-custom-color3 bg-opacity-70 p-1.5 text-black text-xs text-bold rounded-xs z-20">{item?.propertyTypeName}</p>
 
         </div>
         <div class="p-2 px-2 pb-0 w-full">
@@ -120,7 +120,7 @@ const PropertyCard = ({
                                 {item?.cityDivisionName}
                             </span>
                         </a>
-                        <div class="w-full flex items-center justify-between gap-1 border rounded text-slate-600 border-slate-300 text-xs p-2">
+                        <div class="w-full flex items-center justify-between gap-1 border rounded-sm text-slate-600 border-slate-300 text-xs p-2">
                             {
                                 item?.dealTypeKey === "rent"
                                     ?
@@ -138,7 +138,7 @@ const PropertyCard = ({
                             </div>
                         </div>
 
-                        <div class="w-full flex items-center justify-between gap-1 bg-custom-color1 p-2 rounded text-white text-xs">
+                        <div class="w-full flex items-center justify-between gap-1 bg-custom-color1 p-2 rounded-sm text-white text-xs">
                             {
                                 item?.dealTypeKey === "rent"
                                     ?

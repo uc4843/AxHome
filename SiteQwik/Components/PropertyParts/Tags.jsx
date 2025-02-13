@@ -12,7 +12,7 @@ const Tags = ({
             <div class="flex items-center gap-3 flex-wrap">
                 {
                     items?.map(item => <a
-                        class="py-1 px-3 bg-custom-color4 text-white rounded-sm"
+                        class="py-1 px-3 bg-custom-color4 text-white rounded-xs"
                         href={useTagUrl(item.slug, localePathPrefix)}
                         key={item.id}
                     >

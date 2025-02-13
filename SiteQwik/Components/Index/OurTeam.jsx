@@ -107,10 +107,10 @@ const OurTeam = component$(({
 
         <div class="relative max-w-4xl mx-auto px-5 h-24 lg:mb-60">
             <div class="hidden lg:flex justify-between items-center mx-auto -mt-72">
-                <div class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-next bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 swiper-button-disabled nextTeamSlider">
+                <div class="h-24 px-1 flex items-center rounded-sm cursor-pointer teamSlider-next bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 swiper-button-disabled nextTeamSlider">
                     <ChevronRight class="w-8 aspect-square" />
                 </div>
-                <div class="h-24 px-1 flex items-center rounded cursor-pointer teamSlider-prev bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 previousTeamSlider">
+                <div class="h-24 px-1 flex items-center rounded-sm cursor-pointer teamSlider-prev bg-custom-color3 group hover:fill-white hover:bg-custom-color1 transition-all duration-300 previousTeamSlider">
                     <ChevronLeft class="w-8 aspect-square" />
 
                 </div>
