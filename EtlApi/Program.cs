@@ -1,6 +1,7 @@
 Tester.TestSourceConnection();
 Tester.TestTargetConnection();
 StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
+Cloud.CloudConfig.Configure();
 
 // new AccountsImporter().Import();
 new BlogImporter().Import();
