@@ -5,8 +5,8 @@ Cloud.CloudConfig.Configure();
 
 // new AccountsImporter().Import();
 // new BlogImporter().Import();
-new ContentsImporter().Import();
-// new NavigationImporter().Import();
+// new ContentsImporter().Import();
+new NavigationImporter().Import();
 // new FormsImporter().Import();
 // new QuestionsImporter().Import();
 // new GalleriesImporter().Import();
