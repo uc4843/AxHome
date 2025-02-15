@@ -4,8 +4,8 @@ StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
 Cloud.CloudConfig.Configure();
 
 // new AccountsImporter().Import();
-new BlogImporter().Import();
-// new ContentsImporter().Import();
+// new BlogImporter().Import();
+new ContentsImporter().Import();
 // new NavigationImporter().Import();
 // new FormsImporter().Import();
 // new QuestionsImporter().Import();
