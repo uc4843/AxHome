@@ -2,8 +2,8 @@ Tester.TestSourceConnection();
 Tester.TestTargetConnection();
 StorageHelper.OldStorageUrl = "https://storage.axhome.ir";
 
-// new AccountsImporter().Import();
-new BlogImporter().Import();
+new AccountsImporter().Import();
+// new BlogImporter().Import();
 // new ContentsImporter().Import();
 // new NavigationImporter().Import();
 // new FormsImporter().Import();
