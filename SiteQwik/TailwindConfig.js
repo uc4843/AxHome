@@ -1,4 +1,4 @@
-import baseConfig, { withOpacity } from "./TailwindBase.js"
+import baseConfig from "./TailwindBase.js"
 
 const config = {
     presets: [
