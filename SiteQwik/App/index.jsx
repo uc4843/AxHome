@@ -39,9 +39,9 @@ const getData = routeLoader$(async props => {
     ] = await useAsync([
         getLatestPosts(10, props),
         getPage("home", props),
-        getLatestDealType("sale"),
-        getLatestDealType("rent"),
-        getLatestOccasion(),
+        getLatestDealType("sale", props),
+        getLatestDealType("rent", props),
+        getLatestOccasion(props),
         getGlobalization(props),
         getAllCityDivisions(props),
         getAllDealTypes(props),
