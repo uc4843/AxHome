@@ -10,6 +10,7 @@ global using Contracts;
 global using Currencies;
 global using DataTypes;
 global using Forms;
+global using Galleries;
 global using Geo;
 global using Globalization;
 global using Granularities;
