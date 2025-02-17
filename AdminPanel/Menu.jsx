@@ -5,6 +5,7 @@ import { BlogMenu } from "Blog"
 import { ContactsMenu } from "Contacts"
 import { ContentsMenu } from "Contents"
 import { FormsMenu } from "Forms"
+import { GalleriesMenu } from "Galleries"
 import { GeoMenu } from "Geo"
 import { GlobalizationMenu } from "Globalization"
 import { ModulesMenu } from "Modules"
@@ -28,6 +29,7 @@ const menuItems = [
     ...ContentsMenu,
     ...NavigationMenu,
     ...SeoMenu,
+    ...GalleriesMenu,
     ...FormsMenu,
     ...NewTaxonomyMenu,
     ...AttributesMenu,
