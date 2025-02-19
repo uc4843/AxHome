@@ -1,11 +1,11 @@
-certbot --nginx --cert-name axhome.ir \
--d accounts.axhome.ir \
--d admin.new.axhome.ir \
--d agent.new.axhome.ir \
--d api.admin.new.axhome.ir \
--d api.agent.new.axhome.ir \
--d api.new.axhome.ir \
--d db.axhome.ir \
--d new.axhome.ir \
--d storage.new.axhome.ir \
--d www.new.axhome.ir
+certbot --cert-name maskanax.com \
+-d accounts.maskanax.com \
+-d admin.maskanax.com \
+-d agent.maskanax.com \
+-d api.admin.maskanax.com \
+-d api.agent.maskanax.com \
+-d api.maskanax.com \
+-d db.maskanax.com \
+-d maskanax.com \
+-d storage.maskanax.com \
+-d www.maskanax.com
