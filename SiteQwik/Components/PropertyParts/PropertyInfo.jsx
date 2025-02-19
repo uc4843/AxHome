@@ -8,9 +8,8 @@ const PropertyInfo = component$(({
     propertyInfoTexts,
 }) => {
 
-    const attributes = property?.relatedItems.entityAttributes
-    const trueBooleanAttributes = attributes?.filter(item => item?.value == "True")
-    const nonBooleanAttributes = attributes?.filter(item => item?.attributesAttributeDataTypeKey?.toLowerCase() != "boolean" && item?.value != "")
+    const trueBooleanAttributes = property?.relatedItems.entityAttributes?.filter(item => item?.value == "True")
+    const nonBooleanAttributes = property?.relatedItems.entityAttributes?.filter(item => item?.dataType?.toLowerCase() != "boolean" && item?.value != "")
 
     return <>
         <div class="border border-gray-200 my-4 flex flex-col sm:flex-row items-start">
@@ -82,7 +81,7 @@ const PropertyInfo = component$(({
                             class="flex items-center gap-4 text-md group"
                             key={item.id}
                         >
-                            <p class="w-1/3">{item?.attributesAttributeTitle}</p>
+                            <p class="w-1/3">{item?.title}</p>
                             <p>{item?.value}</p>
                         </div>)
                     }
@@ -98,8 +97,8 @@ const PropertyInfo = component$(({
                             class="flex items-center gap-1 text-md"
                             key={item.id}
                         >
-                            <p class="w-1/3">{item.attributesAttributeTitle}</p>
-                            <Check class="w-6 aspect-square border border-black bg-custom-color3 fill-custom-color1 stroke-2" />
+                            <p class="w-1/3">{item.title}</p>
+                            <Check class="w-6 h-6 border border-black bg-custom-color3 fill-custom-color1 stroke-2" />
                         </div>)
                     }
                 </div>

@@ -41,6 +41,15 @@
             "Forms": [
                 "src/Modules/Forms/Exports"
             ],
+            "Galleries": [
+                "src/Modules/Galleries/Exports"
+            ],
+            "GalleriesParts": [
+                "src/Components/GalleriesParts/Exports"
+            ],
+            "GalleryParts": [
+                "src/Components/GalleryParts/Exports"
+            ],
             "Geo": [
                 "src/Modules/Geo/Exports"
             ],
@@ -133,6 +142,9 @@
             ],
             "Units": [
                 "src/Modules/Units/Exports"
+            ],
+            "VideoGalleriesParts": [
+                "src/Components/VideoGalleriesParts/Exports"
             ],
             "VirtualTourParts": [
                 "src/Components/VirtualTourParts/Exports"
