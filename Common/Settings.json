@@ -4,8 +4,6 @@
     "AccountsRealm": "Development",
     "AccountsUrl": "https://accounts.pydr.ir",
     "StorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=holismdevelopment;AccountKey=CBiVBvJP/4RXpSbgftOMGLGkBDQAYPjEzlv3OJjoomAhEKYDrFzbvElmGN3IO/kbcY50ZogrxLFuunjakPxkUg==;EndpointSuffix=core.windows.net",
-    "Realm": "Development",
-    "WebsiteUrl": "https://axhome.local",
     "DatabaseServer": "database",
     "DatabaseUser": "root",
     "DatabasePassword": "IC1joYMLZTT0fQMJ5qcz",

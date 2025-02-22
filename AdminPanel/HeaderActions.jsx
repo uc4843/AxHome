@@ -1,5 +1,5 @@
-import { ClearCache } from 'Panel'
-import { ChooseLocale } from 'Globalization'
+import { ClearCache } from "Panel"
+import { ChooseLocale } from "Globalization"
 
 const HeaderActions = () => {
     return <>
