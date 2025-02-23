@@ -106,7 +106,7 @@ const PropertyCard = ({
                         <a
                             class="flex items-center gap-1"
                             href={useListingUrl({
-                                cityDivision: item?.cityDivisionSlug,
+                                cityDivision: item?.geoCityDivisionSlug,
                                 localePathPrefix: localePathPrefix,
                             })}
                         >
@@ -178,8 +178,8 @@ const PropertyCard = ({
 
                 <div class="text-sm text-custom-color4">
                     <TimeAgo
-                        localKey={currentLocale?.key}
                         localesEnum={localesEnum}
+                        localKey={currentLocale?.key}
                         utcDate={item?.modificationUtcDate}
                     />
 

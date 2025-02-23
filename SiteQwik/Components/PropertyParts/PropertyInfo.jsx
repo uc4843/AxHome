@@ -24,7 +24,7 @@ const PropertyInfo = component$(({
                         <a
                             class="text-black hover:text-custom-color1 transition-all"
                             href={useListingUrl({
-                                cityDivision: property?.cityDivisionSlug,
+                                cityDivision: property?.geoCityDivisionSlug,
                                 dealType: property?.dealTypeSlug,
                                 localePathPrefix: localePathPrefix,
                             })}
@@ -38,7 +38,7 @@ const PropertyInfo = component$(({
                         <a
                             class="text-black hover:text-custom-color1 transition-all"
                             href={useListingUrl({
-                                cityDivision: property?.cityDivisionSlug,
+                                cityDivision: property?.geoCityDivisionSlug,
                                 dealType: property?.dealTypeSlug,
                                 localePathPrefix: localePathPrefix,
                             })}
@@ -52,7 +52,7 @@ const PropertyInfo = component$(({
                         <a
                             class="text-black hover:text-custom-color1 transition-all"
                             href={useListingUrl({
-                                cityDivision: property?.cityDivisionSlug,
+                                cityDivision: property?.geoCityDivisionSlug,
                                 propertyType: property?.propertyTypeSlug,
                                 localePathPrefix: localePathPrefix,
                             })}
