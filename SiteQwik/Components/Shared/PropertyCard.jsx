@@ -37,6 +37,7 @@ const PropertyCard = ({
             <a
                 class="absolute start-4 top-4 bg-custom-color1/70 p-1.5 text-white text-xs text-bold rounded-xs z-20"
                 href={useListingUrl({
+                    cityDivision: item?.geoCityDivisionSlug,
                     dealType: item?.dealTypeSlug,
                     localePathPrefix: localePathPrefix,
                 })}
