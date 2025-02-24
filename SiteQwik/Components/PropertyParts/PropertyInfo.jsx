@@ -25,7 +25,6 @@ const PropertyInfo = component$(({
                             class="text-black hover:text-custom-color1 transition-all"
                             href={useListingUrl({
                                 cityDivision: property?.geoCityDivisionSlug,
-                                dealType: property?.dealTypeSlug,
                                 localePathPrefix: localePathPrefix,
                             })}
                         >
@@ -53,8 +52,9 @@ const PropertyInfo = component$(({
                             class="text-black hover:text-custom-color1 transition-all"
                             href={useListingUrl({
                                 cityDivision: property?.geoCityDivisionSlug,
-                                propertyType: property?.propertyTypeSlug,
+                                dealType: property?.dealTypeSlug,
                                 localePathPrefix: localePathPrefix,
+                                propertyType: property?.propertyTypeSlug,
                             })}
                         >
                             {property?.propertyTypeName}
