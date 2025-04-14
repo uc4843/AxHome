@@ -52,7 +52,6 @@ const Select = component$(({
     })
 
     const handleClickOutside = $(event => {
-
         if (
             boxRef.value &&
             !boxRef.value.contains(event.target) &&
@@ -62,17 +61,14 @@ const Select = component$(({
         }
     })
 
-    useVisibleTask$(
-        () => {
-            document.addEventListener("mousedown", handleClickOutside)
-            return () => document.removeEventListener("mousedown", handleClickOutside)
-        }
+    useVisibleTask$(() => {
+        document.addEventListener("mousedown", handleClickOutside)
+        return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
     )
 
     useTask$(({ track }) => {
-
         track(() => selected)
-
         const changedSelect = items?.find(el => el.slug == selected)
         selectedItem.value = changedSelect?.name || label
     })

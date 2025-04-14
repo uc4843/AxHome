@@ -38,49 +38,43 @@ const Search = component$(({
     })
     const selectChangeHandler = $((e, value) => {
         model[e.name] = value
-        if (e.name === "dealType") {
+        if (e.name == "dealType") {
             resetRentUpfront()
         }
     })
     const selectChildStyle = `${isDark ? "bg-custom-color31 text-custom-color41" : "bg-custom-color4 text-custom-color31"} hover:bg-custom-color1 hover:text-custom-color31 rounded-lg`
     const selectStyle = isDark ? "bg-custom-color31" : "bg-custom-color4 text-custom-color3"
 
+    const combinedProps = {
+        all: filter?.allTextFilter,
+        childClass: selectChildStyle,
+        class: selectStyle,
+        isDark,
+        onChange: selectChangeHandler,
+    }
+
     return <>
         <Select
-            all={filter?.allTextFilter}
-            childClass={selectChildStyle}
-            class={selectStyle}
-            isDark={isDark}
+            {...combinedProps}
             items={allDealTypes}
             label={filter?.dealTypeTitle}
             name="dealType"
-            onChange={selectChangeHandler}
             selected={model.dealType}
         />
-
         <Select
-            all={filter?.allTextFilter}
-            childClass={selectChildStyle}
-            class={selectStyle}
-            isDark={isDark}
+            {...combinedProps}
             items={allPropertyTypes}
             label={filter?.propertyTypeTitle}
             name="propertyType"
-            onChange={selectChangeHandler}
             selected={model.propertyType}
         />
-
         <Select
-            all={filter?.allTextFilter}
-            childClass={selectChildStyle}
-            class={selectStyle}
+            {...combinedProps}
             filter
             filterText={filter?.buttonSearchTitle}
-            isDark={isDark}
             items={allCityDivision}
             label={filter?.cityDivisionType}
             name="cityDivision"
-            onChange={selectChangeHandler}
             selected={model.cityDivision}
         />
 
