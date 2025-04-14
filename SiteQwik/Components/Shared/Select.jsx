@@ -98,7 +98,7 @@ const Select = component$(({
                             {
                                 filter && <div class="max-h-[200px] overflow-y-auto">
                                     <input
-                                        class="w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 text-gray-600 rounded-md"
+                                        class={merge("w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 rounded-md", isDark ? "text-gray-600" : "text-custom-color3")}
                                         onInput$={filterChangeHandler}
                                         placeholder={filterText}
                                     />
