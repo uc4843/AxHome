@@ -5,7 +5,7 @@ import {
     useTask$,
     useVisibleTask$,
 } from "@builder.io/qwik"
-import { useLocation } from "@builder.io/qwik-city"
+import { merge } from "Base"
 import { ChevronDown } from "Svg"
 
 const Select = component$(({
@@ -23,7 +23,6 @@ const Select = component$(({
     selected,
 }) => {
 
-    const location = useLocation()
     const boxRef = useSignal()
     const selectRef = useSignal()
     const isOpen = useSignal(false)
@@ -74,53 +73,67 @@ const Select = component$(({
 
         track(() => selected)
 
-        const changedSelect = items?.find(el => el.slug === selected)
+        const changedSelect = items?.find(el => el.slug == selected)
         selectedItem.value = changedSelect?.name || label
     })
 
-    return <>
+    return <div class={merge("relative selection:text-inherit selection:bg-inherit w-full md:w-[150px] lg:w-[170px] px-1 py-0.5 rounded-md", internalClass)}>
         <div
-            class={`relative selection:text-inherit selection:bg-inherit w-full md:w-[150px] lg:w-[170px] px-1 py-0.5 rounded-md ${internalClass}`}
+            class="flex items-center justify-between cursor-pointer px-2 py-1"
+            onClick$={clickSelectHandler}
+            ref={selectRef}
         >
-            <div
-                class={`flex items-center justify-between cursor-pointer px-2 py-1`}
-                onClick$={clickSelectHandler}
-                ref={selectRef}
-            >
-                <p>{selectedItem.value}</p>
-                <div class="pointer-events-none inset-y-0 end-0 flex items-center text-gray-700">
-                    <ChevronDown class={`w-5 aspect-square  ${isDark ? "fill-black" : "fill-custom-color31"}`} />
-                </div>
-            </div>
-            <div
-                ref={boxRef}
-                class={`absolute z-10 min-w-full lg:w-auto top-[45px] end-1/2 translate-x-[-50%] bg-white my-1 rounded-lg shadow-xl ${boxClass} ${isOpen.value ? "block" : "hidden"}`}>
-                <div class="max-h-[200px] overflow-y-auto">
-                    {items && items?.length > 0 ? <>
-                        {/* filter */}
-                        {filter ? <div class="max-h-[200px] overflow-y-auto">
-                            <input
-                                class="w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 text-gray-600 rounded-md"
-                                onInput$={filterChangeHandler}
-                                placeholder={filterText}
-                            />
-                        </div> : null}
-                        {/*reset select text */}
-                        {all ? <p
-                            class={`w-full py-2 cursor-pointer px-2 ${childClass}`}
-                            onClick$={(e) => selectItemHandler({ ...e, name: name }, { slug: null })}>{all}</p> : null}
-                        {/* items map */}
-                        {filteredItems.value?.map(el => <p
-                            class={`w-full py-2 cursor-pointer px-2 ${childClass}`}
-                            key={el.id}
-                            onClick$={(e) => selectItemHandler({ ...e, name: name }, el)}
-                        >{el?.name}</p>)}
-                    </> : <p class="text-slate-300 h-12 flex items-center justify-center px-2">no data !!</p>
-                    }
-                </div>
+            <p>
+                {selectedItem.value}
+            </p>
+            <div class="pointer-events-none inset-y-0 end-0 flex items-center text-gray-700">
+                <ChevronDown class={merge("w-5 aspect-square", isDark ? "fill-black" : "fill-custom-color31")} />
             </div>
         </div>
-    </>
+        <div
+            class={merge("absolute z-10 min-w-full lg:w-auto top-[45px] end-1/2 translate-x-[-50%] bg-white my-1 rounded-lg shadow-xl", boxClass, isOpen.value ? "block" : "hidden")}
+            ref={boxRef}
+        >
+            <div class={merge("max-h-[200px] overflow-y-auto", isDark ?? "bg-custom-color4")}>
+                {
+                    items && items?.length > 0
+                        ?
+                        <>
+                            {
+                                filter && <div class="max-h-[200px] overflow-y-auto">
+                                    <input
+                                        class="w-full cursor-pointer selection:text-inherit selection:bg-inherit p-2 text-gray-600 rounded-md"
+                                        onInput$={filterChangeHandler}
+                                        placeholder={filterText}
+                                    />
+                                </div>
+                            }
+                            {
+                                all && <p
+                                    class={merge("w-full py-2 cursor-pointer px-2", childClass)}
+                                    onClick$={(e) => selectItemHandler({ ...e, name: name }, { slug: null })}
+                                >
+                                    {all}
+                                </p>
+                            }
+                            {
+                                filteredItems.value?.map(el => <p
+                                    class={merge("w-full py-2 cursor-pointer px-2", childClass)}
+                                    key={el.id}
+                                    onClick$={(e) => selectItemHandler({ ...e, name: name }, el)}
+                                >
+                                    {el?.name}
+                                </p>)
+                            }
+                        </>
+                        :
+                        <p class="text-slate-300 h-12 flex items-center justify-center px-2">
+                            no data !!
+                        </p>
+                }
+            </div>
+        </div>
+    </div>
 })
 
 export default Select

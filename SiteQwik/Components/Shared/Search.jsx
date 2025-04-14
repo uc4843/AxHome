@@ -42,7 +42,7 @@ const Search = component$(({
             resetRentUpfront()
         }
     })
-    const selectChildStyle = `${isDark ? "bg-custom-color31" : "bg-custom-color31"} text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg`
+    const selectChildStyle = `${isDark ? "bg-custom-color31 text-custom-color41" : "bg-custom-color4 text-custom-color31"} hover:bg-custom-color1 hover:text-custom-color31 rounded-lg`
     const selectStyle = isDark ? "bg-custom-color31" : "bg-custom-color4 text-custom-color3"
 
     return <>
