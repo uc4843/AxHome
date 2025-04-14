@@ -38,7 +38,6 @@ const Select = component$(({
         selectedItem.value = el.name
         onChange(e, el.slug)
         isOpen.value = false
-
     })
 
     const filterChangeHandler = $(e => {
@@ -107,7 +106,7 @@ const Select = component$(({
                             {
                                 all && <p
                                     class={merge("w-full py-2 cursor-pointer px-2", childClass)}
-                                    onClick$={(e) => selectItemHandler({ ...e, name: name }, { slug: null })}
+                                    onClick$={(e) => selectItemHandler(e, { name: all, slug: "" })}
                                 >
                                     {all}
                                 </p>
