@@ -71,6 +71,9 @@
             "Modules": [
                 "src/Modules/Modules/Exports"
             ],
+            "MonetaryValues": [
+                "src/Modules/MonetaryValues/Exports"
+            ],
             "Navigation": [
                 "src/Modules/Navigation/Exports"
             ],
