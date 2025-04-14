@@ -47,7 +47,6 @@ const Search = component$(({
     const iconClass = `w-6 aspect-square ${isDark ? "fill-custom-color31" : "fill-custo-color4"} group-hover:fill-custom-color1`
 
     const combinedProps = {
-        all: filter?.allTextFilter,
         childClass: selectChildStyle,
         class: selectStyle,
         isDark,
@@ -57,6 +56,7 @@ const Search = component$(({
     return <>
         <Select
             {...combinedProps}
+            all={filter?.allDealTitle}
             items={allDealTypes}
             label={filter?.dealTypeTitle}
             name="dealType"
@@ -64,6 +64,7 @@ const Search = component$(({
         />
         <Select
             {...combinedProps}
+            all={filter?.allPropertyTitle}
             items={allPropertyTypes}
             label={filter?.propertyTypeTitle}
             name="propertyType"
@@ -71,6 +72,7 @@ const Search = component$(({
         />
         <Select
             {...combinedProps}
+            all={filter?.allCityDivisionTitle}
             filter
             filterText={filter?.buttonSearchTitle}
             items={allCityDivision}
