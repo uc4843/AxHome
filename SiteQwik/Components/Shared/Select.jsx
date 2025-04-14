@@ -15,6 +15,7 @@ const Select = component$(({
     class: internalClass,
     filter,
     filterText,
+    isDark,
     items,
     label,
     name,
@@ -79,7 +80,7 @@ const Select = component$(({
 
     return <>
         <div
-            class={`relative selection:text-inherit selection:bg-inherit bg-white w-full md:w-[150px] lg:w-[170px] px-1 py-0.5 rounded-md ${internalClass}`}
+            class={`relative selection:text-inherit selection:bg-inherit w-full md:w-[150px] lg:w-[170px] px-1 py-0.5 rounded-md ${internalClass}`}
         >
             <div
                 class={`flex items-center justify-between cursor-pointer px-2 py-1`}
@@ -88,7 +89,7 @@ const Select = component$(({
             >
                 <p>{selectedItem.value}</p>
                 <div class="pointer-events-none inset-y-0 end-0 flex items-center text-gray-700">
-                    <ChevronDown class="w-5 aspect-square fill-black" />
+                    <ChevronDown class={`w-5 aspect-square  ${isDark ? "fill-black" : "fill-custom-color31"}`} />
                 </div>
             </div>
             <div

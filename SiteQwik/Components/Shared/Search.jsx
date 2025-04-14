@@ -19,6 +19,7 @@ const Search = component$(({
     allDealTypes,
     allPropertyTypes,
     filter,
+    isDark,
     localePathPrefix,
 }) => {
 
@@ -41,12 +42,15 @@ const Search = component$(({
             resetRentUpfront()
         }
     })
+    const selectChildStyle = `${isDark ? "bg-custom-color31" : "bg-custom-color31"} text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg`
+    const selectStyle = isDark ? "bg-custom-color31" : "bg-custom-color4 text-custom-color3"
 
     return <>
-
         <Select
             all={filter?.allTextFilter}
-            childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
+            childClass={selectChildStyle}
+            class={selectStyle}
+            isDark={isDark}
             items={allDealTypes}
             label={filter?.dealTypeTitle}
             name="dealType"
@@ -56,7 +60,9 @@ const Search = component$(({
 
         <Select
             all={filter?.allTextFilter}
-            childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
+            childClass={selectChildStyle}
+            class={selectStyle}
+            isDark={isDark}
             items={allPropertyTypes}
             label={filter?.propertyTypeTitle}
             name="propertyType"
@@ -66,9 +72,11 @@ const Search = component$(({
 
         <Select
             all={filter?.allTextFilter}
-            childClass="bg-custom-color31 text-custom-color41 hover:bg-custom-color1 hover:text-custom-color31 rounded-lg"
+            childClass={selectChildStyle}
+            class={selectStyle}
             filter
             filterText={filter?.buttonSearchTitle}
+            isDark={isDark}
             items={allCityDivision}
             label={filter?.cityDivisionType}
             name="cityDivision"

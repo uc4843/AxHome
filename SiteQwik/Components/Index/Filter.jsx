@@ -35,6 +35,7 @@ const Filter = ({
                     allDealTypes={allDealTypes}
                     allPropertyTypes={allPropertyTypes}
                     filter={filter}
+                    isDark
                     localePathPrefix={localePathPrefix}
                 />
             </form>
