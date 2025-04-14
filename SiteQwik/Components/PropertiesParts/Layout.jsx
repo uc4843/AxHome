@@ -34,6 +34,7 @@ const Layout = ({
                         {filter?.searchTitle}
                     </p>
                     <Search
+                        {...rest}
                         allCityDivision={cityDivisionWrapper.allCityDivisions}
                         allDealTypes={dealTypes}
                         allPropertyTypes={propertyTypes}
