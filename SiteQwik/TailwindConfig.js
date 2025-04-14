@@ -12,7 +12,6 @@ const config = {
                     color2: "#ef7f80",
                     color3: "#EEEEEE",
                     color31: "#ffffff",
-                    color32: "#727272",
                     color4: "#57585A",
                     color41: "#000",
                     border: "#707070",

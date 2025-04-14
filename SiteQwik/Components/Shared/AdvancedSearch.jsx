@@ -6,6 +6,7 @@ import { toCamelCase } from "Base"
 import { AdvancedInput } from "Shared"
 
 const AdvancedSearch = component$(({
+    isDark,
     maxArea,
     maxDeposit,
     maxRent,
@@ -17,10 +18,9 @@ const AdvancedSearch = component$(({
     model,
 }) => {
 
-    const inputStyle = "px-2 py-1 w-full [appearance:textfield] bg-custom-color31 outline-none border border-custom-color3 focus:border-custom-color1 rounded-md"
+    const inputStyle = `px-2 py-1 w-full [appearance:textfield] outline-none border focus:border-custom-color1 rounded-md ${isDark ? "bg-custom-color31 border-custom-color3" : "bg-custom-color4 border-custom-color4 text-custom-color31 placeholder:text-custom-color3"}`
     const advancedInputChangeHandler = $((name, value) => {
         model[toCamelCase(name)] = value
-
     })
 
     return <>
