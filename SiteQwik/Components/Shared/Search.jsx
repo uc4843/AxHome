@@ -21,24 +21,21 @@ const Search = component$(({
     filter,
     localePathPrefix,
 }) => {
+
+    const isShown = useSignal(true)
     const {
         handleSearch,
         model,
         resetAdvance,
         resetRentUpfront,
     } = useSearch({ localePathPrefix })
-    const isShown = useSignal(false)
-
     const toggleAdvanceSearch = $(() => {
         isShown.value = !isShown.value
         if (isShown.value == false) {
-
             resetAdvance()
         }
     })
-
     const selectChangeHandler = $((e, value) => {
-
         model[e.name] = value
         if (e.name === "dealType") {
             resetRentUpfront()

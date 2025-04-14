@@ -17,7 +17,7 @@ const AdvancedSearch = component$(({
     model,
 }) => {
 
-    const inputStyle = "border-none h-full outline-hidden px-2 py-1 w-full [appearance:textfield]"
+    const inputStyle = "px-2 py-1 w-full [appearance:textfield] bg-custom-color31 outline-none border border-custom-color3 focus:border-custom-color1 rounded-md"
     const advancedInputChangeHandler = $((name, value) => {
         model[toCamelCase(name)] = value
 
@@ -44,7 +44,6 @@ const AdvancedSearch = component$(({
                 />
             </div>
         </div>
-
         {
             model.dealType != "rent" &&
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 rounded-md max-w-7xl mx-auto">
@@ -69,8 +68,7 @@ const AdvancedSearch = component$(({
             </div>
         }
         {
-            model.dealType == "rent" &&
-            <>
+            model.dealType == "rent" && <>
                 <div class="flex flex-col md:flex-row gap-4">
                     <AdvancedInput
                         class={inputStyle}

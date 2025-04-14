@@ -11,11 +11,10 @@ const AdvancedInput = component$(({
     onChange,
 }) => {
 
+    const newValue = value > 0 ? value : null
     const inputChangeHandler = $((e) => {
         onChange(e.target.name, Number(e.target.value.replace(/\D/g, "")))
     })
-
-    const newValue = value > 0 ? value : null
 
     return <input
         class={internalClass}
