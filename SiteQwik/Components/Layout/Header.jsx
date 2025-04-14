@@ -2,17 +2,17 @@ import {
     component$,
     useSignal,
 } from "@builder.io/qwik"
-import { useHomeUrl } from "Globalization"
 import { Image } from "Base"
+import { useHomeUrl } from "Globalization"
+import {
+    DesktopMainMenu,
+    MobileMainMenu,
+} from "Layout"
 import {
     Bars,
     Person,
     PhoneForwarded,
 } from "Svg"
-import {
-    DesktopMainMenu,
-    MobileMainMenu,
-} from "Layout"
 
 const Header = component$(({
     branding,
@@ -24,15 +24,15 @@ const Header = component$(({
 
     const isOpen = useSignal(false)
 
-    return <header class='py:2 md:py-4 bg-custom-color3'>
+    return <header class="py:2 md:py-4 bg-custom-color3">
         <div class="relative flex items-center justify-between max-w-wide mx-auto px-4 2xl:px-0">
-            <div class='flex w-[calc(50%-64px)]'>
+            <div class="flex w-[calc(50%-64px)]">
                 <DesktopMainMenu menuItems={menuItems} />
                 <div
                     class="py-2"
                     onClick$={() => isOpen.value = !isOpen.value}
                 >
-                    <Bars class="w-7 aspect-square text-custom-color24 md:hidden font-bold focus:outline-hidden" />
+                    <Bars class="w-7 aspect-square text-custom-color24 lg:hidden font-bold focus:outline-hidden" />
                 </div>
                 <MobileMainMenu
                     branding={branding}
@@ -47,20 +47,20 @@ const Header = component$(({
                 href={useHomeUrl(localePathPrefix)}
             >
                 <Image
+                    alt={branding?.brand}
                     containerClass="relative hidden xs:block w-auto h-[60px] md:h-[70px] aspect-square mt-2 md:mt-0"
                     imageClass="w-full h-full object-contain"
-                    src={branding?.logo}
-                    alt={branding?.brand}
                     priority
+                    src={branding?.logo}
                 />
             </a>
 
-            <div class='flex items-center w-[calc(50%-64px)] justify-end gap-2'>
+            <div class="flex items-center w-[calc(50%-64px)] justify-end gap-2">
 
                 <a
                     aria-label={headerCta?.ctaTitle}
-                    href={`tel:${contactInfo?.phone}`}
                     class="flex lg:hidden items-center gap-1 hover:translate-y-0.5 transition-all duration-300 text-slate-400 bg-custom-color3 p-1 rounded-md"
+                    href={`tel:${contactInfo?.phone}`}
                 >
                     <span class="text-[14px] text-black">{contactInfo?.phone}</span>
                     <PhoneForwarded class="w-5 h-5 md:w-6 md:h-6 fill-custom-color1" />
@@ -72,14 +72,14 @@ const Header = component$(({
                     href={headerCta?.authLink}
                 >
                     <Person class="w-5 h-5 lg:w-6 lg:h-6 fill-white" />
-                    <p class='hidden lg:flex pe-4 ps-2 text-white font-bold'>
+                    <p class="hidden lg:flex pe-4 ps-2 text-white font-bold">
                         {headerCta?.ctaText}
                     </p>
                 </a>
 
-                <p class='w-[1px] h-[30px] bg-black hidden lg:flex'></p>
+                <p class="w-[1px] h-[30px] bg-black hidden lg:flex"></p>
 
-                <p class='items-center gap-1 hidden lg:flex'>
+                <p class="items-center gap-1 hidden lg:flex">
                     <a
                         aria-label={headerCta?.phoneTitle}
                         class="text-md hover:text-custom-color1"
@@ -90,9 +90,9 @@ const Header = component$(({
                     </a>
                     <a
                         aria-label={headerCta?.phoneTitle}
+                        class="font-light hover:text-custom-color1"
                         href={`tel:${contactInfo?.phone}`}
                         target="_blank"
-                        class='font-light hover:text-custom-color1'
                     >
                         {contactInfo?.phone}
                     </a>
