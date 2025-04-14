@@ -18,13 +18,13 @@ const AdvancedSearch = component$(({
     model,
 }) => {
 
-    const inputStyle = `px-2 py-1 w-full [appearance:textfield] outline-none border focus:border-custom-color1 rounded-md ${isDark ? "bg-custom-color31 border-custom-color3" : "bg-custom-color4 border-custom-color4 text-custom-color31 placeholder:text-custom-color3"}`
+    const inputStyle = `w-full [appearance:textfield] outline-none border focus:border-custom-color1 rounded-md py-1 px-2 ${isDark ? "bg-custom-color31 border-custom-color3" : "bg-custom-color4 border-custom-color4 text-custom-color31 placeholder:text-custom-color3"}`
     const advancedInputChangeHandler = $((name, value) => {
         model[toCamelCase(name)] = value
     })
 
     return <>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 rounded-md max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 gap-x-1.5 gap-y-2 lg:gap-y-4 rounded-md max-w-7xl mx-auto">
             <div class="rounded-md overflow-hidden">
                 <AdvancedInput
                     class={inputStyle}
@@ -46,7 +46,7 @@ const AdvancedSearch = component$(({
         </div>
         {
             model.dealType != "rent" &&
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 rounded-md max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 gap-x-1.5 gap-y-2 lg:gap-y-4 rounded-md max-w-7xl mx-auto">
                 <div class="rounded-md overflow-hidden">
                     <AdvancedInput
                         class={inputStyle}
@@ -69,7 +69,7 @@ const AdvancedSearch = component$(({
         }
         {
             model.dealType == "rent" && <>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="grid grid-cols-2 gap-x-1.5 gap-y-2 lg:gap-y-4 rounded-md max-w-7xl mx-auto">
                     <AdvancedInput
                         class={inputStyle}
                         name="min-rent-upfront"
@@ -85,7 +85,7 @@ const AdvancedSearch = component$(({
                         value={+model.maxRentUpfront}
                     />
                 </div>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="grid grid-cols-2 gap-x-1.5 gap-y-2 lg:gap-y-4 rounded-md max-w-7xl mx-auto">
                     <AdvancedInput
                         class={inputStyle}
                         name="min-monthly-rent"
