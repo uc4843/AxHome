@@ -7,5 +7,6 @@
     "DatabaseServer": "database",
     "DatabaseUser": "root",
     "DatabasePassword": "IC1joYMLZTT0fQMJ5qcz",
-    "SiteUrl": "https://axhome.local"
+    "SiteUrl": "https://axhome.local",
+    "PropertiesHasVideos": true
 }
