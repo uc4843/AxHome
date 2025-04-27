@@ -11,6 +11,7 @@ const Layout = component$(({
     blogTexts,
     breadcrumb,
     categories,
+    content,
     currentLocale,
     item,
     latestPosts,
@@ -53,7 +54,7 @@ const Layout = component$(({
                 />
             </section>
 
-            <Seo content={seo?.relatedItems.content} />
+            <Seo content={content} />
 
         </div>
     </>
