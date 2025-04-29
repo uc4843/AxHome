@@ -4,7 +4,7 @@ import {
     PropertyInfo,
     Slider,
 } from "PropertyParts"
-import { Videos } from "Shared"
+import { Videos } from "Media"
 
 const Main = ({
     body,

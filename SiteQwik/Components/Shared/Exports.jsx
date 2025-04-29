@@ -13,7 +13,6 @@ import RichText from "./RichText"
 import Search from "./Search"
 import SectionTitle from "./SectionTitle"
 import Select from "./Select"
-import Videos from "./Videos"
 
 export { AddComment }
 export { AdvancedInput }
@@ -30,4 +29,3 @@ export { RichText }
 export { Search }
 export { SectionTitle }
 export { Select }
-export { Videos }
