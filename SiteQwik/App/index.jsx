@@ -81,7 +81,6 @@ const Index = component$(() => {
         occasionProperties,
         ourTeam,
         propertiesTexts,
-        property,
         propertyImages,
         propertyInfoTexts,
         rentProperties,
@@ -109,7 +108,6 @@ const Index = component$(() => {
             localesEnum={localesEnum}
             properties={occasionProperties}
             propertiesTexts={propertiesTexts}
-            property={property}
             propertyImages={propertyImages}
             propertyInfoTexts={propertyInfoTexts}
             sliderName="occasionSwiper"

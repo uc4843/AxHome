@@ -21,47 +21,42 @@ const Layout = ({
     translations,
 }) => {
 
-    return <>
-        <section>
-            <Breadcrumb breadcrumb={breadcrumb} />
-
-            <div class="w-full max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0">
-                    <Main
-                        body={content}
-                        localePathPrefix={localePathPrefix}
-                        propertiesTexts={propertiesTexts}
-                        property={property}
-                        propertyInfoTexts={propertyInfoTexts}
-                        translations={translations}
-                    />
-                    <Side
-                        {...propertiesTexts}
-                        agent={agent}
-                        agentTitle={propertiesTexts?.agentTitle}
-                        contactInfo={contactInfo}
-                        currentLocale={currentLocale}
-                        localePathPrefix={localePathPrefix}
-                        localesEnum={localesEnum}
-                        property={property}
-                    />
-                </div>
+    return <section>
+        <Breadcrumb breadcrumb={breadcrumb} />
+        <div class="w-full max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0">
+                <Main
+                    body={content}
+                    localePathPrefix={localePathPrefix}
+                    propertiesTexts={propertiesTexts}
+                    property={property}
+                    propertyInfoTexts={propertyInfoTexts}
+                    translations={translations}
+                />
+                <Side
+                    {...propertiesTexts}
+                    agent={agent}
+                    agentTitle={propertiesTexts?.agentTitle}
+                    contactInfo={contactInfo}
+                    currentLocale={currentLocale}
+                    localePathPrefix={localePathPrefix}
+                    localesEnum={localesEnum}
+                    property={property}
+                />
             </div>
-
-            <div class="w-full h-0.5 bg-slate-200 my-10"></div>
-
-            <RelatedProperties
-                currentLocale={currentLocale}
-                localePathPrefix={localePathPrefix}
-                localesEnum={localesEnum}
-                properties={relatedProperties}
-                propertiesTexts={propertiesTexts}
-                propertyImages={propertyImages}
-                propertyInfoTexts={propertyInfoTexts}
-                translations={translations}
-            />
-        </section>
-    </>
+        </div>
+        <div class="w-full h-0.5 bg-slate-200 my-10"></div>
+        <RelatedProperties
+            currentLocale={currentLocale}
+            localePathPrefix={localePathPrefix}
+            localesEnum={localesEnum}
+            properties={relatedProperties}
+            propertiesTexts={propertiesTexts}
+            propertyImages={propertyImages}
+            propertyInfoTexts={propertyInfoTexts}
+            translations={translations}
+        />
+    </section>
 }
 
 export default Layout

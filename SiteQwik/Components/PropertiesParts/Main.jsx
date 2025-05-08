@@ -4,10 +4,10 @@ import { PropertyCard } from "Shared"
 const Main = component$(({
     currentLocale,
     featuredLabelTitle,
-    items,
     localePathPrefix,
     localesEnum,
     occasionLabelTitle,
+    properties,
     propertiesTexts,
     propertyImages,
     propertyInfoTexts,
@@ -16,7 +16,7 @@ const Main = component$(({
 
     return <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-8 gap-x-4 items-start self-start">
         {
-            items?.map(property => <div key={property.id}>
+            properties?.map(property => <div key={property.id}>
                 <PropertyCard
                     {...propertyImages}
                     currentLocale={currentLocale}

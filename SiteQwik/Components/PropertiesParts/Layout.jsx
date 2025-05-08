@@ -44,7 +44,8 @@ const Layout = ({
             </div>
         </div>
         {
-            averagePrices && <ChartAveragePrice
+            averagePrices &&
+            <ChartAveragePrice
                 {...propertiesTexts}
                 {...rest}
                 prices={averagePrices}
@@ -66,8 +67,8 @@ const Layout = ({
                         averagePrices={averagePrices}
                         cityDivisionWrapper={cityDivisionWrapper}
                         faqPages={faqPages}
-                        items={properties?.data}
                         metadata={properties?.metadata}
+                        properties={properties?.data}
                         propertiesTexts={propertiesTexts}
                         readMore={propertiesTexts?.readMore}
                     />
@@ -83,9 +84,7 @@ const Layout = ({
                     propertiesTexts={propertiesTexts}
                 />
             </section>
-            <section>
-                {faqPages && <FaqPages faqPages={faqPages} />}
-            </section>
+            <FaqPages faqPages={faqPages} />
         </section>
     </>
 }
