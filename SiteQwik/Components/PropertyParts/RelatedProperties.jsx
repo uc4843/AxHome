@@ -65,16 +65,16 @@ const RelatedProperties = component$(({
                         paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                     >
                         {
-                            properties?.map(item => <SwiperSlide key={item.id}>
+                            properties?.map(property => <SwiperSlide key={property.id}>
                                 <PropertyCard
                                     {...propertyImages}
                                     currentLocale={currentLocale}
                                     featuredLabelTitle={featuredLabelTitle}
-                                    item={item}
                                     localePathPrefix={localePathPrefix}
                                     localesEnum={localesEnum}
                                     occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
                                     propertiesTexts={propertiesTexts}
+                                    property={property}
                                     propertyInfoTexts={propertyInfoTexts}
                                     translations={translations}
                                 />

@@ -14,28 +14,24 @@ const Main = component$(({
     translations,
 }) => {
 
-    return <>
-
-        <div class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-8 gap-x-4 items-start self-start'>
-            {
-                items?.map(item => <>
-                    <PropertyCard
-                        {...propertyImages}
-                        currentLocale={currentLocale}
-                        featuredLabelTitle={featuredLabelTitle}
-                        item={item}
-                        localePathPrefix={localePathPrefix}
-                        localesEnum={localesEnum}
-                        occasionLabelTitle={occasionLabelTitle}
-                        translations={translations}
-                        propertyInfoTexts={propertyInfoTexts}
-                        propertiesTexts={propertiesTexts}
-                    />
-                </>)
-            }
-        </div>
-
-    </>
+    return <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-8 gap-x-4 items-start self-start">
+        {
+            items?.map(property => <div key={property.id}>
+                <PropertyCard
+                    {...propertyImages}
+                    currentLocale={currentLocale}
+                    featuredLabelTitle={featuredLabelTitle}
+                    localePathPrefix={localePathPrefix}
+                    localesEnum={localesEnum}
+                    occasionLabelTitle={occasionLabelTitle}
+                    propertiesTexts={propertiesTexts}
+                    property={property}
+                    propertyInfoTexts={propertyInfoTexts}
+                    translations={translations}
+                />
+            </div>)
+        }
+    </div>
 })
 
 export default Main

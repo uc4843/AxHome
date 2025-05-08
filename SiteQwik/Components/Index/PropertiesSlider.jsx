@@ -52,11 +52,8 @@ const PropertiesSlider = component$(({
                     description={propertiesTexts?.occasionDescription}
                     title={propertiesTexts?.occasionTitle}
                 />
-                <div class='mt-10'>
+                <div class="mt-10">
                     <Swiper
-                        name={sliderName}
-                        containerClass="pb-16"
-                        paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                         config={{
                             breakpoints: {
                                 [zero]: {
@@ -81,36 +78,36 @@ const PropertiesSlider = component$(({
                                 }
                             },
                         }}
+                        containerClass="pb-16"
+                        name={sliderName}
+                        paginationClass="pt-0 bullet:w-3 bullet:h-3 active-bullet:bg-custom-color4"
                     >
                         {
-                            properties?.map(item => <>
-                                <SwiperSlide key={item?.id}>
-                                    <PropertyCard
-                                        {...propertyImages}
-                                        currentLocale={currentLocale}
-                                        featuredLabelTitle={featuredLabelTitle}
-                                        item={item}
-                                        localePathPrefix={localePathPrefix}
-                                        localesEnum={localesEnum}
-                                        occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
-                                        translations={translations}
-                                        property={property}
-                                        propertiesTexts={propertiesTexts}
-                                        propertyInfoTexts={propertyInfoTexts}
-                                    />
-                                </SwiperSlide>
-                            </>)
+                            properties?.map(property => <SwiperSlide key={property.id}>
+                                <PropertyCard
+                                    {...propertyImages}
+                                    currentLocale={currentLocale}
+                                    featuredLabelTitle={featuredLabelTitle}
+                                    localePathPrefix={localePathPrefix}
+                                    localesEnum={localesEnum}
+                                    occasionLabelTitle={propertiesTexts?.occasionLabelTitle}
+                                    propertiesTexts={propertiesTexts}
+                                    property={property}
+                                    propertyInfoTexts={propertyInfoTexts}
+                                    translations={translations}
+                                />
+                            </SwiperSlide>)
                         }
                     </Swiper>
                 </div>
 
-                <div class='px-4'>
+                <div class="px-4">
                     <a
                         aria-label={propertiesTexts?.readMore}
-                        class='flex mx-auto justify-center bg-custom-color1 w-full md:w-[250px] p-2 gap-5 hover:brightness-110 transition-all text-white duration-300 rounded-md cursor-pointer'
+                        class="flex mx-auto justify-center bg-custom-color1 w-full md:w-[250px] p-2 gap-5 hover:brightness-110 transition-all text-white duration-300 rounded-md cursor-pointer"
                         href="/properties"
                     >
-                        <ChevronLeft class='w-6 h-6 items-center rounded-full border border-white fill-white' />
+                        <ChevronLeft class="w-6 h-6 items-center rounded-full border border-white fill-white" />
                         <p>{propertiesTexts?.readMore}</p>
                     </a>
 
