@@ -28,5 +28,6 @@ global using Seo;
 global using Settings;
 global using Social;
 global using StateMachines;
+global using Templates;
 global using Tenants;
 global using Units;
