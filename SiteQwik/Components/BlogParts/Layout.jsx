@@ -54,7 +54,7 @@ const Layout = component$(({
                 />
             </section>
 
-            <Seo content={content} />
+            <Seo content={content || seo?.relatedItems.content} />
 
         </div>
     </>

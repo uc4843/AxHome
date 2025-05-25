@@ -7,6 +7,7 @@ import {
 const Side = ({
     allCityDivisions,
     blogTexts,
+    content,
     currentDealType,
     latestPosts,
     localePathPrefix,
@@ -33,6 +34,7 @@ const Side = ({
                 <SeoDescription
                     {...propertiesTexts}
                     {...seo}
+                    content={content || seo?.relatedItems?.content}
                 />
 
                 <LatestPosts

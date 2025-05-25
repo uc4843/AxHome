@@ -5,9 +5,9 @@ import {
 import { RichText } from "Shared"
 
 const SeoDescription = component$(({
-    pageTitle,
+    content,
     metaDescription,
-    relatedItems,
+    pageTitle,
     showLess,
     showMore,
 }) => {
@@ -16,14 +16,14 @@ const SeoDescription = component$(({
 
     return <>
         {
-            relatedItems?.content && relatedItems?.content !== "[]" &&
+            content && content !== "[]" &&
             <>
                 <h1 class="text-lg font-bold mt-10 mb-3">{pageTitle}</h1>
                 <p class="leading-6 font-light">{metaDescription}</p>
                 <div class={`${isShownMore.value ? "" : "h-0 overflow-hidden"}`}>
                     <RichText
                         class="leading-6 font-light"
-                        content={relatedItems?.content}
+                        content={content}
                         h2="font-bold mt-4 mb-2 text-[1.1rem]"
                         h3="font-bold mt-4 mb-2 text-[1rem]"
                         p="mt-2 mb-2"
