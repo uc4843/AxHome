@@ -1,13 +1,19 @@
 import {
     component$,
     Slot,
+    useContext,
 } from "@builder.io/qwik"
 import { routeLoader$ } from "@builder.io/qwik-city"
 import {
+    AppContext,
     GoogleTagManagerNoScript,
+    Message,
     useAsync,
 } from "Base"
-import { getGlobalization } from "Globalization"
+import {
+    applyGranularity,
+    getGlobalization
+} from "Globalization"
 import { getApplicationSettings } from "Settings"
 import { useLayoutSeo } from "Seo"
 import { getLayout } from "Contents"
@@ -40,9 +46,11 @@ const getData = routeLoader$(async props => {
 const Layout = component$(() => {
 
     const data = getData().value
+    const app = useContext(AppContext)
     const {
         currentLocale,
         settings,
+        translations,
     } = data
 
     return <>
@@ -51,6 +59,10 @@ const Layout = component$(() => {
             class="scroll-smooth scroll-pb-7 h-auto"
             dir={currentLocale.isRtl ? "rtl" : "ltr"}
         >
+            <Message
+                {...app}
+                text={applyGranularity(translations, app.message)}
+            />
             <Header {...data} />
             <Slot />
             <Footer {...data} />
