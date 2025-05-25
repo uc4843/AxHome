@@ -19,12 +19,7 @@ const Layout = ({
             <div class="bg-custom-color3 py-10 px-4">
                 <div class="max-w-7xl mx-auto bg-white px-8 py-8 rounded-lg">
                     <RichText
-                        class="text-sm sm:text-base leading-7 sm:leading-8"
                         content={content}
-                        h1="font-bold mt-[20px] mb-[30px] text-[1.75rem]"
-                        h2="font-bold mt-[15px] mb-[20px] text-[1.5rem]"
-                        h3="font-bold mt-[15px] mb-[20px] text-[1.25rem]"
-                        p="mb-[10px]"
                         {...rest}
                     />
                 </div>
