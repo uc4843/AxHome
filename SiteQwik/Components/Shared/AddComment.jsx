@@ -4,23 +4,18 @@ import {
     LongText,
     Text,
 } from "Forms"
-import { Message } from "Shared"
 
 const AddComment = component$(({
     body,
     ctaText,
     entity,
-    errorMessage,
     name,
     submit: textButton,
-    successMessage,
     title,
 }) => {
 
     const {
         handleSubmit,
-        isMessageShown,
-        isSuccess,
         model,
         progress,
     } = useComment(entity)
@@ -39,7 +34,7 @@ const AddComment = component$(({
                     class="w-full bg-custom-color3 px-5 py-4 mt-4 rounded-md focus:outline-hidden placeholder-gray-500"
                     modelBind={model}
                     placeholder={name?.placeholder}
-                    property="Name"
+                    property={name?.relatedItems.keySegment}
                     type="text"
                 />
             </div>
@@ -48,7 +43,7 @@ const AddComment = component$(({
                     class="w-full mt-4 bg-custom-color3 px-5 py-4 rounded-md focus:outline-hidden placeholder-gray-500 resize-none"
                     modelBind={model}
                     placeholder={body?.placeholder}
-                    property="Body"
+                    property={body?.relatedItems.keySegment}
                 />
             </div>
             <div class="flex justify-end mt-4">
@@ -59,16 +54,6 @@ const AddComment = component$(({
                     {progress.value ? "...." : submitText}
                 </span>
             </div>
-
-            {
-                isMessageShown?.value && isSuccess.value &&
-                <Message
-                    isSuccess={isSuccess.value}
-                    message={isSuccess.value ? successMessage : errorMessage}
-                />
-
-            }
-
         </div>
     </>
 })
