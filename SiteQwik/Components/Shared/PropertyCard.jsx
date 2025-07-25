@@ -122,7 +122,7 @@ const PropertyCard = ({
                         </a>
                         <div class="w-full flex items-center justify-between gap-1 border rounded-sm text-slate-600 border-slate-300 text-xs p-2">
                             {
-                                property?.dealTypeKey === "rent"
+                                property?.relatedItems.isRent
                                     ?
                                     <span> {propertiesTexts?.rent}: </span>
                                     :
@@ -140,7 +140,7 @@ const PropertyCard = ({
 
                         <div class="w-full flex items-center justify-between gap-1 bg-custom-color1 p-2 rounded-sm text-white text-xs">
                             {
-                                property?.dealTypeKey === "rent"
+                                property?.relatedItems.isRent
                                     ?
                                     <span> {propertiesTexts?.mortgage}: </span>
                                     :
