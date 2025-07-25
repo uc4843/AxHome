@@ -38,6 +38,9 @@
             "Dashboard": [
                 "src/Components/Dashboard/Exports"
             ],
+            "EntityRendererComponents": [
+                "src/EntityRendererComponents"
+            ],
             "Forms": [
                 "src/Modules/Forms/Exports"
             ],
