@@ -21,9 +21,9 @@ const Layout = ({
     translations,
 }) => {
 
-    return <section>
+    return <main>
         <Breadcrumb breadcrumb={breadcrumb} />
-        <div class="w-full max-w-7xl mx-auto">
+        <article class="w-full max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-[70%_28%] gap-[2%] justify-between px-4 xl:px-0 min-w-0 min-h-0">
                 <Main
                     body={content}
@@ -44,7 +44,7 @@ const Layout = ({
                     property={property}
                 />
             </div>
-        </div>
+        </article>
         <div class="w-full h-0.5 bg-slate-200 my-10"></div>
         <RelatedProperties
             currentLocale={currentLocale}
@@ -56,7 +56,7 @@ const Layout = ({
             propertyInfoTexts={propertyInfoTexts}
             translations={translations}
         />
-    </section>
+    </main>
 }
 
 export default Layout

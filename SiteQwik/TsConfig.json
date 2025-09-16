@@ -65,6 +65,9 @@
             "Layout": [
                 "src/Components/Layout/Exports"
             ],
+            "LikesParts": [
+                "src/Components/LikesParts/Exports"
+            ],
             "Loaders": [
                 "src/Loaders"
             ],

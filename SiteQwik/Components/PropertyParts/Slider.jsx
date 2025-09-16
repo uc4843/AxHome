@@ -72,39 +72,41 @@ const Slider = component$(({
     return <>
         {
             relatedItems?.images && relatedItems?.images.length > 0 &&
-            <div class="max-w-4xl bg-white relative z-0">
+            <section class="max-w-4xl bg-white relative z-0">
 
-                <div class="main-swiper swiper mb-6">
+                <figures class="main-swiper swiper mb-6">
                     <div class="swiper-wrapper">
                         {
-                            relatedItems?.images?.map(item => <div
+                            relatedItems?.images?.map((item, index) => <figure
                                 class="swiper-slide"
                                 key="item.id"
                             >
                                 <Image
-                                    src={item?.relatedItems?.url}
                                     alt={title}
                                     containerClass="w-full aspect-[2/1]"
+                                    priority={index < 1}
+                                    src={item?.relatedItems?.url}
                                 />
-                            </div>)
+                            </figure>)
                         }
                     </div>
-                </div>
+                </figures>
 
-                <div>
+                <figures>
                     <div class="thumbs-swiper swiper">
                         <div class="swiper-wrapper">
                             {
-                                relatedItems?.images?.map(item => <div
+                                relatedItems?.images?.map((item, index) => <figure
                                     class="swiper-slide"
                                     key={item.relatedItems?.id}
                                 >
                                     <Image
-                                        src={item?.relatedItems?.url}
                                         alt={title}
                                         containerClass="w-full aspect-[1/.59]"
+                                        priority={index < 2}
+                                        src={item?.relatedItems?.url}
                                     />
-                                </div>)
+                                </figure>)
                             }
 
                         </div>
@@ -119,8 +121,8 @@ const Slider = component$(({
                     </div>
                 </div> */}
 
-                </div>
-            </div>
+                </figures>
+            </section>
         }
     </>
 })
