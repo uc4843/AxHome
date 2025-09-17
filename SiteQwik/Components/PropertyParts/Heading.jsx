@@ -10,7 +10,7 @@ const Heading = component$(({
                 {property?.title}
             </h1>
         </div>
-        <div class="flex gap-4 justify-start items-center mt-4">
+        <div class="flex flex-wrap gap-4 justify-start items-center mt-4">
             <div class="flex items-center justify-between gap-1.5 p-2 border border-custom-color1 rounded-md">
                 {
                     property?.relatedItems.isRent
