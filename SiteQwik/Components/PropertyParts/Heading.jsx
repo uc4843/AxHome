@@ -10,34 +10,38 @@ const Heading = component$(({
                 {property?.title}
             </h1>
         </div>
-        <div class="flex flex-wrap gap-4 justify-start items-center mt-4">
+        <dl class="flex flex-wrap gap-4 justify-start items-center mt-4">
             <div class="flex items-center justify-between gap-1.5 p-2 border border-custom-color1 rounded-md">
                 {
                     property?.relatedItems.isRent
                         ?
-                        <span> {translations?.rent}</span>
+                        <dt> {translations?.rent}</dt>
                         :
-                        <span> {translations?.minorPrice}</span>
+                        <dt> {translations?.minorPrice}</dt>
                 }
-                <span>
-                    {property?.minorPrice?.toLocaleString()}
-                </span>
-                <span>{translations?.toman}</span>
+                <dd class="font-light space-x-1.5">
+                    <strong>
+                        {property?.minorPrice?.toLocaleString()}
+                    </strong>
+                    <strong>{translations?.toman}</strong>
+                </dd>
             </div>
             <div class="flex items-center justify-between gap-1.5 p-2 border border-custom-color1 rounded-md">
                 {
                     property?.relatedItems.isRent
                         ?
-                        <span> {translations?.mortgage}</span>
+                        <dt> {translations?.mortgage}</dt>
                         :
-                        <span> {translations?.majorPrice}</span>
+                        <dt> {translations?.majorPrice}</dt>
                 }
-                <span>
-                    {property?.majorPrice?.toLocaleString()}
-                </span>
-                <span>{translations?.toman}</span>
+                <dd class="font-light space-x-1.5">
+                    <strong>
+                        {property?.majorPrice?.toLocaleString()}
+                    </strong>
+                    <strong>{translations?.toman}</strong>
+                </dd>
             </div>
-        </div>
+        </dl>
     </div>
 })
 

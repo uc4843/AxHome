@@ -5,12 +5,12 @@ const Body = ({
     propertiesTexts,
 }) => {
 
-    return <div class="w-full bg-white">
+    return <section class="w-full bg-white">
         <h2 class="mb-6 font-bold text-xl flex items-center">
-            <span>{propertiesTexts?.description}</span>
+            {propertiesTexts?.description}
         </h2>
         <RichText content={body} />
-    </div>
+    </section>
 }
 
 export default Body
