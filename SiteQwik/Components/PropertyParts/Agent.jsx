@@ -77,13 +77,12 @@ const Agent = component$(({
             >
                 {
                     relatedItems?.phones?.map(item => <a
+                        aria-labe={item.phoneValue}
                         class="flex gap-2 items-center justify-between"
                         href={`tel:${item?.phoneValue}`}
                         key={item.id}
                     >
-                        <p>
-                            {item?.phoneValue}
-                        </p>
+                        <p>{item?.phoneValue}</p>
                         <p>{agentNum}</p>
                     </a>)
                 }
@@ -94,12 +93,11 @@ const Agent = component$(({
                 dir="ltr"
             >
                 <a
+                    aria-label={phone}
                     class="flex gap-2 items-center justify-between"
                     href={`tel:${phone}`}
                 >
-                    <p>
-                        {phone}
-                    </p>
+                    <p>{phone}</p>
                     <p>{realEstateNum}</p>
                 </a>
             </div>
@@ -107,7 +105,7 @@ const Agent = component$(({
             <Sharing modalTitle={modalShareTitle}>
                 <div class="flex gap-1 cursor-pointer py-2 px-2 rounded-md border border-gray-200 bg-white cursor-pointer group hover:border-custom-color1 transition-all">
                     <Share class="w-5 aspect-square cursor-pointer text-white group-hover:text-custom-color1" />
-                    <span>{shareTitle}</span>
+                    <p>{shareTitle}</p>
                 </div>
             </Sharing>
 
