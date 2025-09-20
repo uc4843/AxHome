@@ -25,26 +25,28 @@ const Agent = component$(({
 }) => {
 
     return <>
-        <div class="w-full p-4 rounded-md shadow-lg shadow-gray-200 bg-white border border-custom-color3 basis-[50%] px-4 text-sm">
+        <aside class="w-full p-4 rounded-md shadow-lg shadow-gray-200 bg-white border border-custom-color3 basis-[50%] px-4 text-sm">
 
             <div class="flex flex-col items-end gap-1">
                 <div class="flex gap-2 items-center">
-                    <span>{propertyAdCodeTitle}:</span>
-                    <span>{property?.id}</span>
+                    <p>{propertyAdCodeTitle}:</p>
+                    <p>{property?.id}</p>
                 </div>
-                <div class="text-custom-color4">
+                <p class="text-custom-color4">
                     <TimeAgo
                         utcDate={property?.modificationUtcDate}
                         localKey={currentLocale?.key}
                         localesEnum={localesEnum}
                     />
-
-                </div>
+                </p>
             </div>
 
             <div class="flex items-center justify-start gap-2 my-4">
                 {relatedItems?.imageUrl &&
-                    <a href={useAgentUrl(slug, localePathPrefix)}>
+                    <a
+                        aria-labe={displayName}
+                        href={useAgentUrl(slug, localePathPrefix)}
+                    >
                         <Image
                             src={relatedItems?.imageUrl}
                             alt={displayName}
@@ -53,15 +55,19 @@ const Agent = component$(({
                         />
                     </a>
                 }
-                <div class="my-6">
-                    <span class="me-1">
+                <div class="my-6 flex gap-1 items-center">
+                    <p class="me-1">
                         {agentTitle}:
-                    </span>
-                    <a href={useAgentUrl(slug, localePathPrefix)}>
-                        <strong class="break-all">
+                    </p>
+                    <strong>
+                        <a
+                            aria-labe={displayName}
+                            class="break-all"
+                            href={useAgentUrl(slug, localePathPrefix)}
+                        >
                             {displayName}
-                        </strong>
-                    </a>
+                        </a>
+                    </strong>
                 </div>
             </div>
 
@@ -105,7 +111,7 @@ const Agent = component$(({
                 </div>
             </Sharing>
 
-        </div>
+        </aside>
     </>
 })
 
