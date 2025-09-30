@@ -4,15 +4,13 @@ const Description = ({
 }) => {
 
     return <>
-        <div class="my-5 border border-gray-200 p-4 flex flex-col basis-[50%]">
+        <div class="my-5 border border-gray-200 p-4 flex flex-col basis-[50%] items-center">
 
-            <h2 class="w-full py-5 border-black flex justify-between items-center border-b">
-                <span class='bg-custom-color1 rounded-md py-2 px-4 text-center text-white mx-auto inline-block'>
-                    {descriptionText}
-                </span>
-            </h2>
+            <strong class="bg-custom-color1 rounded-md py-2 px-4 text-center text-white mx-auto inline-block my-5">
+                {descriptionText}
+            </strong>
 
-            <p class='text-sm md:text-md font-semibold my-4'>
+            <p class="text-sm md:text-md font-semibold py-4 border-t border-black">
                 {body}
             </p>
         </div>

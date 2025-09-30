@@ -1,4 +1,5 @@
 {
     "ApiUrl": "https://api.maskanax.com",
+    "IsDeveloping": true,
     "TenantDomain": "maskanax.com"
 }

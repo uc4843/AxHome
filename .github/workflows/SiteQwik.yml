@@ -44,7 +44,7 @@ jobs:
       - name: Pull images
         run: |
           docker pull holism/site
-          docker pull node:lts-bookworm-slim
+          docker pull node:lts-trixie-slim
 
       - name: Get runnable
         run: |
