@@ -5,9 +5,11 @@ import Backdrop from "./Backdrop"
 import BlogCategories from "./BlogCategories"
 import Breadcrumb from "./Breadcrumb"
 import CommentsList from "./CommentsList"
+import Cta from "./Cta"
 import Message from "./Message"
 import Pagination from "./Pagination"
 import PostCard from "./PostCard"
+import Progress from "./Progress"
 import PropertyCard from "./PropertyCard"
 import RichText from "./RichText"
 import Search from "./Search"
@@ -21,9 +23,11 @@ export { Backdrop }
 export { BlogCategories }
 export { Breadcrumb }
 export { CommentsList }
+export { Cta }
 export { Message }
 export { Pagination }
 export { PostCard }
+export { Progress }
 export { PropertyCard }
 export { RichText }
 export { Search }

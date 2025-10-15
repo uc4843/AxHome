@@ -44,7 +44,7 @@ const Agent = component$(({
             <div class="flex items-center justify-start gap-2 my-4">
                 {relatedItems?.imageUrl &&
                     <a
-                        aria-labe={displayName}
+                        aria-label={displayName}
                         href={useAgentUrl(slug, localePathPrefix)}
                     >
                         <Image
@@ -61,7 +61,7 @@ const Agent = component$(({
                     </p>
                     <strong>
                         <a
-                            aria-labe={displayName}
+                            aria-label={displayName}
                             class="break-all"
                             href={useAgentUrl(slug, localePathPrefix)}
                         >
@@ -77,7 +77,7 @@ const Agent = component$(({
             >
                 {
                     relatedItems?.phones?.map(item => <a
-                        aria-labe={item.phoneValue}
+                        aria-label={item.phoneValue}
                         class="flex gap-2 items-center justify-between"
                         href={`tel:${item?.phoneValue}`}
                         key={item.id}
