@@ -11,6 +11,7 @@ Contracts
 Currencies
 DataTypes
 Discounts
+Flows
 Forms
 Galleries
 Geo
@@ -23,13 +24,17 @@ MonetaryValues
 Navigation
 NewTaxonomy
 Notifications
+Orders
 Parts
+Payment
 Pricing
 Properties
 Questions
+Sales
 Scopes
 Seo
 Settings
+Shipment
 Social
 StateMachines
 Subscriptions
