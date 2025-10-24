@@ -1,5 +1,5 @@
 import DashboardIcon from "@mui/icons-material/Dashboard"
-import { PropertiesMenu } from "Properties"
+import Menus from "Menus"
 
 const menuItems = [
     {
@@ -7,7 +7,7 @@ const menuItems = [
         icon: DashboardIcon,
         path: "/"
     },
-    ...PropertiesMenu
+    ...Menus.Properties
 ]
 
 export default menuItems
