@@ -2,6 +2,7 @@ Accounts
 Aggregates
 Attributes
 Blog
+Brands
 ChangeLog
 Commissions
 Contacts
@@ -9,6 +10,7 @@ Contents
 Contracts
 Currencies
 DataTypes
+Discounts
 Forms
 Galleries
 Geo
@@ -30,6 +32,7 @@ Seo
 Settings
 Social
 StateMachines
+Subscriptions
 Templates
 Tenants
 Units
