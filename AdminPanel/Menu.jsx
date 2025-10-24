@@ -1,45 +1,28 @@
-import DashboardIcon from "@mui/icons-material/Dashboard"
-import { AccountsMenu } from "Accounts"
-import { AttributesMenu } from "Attributes"
-import { BlogMenu } from "Blog"
-import { ContactsMenu } from "Contacts"
-import { ContentsMenu } from "Contents"
-import { FormsMenu } from "Forms"
-import { GalleriesMenu } from "Galleries"
-import { GeoMenu } from "Geo"
-import { GlobalizationMenu } from "Globalization"
-import { ModulesMenu } from "Modules"
-import { NavigationMenu } from "Navigation"
-import { NewTaxonomyMenu } from "NewTaxonomy"
-import { PropertiesMenu } from "Properties"
-import { QuestionsMenu } from "Questions"
-import { SeoMenu } from "Seo"
-import { SettingsMenu } from "Settings"
-import { TenantsMenu } from "Tenants"
+import Menus from "Menus"
 
 const menuItems = [
     {
         title: "InfraDashboard",
-        icon: DashboardIcon,
+        icon: "Dashboard",
         path: "/"
     },
-    ...PropertiesMenu,
-    ...BlogMenu,
-    ...QuestionsMenu,
-    ...ContentsMenu,
-    ...NavigationMenu,
-    ...SeoMenu,
-    ...GalleriesMenu,
-    ...FormsMenu,
-    ...NewTaxonomyMenu,
-    ...AttributesMenu,
-    ...ModulesMenu,
-    ...GeoMenu,
-    ...GlobalizationMenu,
-    ...SettingsMenu,
-    ...TenantsMenu,
-    ...ContactsMenu,
-    ...AccountsMenu,
+    ...Menus.Properties,
+    ...Menus.Blog,
+    ...Menus.Questions,
+    ...Menus.Contents,
+    ...Menus.Navigation,
+    ...Menus.Seo,
+    ...Menus.Galleries,
+    ...Menus.Forms,
+    ...Menus.NewTaxonomy,
+    ...Menus.Attributes,
+    ...Menus.Modules,
+    ...Menus.Geo,
+    ...Menus.Globalization,
+    ...Menus.Settings,
+    ...Menus.Tenants,
+    ...Menus.Contacts,
+    ...Menus.Accounts,
 ]
 
 export default menuItems
