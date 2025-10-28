@@ -1,10 +1,9 @@
-import DashboardIcon from "@mui/icons-material/Dashboard"
 import Menus from "Menus"
 
 const menuItems = [
     {
         title: "InfraDashboard",
-        icon: DashboardIcon,
+        icon: "Dashboard",
         path: "/"
     },
     ...Menus.Properties
