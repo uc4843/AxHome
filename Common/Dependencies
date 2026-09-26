@@ -3,6 +3,7 @@ Aggregates
 Attributes
 Blog
 Brands
+Catalogs
 ChangeLog
 Commissions
 Contacts
@@ -18,6 +19,7 @@ Geo
 Globalization
 Granularities
 Interfaces
+Inventory
 Media
 Modules
 MonetaryValues
@@ -27,6 +29,7 @@ Notifications
 Orders
 Parts
 Payment
+Places
 Pricing
 Properties
 Questions
