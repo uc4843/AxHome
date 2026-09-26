@@ -16,7 +16,7 @@ const Main = component$(({
 
     return <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-8 gap-x-4 items-start self-start">
         {
-            properties?.map(property => <div key={property.id}>
+            properties?.map((property, index) => <div key={property.id}>
                 <PropertyCard
                     {...propertyImages}
                     currentLocale={currentLocale}
@@ -24,6 +24,7 @@ const Main = component$(({
                     localePathPrefix={localePathPrefix}
                     localesEnum={localesEnum}
                     occasionLabelTitle={occasionLabelTitle}
+                    priority={index < 3}
                     propertiesTexts={propertiesTexts}
                     property={property}
                     propertyInfoTexts={propertyInfoTexts}

@@ -102,7 +102,10 @@ const Agent = component$(({
                 </a>
             </div>
 
-            <Sharing modalTitle={modalShareTitle}>
+            <Sharing
+                modalTitle={modalShareTitle}
+                title={property?.title}
+            >
                 <div class="flex gap-1 cursor-pointer py-2 px-2 rounded-md border border-gray-200 bg-white cursor-pointer group hover:border-custom-color1 transition-all">
                     <Share class="w-5 aspect-square cursor-pointer text-white group-hover:text-custom-color1" />
                     <p>{shareTitle}</p>

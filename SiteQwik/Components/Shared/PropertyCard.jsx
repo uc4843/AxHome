@@ -16,6 +16,7 @@ const PropertyCard = ({
     localesEnum,
     location,
     occasionLabelTitle,
+    priority,
     propertiesTexts,
     property,
     propertyInfoTexts,
@@ -30,6 +31,7 @@ const PropertyCard = ({
                 <Image
                     alt={property?.title}
                     containerClass="relative w-full aspect-[6/4] z-10"
+                    priority={priority}
                     src={property?.relatedItems?.imageUrl}
                 />
             </a>
