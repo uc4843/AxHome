@@ -158,6 +158,15 @@
             "Pricing": [
                 "src/Modules/Pricing/Exports"
             ],
+            "ProductParts": [
+                "src/Components/ProductParts/Exports"
+            ],
+            "Products": [
+                "src/Modules/Products/Exports"
+            ],
+            "ProductsParts": [
+                "src/Components/ProductsParts/Exports"
+            ],
             "Properties": [
                 "src/Modules/Properties/Exports"
             ],
