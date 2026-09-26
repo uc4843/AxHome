@@ -34,7 +34,10 @@ const config = {
                     "50%": { transform: "translateY(-30%)" },
                 }
             }
-        }
+        },
+        fontFamily: {
+            iransansx: ["IRANSansX"],
+        },
     },
 }
 

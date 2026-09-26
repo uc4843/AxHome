@@ -56,7 +56,7 @@ const Layout = component$(() => {
     return <>
         <GoogleTagManagerNoScript {...settings} />
         <div
-            class="scroll-smooth scroll-pb-7 h-auto"
+            class="scroll-smooth scroll-pb-7 h-auto font-iransansx"
             dir={currentLocale.isRtl ? "rtl" : "ltr"}
         >
             <Message
