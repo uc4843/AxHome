@@ -17,6 +17,30 @@
             "BlogParts": [
                 "src/Components/BlogParts/Exports"
             ],
+            "BrandParts": [
+                "src/Components/BrandParts/Exports"
+            ],
+            "Brands": [
+                "src/Modules/Brands/Exports"
+            ],
+            "BrandsParts": [
+                "src/Components/BrandsParts/Exports"
+            ],
+            "CartParts": [
+                "src/Components/CartParts/Exports"
+            ],
+            "CatalogParts": [
+                "src/Components/CatalogParts/Exports"
+            ],
+            "Catalogs": [
+                "src/Modules/Catalogs/Exports"
+            ],
+            "CatalogsParts": [
+                "src/Components/CatalogsParts/Exports"
+            ],
+            "CheckoutParts": [
+                "src/Components/CheckoutParts/Exports"
+            ],
             "CompareParts": [
                 "src/Components/CompareParts/Exports"
             ],
@@ -25,6 +49,9 @@
             ],
             "Contacts": [
                 "src/Modules/Contacts/Exports"
+            ],
+            "ContactsParts": [
+                "src/Components/ContactsParts/Exports"
             ],
             "Contents": [
                 "src/Modules/Contents/Exports"
@@ -38,8 +65,20 @@
             "Dashboard": [
                 "src/Components/Dashboard/Exports"
             ],
+            "DirectTransferParts": [
+                "src/Components/DirectTransferParts/Exports"
+            ],
             "EntityRendererComponents": [
                 "src/EntityRendererComponents"
+            ],
+            "FlowParts": [
+                "src/Components/FlowParts/Exports"
+            ],
+            "Flows": [
+                "src/Modules/Flows/Exports"
+            ],
+            "FormParts": [
+                "src/Components/FormParts/Exports"
             ],
             "Forms": [
                 "src/Modules/Forms/Exports"
@@ -61,6 +100,9 @@
             ],
             "Index": [
                 "src/Components/Index/Exports"
+            ],
+            "InvoiceParts": [
+                "src/Components/InvoiceParts/Exports"
             ],
             "Layout": [
                 "src/Components/Layout/Exports"
@@ -86,11 +128,26 @@
             "NewTaxonomy": [
                 "src/Modules/NewTaxonomy/Exports"
             ],
+            "Orders": [
+                "src/Modules/Orders/Exports"
+            ],
+            "PackageParts": [
+                "src/Components/PackageParts/Exports"
+            ],
+            "PackagesParts": [
+                "src/Components/PackagesParts/Exports"
+            ],
             "PageParts": [
                 "src/Components/PageParts/Exports"
             ],
             "PaginationBehaviors": [
                 "src/PaginationBehaviors"
+            ],
+            "Payment": [
+                "src/Modules/Payment/Exports"
+            ],
+            "PaymentParts": [
+                "src/Components/PaymentParts/Exports"
             ],
             "PostParts": [
                 "src/Components/PostParts/Exports"
@@ -128,6 +185,9 @@
             "RichTextComponents": [
                 "src/RichTextComponents"
             ],
+            "Sales": [
+                "src/Modules/Sales/Exports"
+            ],
             "Seo": [
                 "src/Modules/Seo/Exports"
             ],
@@ -137,11 +197,17 @@
             "Shared": [
                 "src/Components/Shared/Exports"
             ],
+            "Shipment": [
+                "src/Modules/Shipment/Exports"
+            ],
             "SignInParts": [
                 "src/Components/SignInParts/Exports"
             ],
             "Social": [
                 "src/Modules/Social/Exports"
+            ],
+            "Subscriptions": [
+                "src/Modules/Subscriptions/Exports"
             ],
             "Svg": [
                 "src/Components/Svg/Exports"

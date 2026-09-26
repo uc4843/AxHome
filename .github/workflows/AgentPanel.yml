@@ -31,8 +31,8 @@ jobs:
         run: |
           Clone HolismHolding
 
-      - name: Change Docker image directory ownership
-        run: sudo chown -R $USER:$USER /var/lib/docker/image
+      - name: Add user to the Docker group
+        run: sudo usermod -aG docker $USER
 
       - name: Cache Docker
         uses: actions/cache@v4
